@@ -94,7 +94,7 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
   todoObj.todos.forEach((stepText, idx) => {
     const isChecked = savedState[idx];
     const li = document.createElement('li');
-    li.className = `flex items-start gap-3 p-2 rounded-lg border transition-all cursor-pointer select-none ${
+    li.className = `flex items-start gap-3 p-2.5 rounded-xl border transition-all cursor-pointer select-none ${
       isChecked 
         ? 'bg-indigo-50/30 border-indigo-100 text-gray-400 line-through dark:bg-indigo-950/20 dark:border-indigo-900/30 dark:text-gray-500' 
         : 'bg-gray-50/50 border-gray-100 hover:border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/30 dark:hover:border-gray-600'
@@ -136,17 +136,20 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
   };
 }
 
-// 3. SEARCH & FILTERING LOGIC
+// 3. SEARCH & FILTERING LOGIC (WITH INSTANT TAKEOVER)
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
+    
+    // Hide featured daily section while searching so results float up directly beneath the search bar
     if (query.length > 0) {
       dailySection.classList.add('hidden');
-      showAll = true; // Show all search matches
+      showAll = true; // Automatically show all search results
     } else {
       dailySection.classList.remove('hidden');
       showAll = false;
     }
+    
     filterTodos(query, activeCategory);
   });
 }
@@ -158,9 +161,9 @@ if (categoryPills) {
     
     activeCategory = btn.dataset.category;
     document.querySelectorAll('.cat-btn').forEach(b => {
-      b.className = 'cat-btn px-3 py-1 rounded-full text-xs font-medium transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white';
+      b.className = 'cat-btn px-3.5 py-1 rounded-full font-medium transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white';
     });
-    btn.className = 'cat-btn px-3 py-1 rounded-full text-xs font-semibold transition-all bg-indigo-600 text-white';
+    btn.className = 'cat-btn px-3.5 py-1 rounded-full font-semibold transition-all bg-indigo-600 text-white shadow-xs';
     
     filterTodos(searchInput.value.toLowerCase().trim(), activeCategory);
   });
@@ -178,7 +181,7 @@ function filterTodos(query = '', category = 'all') {
   renderListings();
 }
 
-// Compact Row Renderer
+// COMPACT ROW RENDERER
 function renderListings() {
   if (!listingsContainer) return;
 
@@ -238,6 +241,7 @@ function handleHashRouting() {
   }
 }
 
+// SURPRISE BUTTON
 if (surpriseBtn) {
   surpriseBtn.addEventListener('click', () => {
     if (!allTodos.length) return;
@@ -251,6 +255,7 @@ if (surpriseBtn) {
   });
 }
 
+// THEME INITIALIZATION
 if (localStorage.getItem('theme') === 'light') {
   document.documentElement.classList.remove('dark');
 } else {
