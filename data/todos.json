@@ -1,0 +1,107 @@
+[
+  {
+    "id": "gmail-setup",
+    "category": "tech",
+    "title": "...open a new Gmail account",
+    "desc": "Protect your privacy and lock down your digital life immediately.",
+    "tags": ["email", "google", "security", "privacy"],
+    "sourceName": "Google Safety Center",
+    "sourceUrl": "https://safety.google",
+    "affiliate": null,
+    "todos": [
+      "Enable App-based Two-Factor Authentication (2FA) in Google Settings.",
+      "Add and verify a secure recovery email address.",
+      "Review and complete the Google Privacy Checkup prompts.",
+      "Turn off automated web activity & location tracking history.",
+      "Set up a custom email signature and clean up inbox categories."
+    ]
+  },
+  {
+    "id": "stroke-signs",
+    "category": "health",
+    "title": "...suspect someone is having a stroke",
+    "desc": "Act FAST to identify critical stroke symptoms and save lives.",
+    "tags": ["emergency", "health", "medical", "fast"],
+    "sourceName": "American Stroke Association",
+    "sourceUrl": "https://www.stroke.org",
+    "affiliate": null,
+    "todos": [
+      "F - Face Drooping: Ask the person to smile and check if one side droops.",
+      "A - Arm Weakness: Ask the person to raise both arms and see if one drifts downward.",
+      "S - Speech Difficulty: Ask the person to repeat a simple phrase to check for slurring.",
+      "T - Time to Call 911: Call emergency services immediately if you observe any sign.",
+      "Note the exact time symptoms first appeared to tell first responders."
+    ]
+  },
+  {
+    "id": "hotel-checkin",
+    "category": "travel",
+    "title": "...walk into a new hotel room",
+    "desc": "Ensure your quarters are secure, sanitary, and functional before unpacking.",
+    "tags": ["travel", "hotel", "safety", "hygiene"],
+    "sourceName": "CDC Travel Health",
+    "sourceUrl": "https://wwwnc.cdc.gov/travel",
+    "affiliate": null,
+    "todos": [
+      "Check mattress corners, seams, and headboard immediately for signs of bedbugs.",
+      "Verify the deadbolt, door lock latch, and peep-hole function properly.",
+      "Locate the nearest emergency fire exit stairs down your hallway.",
+      "Sanitize high-touch surfaces like the TV remote and bathroom faucet handles.",
+      "Test the air conditioning, safe lock, and hot water operation."
+    ]
+  },
+  {
+    "id": "car-accident",
+    "category": "life",
+    "title": "...get into a minor car accident",
+    "desc": "Keep a level head, document evidence, and protect yourself legally on the road.",
+    "tags": ["car", "driving", "insurance", "emergency"],
+    "sourceName": "Insurance Information Institute",
+    "sourceUrl": "https://www.iii.org",
+    "affiliate": null,
+    "todos": [
+      "Safely move your vehicle out of traffic and turn on hazard lights.",
+      "Check all passengers and drivers for injuries; call 911 if needed.",
+      "Photograph vehicle damage, license plates, street signs, and overall scene.",
+      "Exchange contact, insurance policy, and driver's license details with the other driver.",
+      "Report the incident to your insurance provider and file an official police report."
+    ]
+  },
+  {
+    "id": "hysa-setup",
+    "category": "finance",
+    "title": "...open a High-Yield Savings Account (HYSA)",
+    "desc": "Maximize your interest earnings while keeping your emergency fund safe.",
+    "tags": ["banking", "money", "savings", "interest"],
+    "sourceName": "FDIC BankFind",
+    "sourceUrl": "https://www.fdic.gov",
+    "affiliate": {
+      "text": "Top FDIC-insured Banks",
+      "url": "#"
+    },
+    "todos": [
+      "Verify the financial institution is FDIC or NCUA insured up to $250,000.",
+      "Compare Annual Percentage Yields (APY), monthly fees, and minimum balance rules.",
+      "Link a primary checking account via secure ACH electronic transfer.",
+      "Set up automatic recurring monthly transfers to build your savings habit.",
+      "Designate official account beneficiaries for financial security."
+    ]
+  },
+  {
+    "id": "sourdough-start",
+    "category": "hobbies",
+    "title": "...start your very first sourdough starter",
+    "desc": "Begin cultivation for home-baked artisanal sourdough bread.",
+    "tags": ["baking", "cooking", "food", "diy"],
+    "sourceName": "King Arthur Baking",
+    "sourceUrl": "https://www.kingarthurbaking.com",
+    "affiliate": null,
+    "todos": [
+      "Combine equal parts whole wheat flour and unchlorinated water in a clean glass jar.",
+      "Cover loosely with a cloth or lid to allow wild yeast airflow while keeping dust out.",
+      "Store in a warm spot (70°F–80°F) away from direct sunlight.",
+      "Discard half the mixture daily and feed with fresh flour and water at 24-hour intervals.",
+      "Watch for active bubbling and doubling in size over 5 to 7 days before baking."
+    ]
+  }
+]
