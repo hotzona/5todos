@@ -1,27 +1,282 @@
 [
   {
-    "id": "gmail-setup",
+    "id": "wifi-router-setup",
     "category": "tech",
-    "title": "...open a new Gmail account",
-    "desc": "Protect your privacy and lock down your digital life immediately.",
-    "tags": ["email", "google", "security", "privacy"],
-    "sourceName": "Google Safety Center",
-    "sourceUrl": "https://safety.google",
+    "title": "...set up a new home Wi-Fi router",
+    "desc": "Secure your local network and optimize wireless performance.",
+    "tags": ["wifi", "router", "network", "security", "internet"],
+    "sourceName": "CISA Home Network Security",
+    "sourceUrl": "https://www.cisa.gov/news-events/news/securing-your-home-network",
     "affiliate": null,
     "todos": [
-      "Enable App-based Two-Factor Authentication (2FA) in Google Settings.",
-      "Add and verify a secure recovery email address.",
-      "Review and complete the Google Privacy Checkup prompts.",
-      "Turn off automated web activity & location tracking history.",
-      "Set up a custom email signature and clean up inbox categories."
+      "Change default admin username and password on router portal immediately.",
+      "Update network SSID name to avoid identifying personal or address information.",
+      "Enable WPA3 security encryption (or WPA2-Personal minimum).",
+      "Set up an isolated Guest Wi-Fi network for IoT and visitor devices.",
+      "Enable automatic firmware update checks in router settings."
     ]
   },
   {
-    "id": "stroke-signs",
+    "id": "ethernet-optimization",
+    "category": "tech",
+    "title": "...optimize a wired Ethernet connection",
+    "desc": "Maximize throughput and minimize latency for gaming and streaming.",
+    "tags": ["ethernet", "networking", "gigabit", "latency", "speed"],
+    "sourceName": "IEEE Standards Association",
+    "sourceUrl": "https://standards.ieee.org",
+    "affiliate": null,
+    "todos": [
+      "Use Cat6 or Cat6a cabling for gigabit speeds and shielding against interference.",
+      "Update network adapter drivers directly from motherboard or card manufacturer.",
+      "Disable Energy-Efficient Ethernet (EEE) in Windows Device Manager properties.",
+      "Configure network adapter speed and duplex settings to Auto-Negotiation.",
+      "Set custom high-speed DNS servers (such as Cloudflare 1.1.1.1 or Google 8.8.8.8)."
+    ]
+  },
+  {
+    "id": "steam-deck-setup",
+    "category": "tech",
+    "title": "...unbox a new Steam Deck or handheld gaming PC",
+    "desc": "Get your portable gaming rig optimized and protected out of the box.",
+    "tags": ["steam", "handheld", "gaming", "steamdeck", "pcgaming"],
+    "sourceName": "Valve Steam Deck Support",
+    "sourceUrl": "https://help.steampowered.com/en/wizard/HelpWithSteamDeck",
+    "affiliate": null,
+    "todos": [
+      "Run complete system software update while connected to wall charger.",
+      "Format microSD card to ext4/system format inside device system settings.",
+      "Configure Steam Guard Mobile Authenticator for full account protection.",
+      "Set up custom power performance limits (TDP) for intensive AAA games.",
+      "Install Proton GE compatibility layer via desktop mode for unverified titles."
+    ]
+  },
+  {
+    "id": "steam-pc-setup",
+    "category": "tech",
+    "title": "...configure Steam on a new PC",
+    "desc": "Optimize game downloads, cloud saves, and security on desktop.",
+    "tags": ["steam", "gaming", "pc", "downloads", "security"],
+    "sourceName": "Steam Customer Support",
+    "sourceUrl": "https://help.steampowered.com",
+    "affiliate": null,
+    "todos": [
+      "Enable Steam Guard Two-Factor Authentication via phone app.",
+      "Verify Steam Cloud Save synchronization is globally active in settings.",
+      "Select optimal local download region to maximize gigabit download bandwidth.",
+      "Configure secondary hard drive or SSD library installation folders.",
+      "Enable In-Game FPS Counter and Overlay preferences."
+    ]
+  },
+  {
+    "id": "new-iphone-setup",
+    "category": "tech",
+    "title": "...set up a brand new iPhone",
+    "desc": "Migrate data smoothly while locking down essential privacy controls.",
+    "tags": ["iphone", "apple", "ios", "smartphone", "privacy"],
+    "sourceName": "Apple Support",
+    "sourceUrl": "https://support.apple.com/iphone",
+    "affiliate": null,
+    "todos": [
+      "Use Quick Start proximity migration while keeping both phones plugged in.",
+      "Set up Face ID and configure Stolen Device Protection in settings.",
+      "Enable iCloud Backup and verify Messages and Photos are syncing.",
+      "Review App Tracking Transparency and set all app permission prompts to Ask.",
+      "Enable Find My iPhone including network offline location tracking."
+    ]
+  },
+  {
+    "id": "new-android-setup",
+    "category": "tech",
+    "title": "...set up a brand new Android phone",
+    "desc": "Transfer data cleanly and optimize battery and privacy preferences.",
+    "tags": ["android", "google", "samsung", "smartphone", "privacy"],
+    "sourceName": "Google Android Help",
+    "sourceUrl": "https://support.google.com/android",
+    "affiliate": null,
+    "todos": [
+      "Transfer accounts and media using official cable-to-cable setup wizard.",
+      "Update all system apps immediately via Google Play Store updates.",
+      "Set up biometric fingerprint unlock along with a secure backup PIN.",
+      "Disable personalized ads and usage diagnostics under Google Account settings.",
+      "Turn on Android Find My Device and enable offline location network features."
+    ]
+  },
+  {
+    "id": "new-computer-setup",
+    "category": "tech",
+    "title": "...un-box a brand new computer",
+    "desc": "Clean up bloatware and secure your operating system on day one.",
+    "tags": ["pc", "windows", "mac", "computer", "setup"],
+    "sourceName": "Microsoft Windows Security",
+    "sourceUrl": "https://support.microsoft.com/windows",
+    "affiliate": null,
+    "todos": [
+      "Run system update utility until no OS updates remain.",
+      "Uninstall pre-installed OEM bloatware and trial antivirus software.",
+      "Enable BitLocker or FileVault full-disk encryption.",
+      "Create a non-administrator daily user account for regular web browsing.",
+      "Set up automatic system recovery restore points and external backup target."
+    ]
+  },
+  {
+    "id": "pc-privacy-hardening",
+    "category": "tech",
+    "title": "...harden your computer privacy and security",
+    "desc": "Minimize data tracking, telemetry, and vulnerability vectors.",
+    "tags": ["privacy", "security", "windows", "mac", "telemetry"],
+    "sourceName": "Electronic Frontier Foundation (EFF)",
+    "sourceUrl": "https://www.eff.org/wp/privacy-tools",
+    "affiliate": null,
+    "todos": [
+      "Install open-source content blocker (uBlock Origin) in browser.",
+      "Disable OS background telemetry, diagnostic tracking, and location services.",
+      "Switch default browser search engine to privacy-focused service (DuckDuckGo/Brave).",
+      "Audit and revoke unnecessary camera and microphone app permissions.",
+      "Configure DNS-over-HTTPS (DoH) inside web browser security settings."
+    ]
+  },
+  {
+    "id": "intl-flight-prep",
+    "category": "travel",
+    "title": "...prepare for an international flight",
+    "desc": "Ensure smooth border clearance, document readiness, and stress-free transit.",
+    "tags": ["travel", "flight", "passport", "international", "packing"],
+    "sourceName": "U.S. Department of State Travel",
+    "sourceUrl": "https://travel.state.gov",
+    "affiliate": null,
+    "todos": [
+      "Verify passport validity extends at least 6 months past planned return date.",
+      "Check destination visa and digital entry form requirements (e.g., ETIAS/ESTA).",
+      "Notify credit card companies and bank of international travel dates.",
+      "Download offline maps and translation language packs to your smartphone.",
+      "Pack physical printed copies of key travel documents and emergency contacts."
+    ]
+  },
+  {
+    "id": "foreign-airport-arrival",
+    "category": "travel",
+    "title": "...land in a foreign country where you don't speak the language",
+    "desc": "Navigate customs, transit, and connectivity safely upon arrival.",
+    "tags": ["travel", "airport", "transit", "language", "international"],
+    "sourceName": "CDC Travelers' Health",
+    "sourceUrl": "https://wwwnc.cdc.gov/travel",
+    "affiliate": null,
+    "todos": [
+      "Connect to official airport Wi-Fi or activate an international eSIM/data plan.",
+      "Withdraw a small amount of local currency from an official airport bank ATM.",
+      "Confirm local transit options or use verified ride-share/official airport taxis.",
+      "Save hotel address written in the local native language on your phone.",
+      "Keep passport, entry customs declaration forms, and valuables in secured daypack."
+    ]
+  },
+  {
+    "id": "hotel-checkin-security",
+    "category": "travel",
+    "title": "...walk into a new hotel room",
+    "desc": "Ensure your room is secure, sanitary, and functional before unpacking.",
+    "tags": ["hotel", "travel", "safety", "hygiene", "security"],
+    "sourceName": "OSHA Travel & Lodging Guidelines",
+    "sourceUrl": "https://www.osha.gov",
+    "affiliate": null,
+    "todos": [
+      "Inspect mattress seams, headboard corners, and sheets for bedbug signs.",
+      "Verify main door deadbolt, secondary latch, and peep-hole function properly.",
+      "Locate emergency fire exit stairwells relative to your floor room location.",
+      "Sanitize high-touch items like TV remote, door handles, and light switches.",
+      "Test air conditioning, hot water, and electronic room safe lock operation."
+    ]
+  },
+  {
+    "id": "roadtrip-car-prep",
+    "category": "travel",
+    "title": "...prep your vehicle for a major road trip",
+    "desc": "Prevent highway breakdowns and ensure passenger safety before long drives.",
+    "tags": ["roadtrip", "car", "travel", "driving", "maintenance"],
+    "sourceName": "National Highway Traffic Safety Administration (NHTSA)",
+    "sourceUrl": "https://www.nhtsa.gov",
+    "affiliate": null,
+    "todos": [
+      "Check tire pressure (including spare) and verify adequate tread depth.",
+      "Inspect engine oil, coolant, brake fluid, and windshield washer levels.",
+      "Test headlights, brake lights, turn signals, and windshield wipers.",
+      "Pack emergency kit with jumper cables, flashlight, first aid, and water.",
+      "Confirm roadside assistance coverage details and save hotline number."
+    ]
+  },
+  {
+    "id": "airport-security-breeze",
+    "category": "travel",
+    "title": "...breeze through airport security checkpoint lines",
+    "desc": "Minimize wait times and avoid unnecessary bag searches or delays.",
+    "tags": ["airport", "security", "flight", "tsa", "travel"],
+    "sourceName": "Transportation Security Administration (TSA)",
+    "sourceUrl": "https://www.tsa.gov",
+    "affiliate": null,
+    "todos": [
+      "Place liquids/gels under 3.4oz (100ml) in a clear 1-quart zip bag in outer pocket.",
+      "Keep boarding pass and physical photo ID accessible until through screening.",
+      "Remove heavy jackets, belts, metal items, and empty pockets into bins.",
+      "Pack large electronics (laptops/tablets) so they can be removed quickly.",
+      "Wear easy-to-remove slip-on shoes if you do not have TSA PreCheck/Global Entry."
+    ]
+  },
+  {
+    "id": "hostel-first-night",
+    "category": "travel",
+    "title": "...stay in a shared hostel room for the first time",
+    "desc": "Keep your personal items safe while being a courteous room occupant.",
+    "tags": ["hostel", "travel", "backpacking", "budget", "safety"],
+    "sourceName": "Hostelling International Safety Guide",
+    "sourceUrl": "https://hihostels.com",
+    "affiliate": null,
+    "todos": [
+      "Secure passport, wallet, and electronics inside locker using your own padlock.",
+      "Pack a small shower bag and flip-flops for shared bathroom facilities.",
+      "Keep headlamp or phone light low when entering dorm rooms late at night.",
+      "Identify accessible power outlets near your bunk for overnight device charging.",
+      "Store luggage neatly under your bed space to keep common walkways clear."
+    ]
+  },
+  {
+    "id": "vacation-rental-checkout",
+    "category": "travel",
+    "title": "...check out of an Airbnb or vacation rental",
+    "desc": "Avoid unexpected cleaning fee disputes and ensure nothing is left behind.",
+    "tags": ["airbnb", "vacation", "rental", "checkout", "travel"],
+    "sourceName": "Short Term Rental Association Guidelines",
+    "sourceUrl": "https://www.vrma.org",
+    "affiliate": null,
+    "todos": [
+      "Conduct a thorough room-by-room sweep under beds and outlets for chargers/items.",
+      "Consolidate trash and food waste according to host house rule instructions.",
+      "Start dishwasher or run used dishes if specified in checkout checklist.",
+      "Set thermostat to target departure temperature and lock all windows and exterior doors.",
+      "Return physical keys to lockbox and message host upon departure time."
+    ]
+  },
+  {
+    "id": "cruise-ship-embarkation",
+    "category": "travel",
+    "title": "...board a cruise ship on embarkation day",
+    "desc": "Navigate boarding procedures, safety drills, and cabin setup smoothly.",
+    "tags": ["cruise", "travel", "vacation", "ship", "embarkation"],
+    "sourceName": "Cruise Lines International Association (CLIA)",
+    "sourceUrl": "https://cruising.org",
+    "affiliate": null,
+    "todos": [
+      "Pack essential meds, documents, and swim gear in day carry-on bag.",
+      "Complete mandatory safety muster drill steps as soon as you board.",
+      "Connect to ship network app to book specialty dining or show reservations.",
+      "Inspect cabin upon keycard access and report any pre-existing damage.",
+      "Switch mobile phone settings to Airplane Mode to avoid maritime roaming rates."
+    ]
+  },
+  {
+    "id": "stroke-signs-fast",
     "category": "health",
     "title": "...suspect someone is having a stroke",
     "desc": "Act FAST to identify critical stroke symptoms and save lives.",
-    "tags": ["emergency", "health", "medical", "fast"],
+    "tags": ["emergency", "health", "medical", "fast", "stroke"],
     "sourceName": "American Stroke Association",
     "sourceUrl": "https://www.stroke.org",
     "affiliate": null,
@@ -30,49 +285,66 @@
       "A - Arm Weakness: Ask the person to raise both arms and see if one drifts downward.",
       "S - Speech Difficulty: Ask the person to repeat a simple phrase to check for slurring.",
       "T - Time to Call 911: Call emergency services immediately if you observe any sign.",
-      "Note the exact time symptoms first appeared to tell first responders."
+      "Note the exact time symptoms first appeared to inform emergency responders."
     ]
   },
   {
-    "id": "hotel-checkin",
-    "category": "travel",
-    "title": "...walk into a new hotel room",
-    "desc": "Ensure your quarters are secure, sanitary, and functional before unpacking.",
-    "tags": ["travel", "hotel", "safety", "hygiene"],
-    "sourceName": "CDC Travel Health",
-    "sourceUrl": "https://wwwnc.cdc.gov/travel",
+    "id": "burn-first-aid",
+    "category": "health",
+    "title": "...treat a household thermal or heat burn",
+    "desc": "Reduce tissue damage and prevent severe infection immediately after a burn.",
+    "tags": ["burn", "firstaid", "health", "emergency", "medical"],
+    "sourceName": "American Red Cross First Aid",
+    "sourceUrl": "https://www.redcross.org",
     "affiliate": null,
     "todos": [
-      "Check mattress corners, seams, and headboard immediately for signs of bedbugs.",
-      "Verify the deadbolt, door lock latch, and peep-hole function properly.",
-      "Locate the nearest emergency fire exit stairs down your hallway.",
-      "Sanitize high-touch surfaces like the TV remote and bathroom faucet handles.",
-      "Test the air conditioning, safe lock, and hot water operation."
+      "Cool the burn immediately under cool (not cold or ice) running water for 10–20 minutes.",
+      "Remove rings or tight items from affected area before swelling begins.",
+      "Cover burn loosely with clean, non-stick sterile gauze or plastic film wrap.",
+      "Do NOT pop blisters, apply butter, ice, or ointment to open skin.",
+      "Seek urgent medical care if burn is larger than 3 inches or on face, hands, or major joints."
     ]
   },
   {
-    "id": "car-accident",
-    "category": "life",
-    "title": "...get into a minor car accident",
-    "desc": "Keep a level head, document evidence, and protect yourself legally on the road.",
-    "tags": ["car", "driving", "insurance", "emergency"],
-    "sourceName": "Insurance Information Institute",
-    "sourceUrl": "https://www.iii.org",
+    "id": "severe-bleeding",
+    "category": "health",
+    "title": "...respond to severe arterial or deep wound bleeding",
+    "desc": "Control life-threatening blood loss before paramedics arrive.",
+    "tags": ["bleeding", "firstaid", "emergency", "trauma", "health"],
+    "sourceName": "Stop The Bleed / American College of Surgeons",
+    "sourceUrl": "https://www.stopthebleed.org",
     "affiliate": null,
     "todos": [
-      "Safely move your vehicle out of traffic and turn on hazard lights.",
-      "Check all passengers and drivers for injuries; call 911 if needed.",
-      "Photograph vehicle damage, license plates, street signs, and overall scene.",
-      "Exchange contact, insurance policy, and driver's license details with the other driver.",
-      "Report the incident to your insurance provider and file an official police report."
+      "Call 911 immediately and ensure scene safety before approaching.",
+      "Apply firm, continuous direct pressure to wound using clean cloth or sterile gauze.",
+      "Pack deep wounds tightly with sterile gauze or clean cloth while maintaining pressure.",
+      "Apply tourniquet 2–3 inches above wound on arm or leg if bleeding does not stop.",
+      "Keep victim calm and covered with blanket to prevent medical shock."
     ]
   },
   {
-    "id": "hysa-setup",
+    "id": "choking-adult",
+    "category": "health",
+    "title": "...help a conscious adult who is choking",
+    "desc": "Perform abdominal thrusts to clear obstructed airway safely.",
+    "tags": ["choking", "heimlich", "emergency", "firstaid", "health"],
+    "sourceName": "Mayo Clinic First Aid",
+    "sourceUrl": "https://www.mayoclinic.org",
+    "affiliate": null,
+    "todos": [
+      "Ask 'Are you choking?' — if they cannot speak, cough, or breathe, act immediately.",
+      "Stand behind person, lean them forward slightly, and give 5 sharp back blows between shoulder blades.",
+      "Wrap arms around waist, place fist just above navel, and deliver 5 quick inward/upward abdominal thrusts.",
+      "Alternate 5 back blows and 5 abdominal thrusts until object is dislodged.",
+      "Call 911 immediately if person loses consciousness and begin CPR."
+    ]
+  },
+  {
+    "id": "hysa-setup-guide",
     "category": "finance",
     "title": "...open a High-Yield Savings Account (HYSA)",
-    "desc": "Maximize your interest earnings while keeping your emergency fund safe.",
-    "tags": ["banking", "money", "savings", "interest"],
+    "desc": "Maximize interest earnings while keeping your emergency fund risk-free.",
+    "tags": ["banking", "money", "savings", "interest", "finance"],
     "sourceName": "FDIC BankFind",
     "sourceUrl": "https://www.fdic.gov",
     "affiliate": {
@@ -80,28 +352,62 @@
       "url": "#"
     },
     "todos": [
-      "Verify the financial institution is FDIC or NCUA insured up to $250,000.",
-      "Compare Annual Percentage Yields (APY), monthly fees, and minimum balance rules.",
-      "Link a primary checking account via secure ACH electronic transfer.",
-      "Set up automatic recurring monthly transfers to build your savings habit.",
-      "Designate official account beneficiaries for financial security."
+      "Verify financial institution is FDIC or NCUA insured up to $250,000 per depositor.",
+      "Compare Annual Percentage Yields (APY), monthly maintenance fees, and minimum balance rules.",
+      "Link primary checking account via secure ACH electronic bank transfer.",
+      "Set up automatic recurring monthly transfers to build emergency savings habit.",
+      "Designate official account payable-on-death beneficiaries for financial security."
     ]
   },
   {
-    "id": "sourdough-start",
-    "category": "hobbies",
-    "title": "...start your very first sourdough starter",
-    "desc": "Begin cultivation for home-baked artisanal sourdough bread.",
-    "tags": ["baking", "cooking", "food", "diy"],
-    "sourceName": "King Arthur Baking",
-    "sourceUrl": "https://www.kingarthurbaking.com",
+    "id": "credit-report-freeze",
+    "category": "finance",
+    "title": "...freeze your credit reports against identity theft",
+    "desc": "Block unauthorized loans and new credit accounts opened in your name.",
+    "tags": ["credit", "identity", "security", "finance", "money"],
+    "sourceName": "Federal Trade Commission (FTC)",
+    "sourceUrl": "https://consumer.ftc.gov/articles/what-know-about-credit-freezes",
     "affiliate": null,
     "todos": [
-      "Combine equal parts whole wheat flour and unchlorinated water in a clean glass jar.",
-      "Cover loosely with a cloth or lid to allow wild yeast airflow while keeping dust out.",
-      "Store in a warm spot (70°F–80°F) away from direct sunlight.",
-      "Discard half the mixture daily and feed with fresh flour and water at 24-hour intervals.",
-      "Watch for active bubbling and doubling in size over 5 to 7 days before baking."
+      "Create official security accounts on Experian, Equifax, and TransUnion portals.",
+      "Request a free Security Freeze on each of the 3 major credit bureau websites.",
+      "Store generated PINs or security passwords safely in a password manager.",
+      "Request a security freeze with Innovis and ChexSystems (checking account protection).",
+      "Unfreeze credit temporarily whenever applying for legitimate new loans or cards."
+    ]
+  },
+  {
+    "id": "first-job-401k",
+    "category": "finance",
+    "title": "...set up your 401(k) at a new job",
+    "desc": "Capture employer matching money and automate retirement compound growth.",
+    "tags": ["investing", "401k", "retirement", "money", "jobs"],
+    "sourceName": "FINRA Investor Education",
+    "sourceUrl": "https://www.finra.org",
+    "affiliate": null,
+    "todos": [
+      "Contribute at least enough percentage to claim 100% of employer matching contribution.",
+      "Select low-cost Target Date Index Fund or broad S&P 500 index fund options.",
+      "Choose Traditional (tax-deferred) or Roth (tax-free growth) contribution type.",
+      "Enable annual auto-escalation to increase savings rate by 1% each year.",
+      "Designate primary and secondary account beneficiaries."
+    ]
+  },
+  {
+    "id": "debt-snowball-plan",
+    "category": "finance",
+    "title": "...build a debt elimination payoff plan",
+    "desc": "Gain momentum paying off credit cards and personal loans systematically.",
+    "tags": ["debt", "budget", "money", "creditcard", "finance"],
+    "sourceName": "Consumer Financial Protection Bureau (CFPB)",
+    "sourceUrl": "https://www.consumerfinance.gov",
+    "affiliate": null,
+    "todos": [
+      "List all outstanding debts with exact balances, minimum payments, and interest rates.",
+      "Organize list from smallest balance to largest balance (Snowball Method).",
+      "Pay minimum required payment on all accounts except smallest balance debt.",
+      "Throw all extra disposable income toward eliminating smallest debt balance.",
+      "Roll entire payment amount from paid-off debt into next smallest balance."
     ]
   }
 ]
