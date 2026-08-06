@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block internal offline tools from crawlers
+Disallow: /creator.html
+
+# Sitemap location
+Sitemap: https://5todos.com/sitemap.xml
