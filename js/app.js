@@ -2,12 +2,15 @@
 let allTodos = [];
 let filteredTodos = [];
 let activeCategory = 'all';
+let showAll = false;
 
 // DOM ELEMENTS
+const dailySection = document.getElementById('daily-section');
 const dailyContainer = document.getElementById('daily-card-container');
-const categoryGrid = document.getElementById('category-grid');
+const listingsContainer = document.getElementById('listings-grid');
 const searchInput = document.getElementById('search-input');
 const surpriseBtn = document.getElementById('surprise-btn');
+const categoryPills = document.getElementById('category-pills');
 
 // 1. FETCH JSON DATA
 async function loadTodos() {
@@ -23,12 +26,12 @@ async function loadTodos() {
   } catch (error) {
     console.error('Error loading 5todos:', error);
     if (dailyContainer) {
-      dailyContainer.innerHTML = `<div class="p-6 text-center text-red-400">Failed to load checklists. Please refresh.</div>`;
+      dailyContainer.innerHTML = `<div class="p-4 text-center text-red-400 text-xs">Failed to load checklists.</div>`;
     }
   }
 }
 
-// 2. DAILY SEEDED ALGORITHM (Changes midnight local time)
+// 2. DAILY SEEDED ALGORITHM
 function renderDailyTodo(overrideTodo = null) {
   if (!allTodos.length) return;
 
@@ -45,43 +48,31 @@ function renderDailyTodo(overrideTodo = null) {
   const storageKey = `progress-${selected.id}`;
   let savedState = JSON.parse(localStorage.getItem(storageKey)) || [false, false, false, false, false];
 
-  const dateOptions = { month: 'long', day: 'numeric', year: 'numeric' };
-  const dateStr = new Date().toLocaleDateString('en-US', dateOptions);
-
   dailyContainer.innerHTML = `
-    <div class="bg-white dark:bg-gray-800 rounded-3xl border border-gray-200 dark:border-gray-700 p-6 md:p-8 shadow-sm relative overflow-hidden transition-all">
-      <div class="absolute top-0 right-0 w-48 h-48 bg-indigo-500/10 dark:bg-indigo-400/5 rounded-full blur-3xl pointer-events-none"></div>
-      
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> ${overrideTodo ? 'Featured Checklist' : 'Daily 5todo'}
+    <div class="bg-white dark:bg-gray-800/90 rounded-2xl border border-gray-200 dark:border-gray-700/80 p-5 shadow-xs relative overflow-hidden transition-all">
+      <div class="flex items-center justify-between gap-3 mb-3">
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-indigo-50 text-indigo-600 dark:bg-indigo-950/60 dark:text-indigo-300">
+          <i data-lucide="sparkles" class="w-3 h-3"></i> ${overrideTodo ? 'Active Checklist' : 'Daily 5todo'}
         </span>
-        <span class="text-xs font-medium text-gray-400">${dateStr}</span>
-      </div>
-
-      <div class="space-y-2 mb-6">
-        <h2 class="text-2xl font-extrabold tracking-tight">${selected.title}</h2>
-        <p class="text-gray-500 dark:text-gray-400 text-sm">${selected.desc}</p>
-        
         ${selected.sourceName ? `
-          <div class="pt-1">
-            <a href="${selected.sourceUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-indigo-500 hover:underline">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Verified by ${selected.sourceName}
-            </a>
-          </div>
+          <a href="${selected.sourceUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-indigo-500">
+            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-500"></i> ${selected.sourceName}
+          </a>
         ` : ''}
       </div>
 
-      <ul id="active-checklist" class="space-y-3 mb-6"></ul>
+      <div class="space-y-1 mb-4">
+        <h2 class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">${selected.title}</h2>
+        <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">${selected.desc}</p>
+      </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-gray-100 dark:border-gray-700/60">
-        <div class="text-sm font-black text-indigo-600 dark:text-indigo-400" id="progress-counter">0 of 5 Done</div>
-        
-        <div class="flex gap-2 w-full sm:w-auto">
-          <button id="export-btn" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 text-xs font-semibold transition-all">
-            <i data-lucide="copy" class="w-3.5 h-3.5"></i> Export List
-          </button>
-        </div>
+      <ul id="active-checklist" class="space-y-2 mb-4"></ul>
+
+      <div class="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700/50">
+        <div class="text-xs font-bold text-indigo-600 dark:text-indigo-400" id="progress-counter">0 of 5 Done</div>
+        <button id="export-btn" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-xs font-medium transition-all">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i> Export
+        </button>
       </div>
     </div>
   `;
@@ -103,19 +94,19 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
   todoObj.todos.forEach((stepText, idx) => {
     const isChecked = savedState[idx];
     const li = document.createElement('li');
-    li.className = `flex items-start gap-3 p-3 rounded-xl border transition-all cursor-pointer select-none ${
+    li.className = `flex items-start gap-3 p-2 rounded-lg border transition-all cursor-pointer select-none ${
       isChecked 
-        ? 'bg-indigo-50/40 border-indigo-200 text-gray-400 line-through dark:bg-indigo-900/10 dark:border-indigo-900/40 dark:text-gray-500' 
-        : 'bg-gray-50 border-gray-100 hover:border-gray-200 dark:bg-gray-800/50 dark:border-gray-700/40 dark:hover:border-gray-700'
+        ? 'bg-indigo-50/30 border-indigo-100 text-gray-400 line-through dark:bg-indigo-950/20 dark:border-indigo-900/30 dark:text-gray-500' 
+        : 'bg-gray-50/50 border-gray-100 hover:border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/30 dark:hover:border-gray-600'
     }`;
 
     li.innerHTML = `
-      <button class="mt-0.5 w-5 h-5 rounded-md border flex items-center justify-center transition-colors flex-shrink-0 ${
+      <button class="mt-0.5 w-4 h-4 rounded border flex items-center justify-center transition-colors flex-shrink-0 ${
         isChecked ? 'bg-indigo-600 border-indigo-600 text-white' : 'border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800'
       }">
-        ${isChecked ? '<i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>' : ''}
+        ${isChecked ? '<i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>' : ''}
       </button>
-      <span class="text-sm font-medium leading-relaxed">${idx + 1}. ${stepText}</span>
+      <span class="text-xs md:text-sm font-medium leading-normal">${idx + 1}. ${stepText}</span>
     `;
 
     li.addEventListener('click', () => {
@@ -129,7 +120,6 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
 
   updateCounter();
 
-  // EXPORT HANDLER
   document.getElementById('export-btn').onclick = () => {
     let text = `📋 5todos.com: ${todoObj.title.replace('...', '')}\n${todoObj.desc}\n\n`;
     todoObj.todos.forEach((t, i) => {
@@ -139,30 +129,40 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
       const btn = document.getElementById('export-btn');
       btn.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Copied!`;
       setTimeout(() => {
-        btn.innerHTML = `<i data-lucide="copy" class="w-3.5 h-3.5"></i> Export List`;
+        btn.innerHTML = `<i data-lucide="copy" class="w-3.5 h-3.5"></i> Export`;
         lucide.createIcons();
       }, 2000);
     });
   };
 }
 
-// 3. SURPRISE ME HANDLER
-if (surpriseBtn) {
-  surpriseBtn.addEventListener('click', () => {
-    if (!allTodos.length) return;
-    const randomIndex = Math.floor(Math.random() * allTodos.length);
-    const randomTodo = allTodos[randomIndex];
-    window.location.hash = randomTodo.id;
-    renderDailyTodo(randomTodo);
-    window.scrollTo({ top: dailyContainer.offsetTop - 80, behavior: 'smooth' });
-  });
-}
-
-// 4. SEARCH & CATEGORY FILTERING
+// 3. SEARCH & FILTERING LOGIC
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
+    if (query.length > 0) {
+      dailySection.classList.add('hidden');
+      showAll = true; // Show all search matches
+    } else {
+      dailySection.classList.remove('hidden');
+      showAll = false;
+    }
     filterTodos(query, activeCategory);
+  });
+}
+
+if (categoryPills) {
+  categoryPills.addEventListener('click', (e) => {
+    const btn = e.target.closest('button');
+    if (!btn) return;
+    
+    activeCategory = btn.dataset.category;
+    document.querySelectorAll('.cat-btn').forEach(b => {
+      b.className = 'cat-btn px-3 py-1 rounded-full text-xs font-medium transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white';
+    });
+    btn.className = 'cat-btn px-3 py-1 rounded-full text-xs font-semibold transition-all bg-indigo-600 text-white';
+    
+    filterTodos(searchInput.value.toLowerCase().trim(), activeCategory);
   });
 }
 
@@ -178,27 +178,45 @@ function filterTodos(query = '', category = 'all') {
   renderListings();
 }
 
+// Compact Row Renderer
 function renderListings() {
-  const container = document.getElementById('listings-grid');
-  if (!container) return;
+  if (!listingsContainer) return;
 
   if (!filteredTodos.length) {
-    container.innerHTML = `<div class="col-span-full text-center py-12 text-gray-400">No matching 5todos found. Try another search!</div>`;
+    listingsContainer.innerHTML = `<div class="text-center py-6 text-gray-400 text-xs">No matching 5todos found.</div>`;
     return;
   }
 
-  container.innerHTML = filteredTodos.map(item => `
-    <div onclick="openTodo('${item.id}')" class="bg-white dark:bg-gray-800 p-5 rounded-2xl border border-gray-100 dark:border-gray-700/60 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all cursor-pointer shadow-sm group">
-      <div class="flex items-center justify-between gap-2 mb-2">
-        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-300">${item.category}</span>
-        ${item.sourceName ? '<i data-lucide="shield-check" class="w-3.5 h-3.5 text-indigo-400"></i>' : ''}
+  const displayList = showAll ? filteredTodos : filteredTodos.slice(0, 6);
+
+  let html = displayList.map(item => `
+    <div onclick="openTodo('${item.id}')" class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/40 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all cursor-pointer group">
+      <div class="flex items-center gap-3 min-w-0 pr-2">
+        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex-shrink-0">${item.category}</span>
+        <h3 class="font-medium text-xs md:text-sm text-gray-800 dark:text-gray-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 truncate">${item.title}</h3>
       </div>
-      <h3 class="font-bold text-base group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors mb-1">${item.title}</h3>
-      <p class="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">${item.desc}</p>
+      <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 group-hover:text-indigo-500 flex-shrink-0 transition-transform group-hover:translate-x-0.5"></i>
     </div>
   `).join('');
 
+  if (!showAll && filteredTodos.length > 6) {
+    html += `
+      <button id="show-more-btn" class="w-full py-2.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline text-center">
+        Show all ${filteredTodos.length} checklists →
+      </button>
+    `;
+  }
+
+  listingsContainer.innerHTML = html;
   lucide.createIcons();
+
+  const showMoreBtn = document.getElementById('show-more-btn');
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', () => {
+      showAll = true;
+      renderListings();
+    });
+  }
 }
 
 window.openTodo = function(id) {
@@ -206,7 +224,9 @@ window.openTodo = function(id) {
   if (found) {
     window.location.hash = id;
     renderDailyTodo(found);
-    window.scrollTo({ top: dailyContainer.offsetTop - 80, behavior: 'smooth' });
+    searchInput.value = '';
+    dailySection.classList.remove('hidden');
+    window.scrollTo({ top: dailySection.offsetTop - 80, behavior: 'smooth' });
   }
 };
 
@@ -218,7 +238,19 @@ function handleHashRouting() {
   }
 }
 
-// 5. INITIALIZE THEME & DATA
+if (surpriseBtn) {
+  surpriseBtn.addEventListener('click', () => {
+    if (!allTodos.length) return;
+    const randomIndex = Math.floor(Math.random() * allTodos.length);
+    const randomTodo = allTodos[randomIndex];
+    window.location.hash = randomTodo.id;
+    renderDailyTodo(randomTodo);
+    searchInput.value = '';
+    dailySection.classList.remove('hidden');
+    window.scrollTo({ top: dailySection.offsetTop - 80, behavior: 'smooth' });
+  });
+}
+
 if (localStorage.getItem('theme') === 'light') {
   document.documentElement.classList.remove('dark');
 } else {
