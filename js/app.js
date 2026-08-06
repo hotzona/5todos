@@ -20,9 +20,12 @@ async function loadTodos() {
     allTodos = await response.json();
     filteredTodos = [...allTodos];
 
-    renderDailyTodo();
+    // Priority to hash routing on load
+    const hash = window.location.hash.replace('#', '');
+    const foundHash = hash ? allTodos.find(t => t.id === hash) : null;
+
+    renderDailyTodo(foundHash);
     renderListings();
-    handleHashRouting();
   } catch (error) {
     console.error('Error loading 5todos:', error);
     if (dailyContainer) {
@@ -31,7 +34,7 @@ async function loadTodos() {
   }
 }
 
-// 2. DAILY SEEDED ALGORITHM
+// 2. DAILY & ACTIVE CHECKLIST RENDERER
 function renderDailyTodo(overrideTodo = null) {
   if (!allTodos.length) return;
 
@@ -55,7 +58,7 @@ function renderDailyTodo(overrideTodo = null) {
           <i data-lucide="sparkles" class="w-3 h-3"></i> ${overrideTodo ? 'Active Checklist' : 'Daily 5todo'}
         </span>
         ${selected.sourceName ? `
-          <a href="${selected.sourceUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-indigo-500">
+          <a href="${selected.sourceUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-indigo-500 transition-colors">
             <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-500"></i> ${selected.sourceName}
           </a>
         ` : ''}
@@ -71,7 +74,7 @@ function renderDailyTodo(overrideTodo = null) {
       <div class="flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-700/50">
         <div class="text-xs font-bold text-indigo-600 dark:text-indigo-400" id="progress-counter">0 of 5 Done</div>
         <button id="export-btn" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-xs font-medium transition-all">
-          <i data-lucide="copy" class="w-3.5 h-3.5"></i> Export
+          <i data-lucide="share-2" class="w-3.5 h-3.5"></i> Share / Export
         </button>
       </div>
     </div>
@@ -113,6 +116,7 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
       savedState[idx] = !savedState[idx];
       localStorage.setItem(storageKey, JSON.stringify(savedState));
       renderChecklistItems(todoObj, savedState, storageKey);
+      renderListings(); // Refresh library list badges
     });
 
     listEl.appendChild(li);
@@ -120,31 +124,46 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
 
   updateCounter();
 
-  document.getElementById('export-btn').onclick = () => {
-    let text = `📋 5todos.com: ${todoObj.title.replace('...', '')}\n${todoObj.desc}\n\n`;
+  // NATIVE SHARE / EXPORT
+  document.getElementById('export-btn').onclick = async () => {
+    const shareUrl = `${window.location.origin}${window.location.pathname}#${todoObj.id}`;
+    let shareText = `📋 5todos.com: ${todoObj.title.replace('...', '')}\n${todoObj.desc}\n\n`;
     todoObj.todos.forEach((t, i) => {
-      text += `${savedState[i] ? '[x]' : '[ ]'} ${i + 1}. ${t}\n`;
+      shareText += `${savedState[i] ? '[x]' : '[ ]'} ${i + 1}. ${t}\n`;
     });
-    navigator.clipboard.writeText(text).then(() => {
-      const btn = document.getElementById('export-btn');
-      btn.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Copied!`;
-      setTimeout(() => {
-        btn.innerHTML = `<i data-lucide="copy" class="w-3.5 h-3.5"></i> Export`;
-        lucide.createIcons();
-      }, 2000);
-    });
+    shareText += `\nLink: ${shareUrl}`;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `5todos: ${todoObj.title}`,
+          text: shareText,
+          url: shareUrl
+        });
+      } catch (err) {
+        // Fallback if user cancels share dialog
+      }
+    } else {
+      navigator.clipboard.writeText(shareText).then(() => {
+        const btn = document.getElementById('export-btn');
+        btn.innerHTML = `<i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Copied!`;
+        setTimeout(() => {
+          btn.innerHTML = `<i data-lucide="share-2" class="w-3.5 h-3.5"></i> Share / Export`;
+          lucide.createIcons();
+        }, 2000);
+      });
+    }
   };
 }
 
-// 3. SEARCH & FILTERING LOGIC (WITH INSTANT TAKEOVER)
+// 3. SEARCH & FILTERING LOGIC
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
     
-    // Hide featured daily section while searching so results float up directly beneath the search bar
     if (query.length > 0) {
       dailySection.classList.add('hidden');
-      showAll = true; // Automatically show all search results
+      showAll = true;
     } else {
       dailySection.classList.remove('hidden');
       showAll = false;
@@ -181,7 +200,7 @@ function filterTodos(query = '', category = 'all') {
   renderListings();
 }
 
-// COMPACT ROW RENDERER
+// 4. COMPACT ROW RENDERER WITH PROGRESS BADGES
 function renderListings() {
   if (!listingsContainer) return;
 
@@ -192,15 +211,30 @@ function renderListings() {
 
   const displayList = showAll ? filteredTodos : filteredTodos.slice(0, 6);
 
-  let html = displayList.map(item => `
-    <div onclick="openTodo('${item.id}')" class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/40 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all cursor-pointer group">
-      <div class="flex items-center gap-3 min-w-0 pr-2">
-        <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex-shrink-0">${item.category}</span>
-        <h3 class="font-medium text-xs md:text-sm text-gray-800 dark:text-gray-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 truncate">${item.title}</h3>
+  let html = displayList.map(item => {
+    const savedState = JSON.parse(localStorage.getItem(`progress-${item.id}`)) || [];
+    const doneCount = savedState.filter(Boolean).length;
+    
+    let progressBadge = '';
+    if (doneCount === 5) {
+      progressBadge = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex-shrink-0">Done ✓</span>`;
+    } else if (doneCount > 0) {
+      progressBadge = `<span class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex-shrink-0">${doneCount}/5</span>`;
+    }
+
+    return `
+      <div onclick="openTodo('${item.id}')" class="flex items-center justify-between p-3 rounded-xl bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/40 hover:border-indigo-500 dark:hover:border-indigo-400 transition-all cursor-pointer group">
+        <div class="flex items-center gap-2.5 min-w-0 pr-2">
+          <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 flex-shrink-0">${item.category}</span>
+          <h3 class="font-medium text-xs md:text-sm text-gray-800 dark:text-gray-200 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 truncate">${item.title}</h3>
+        </div>
+        <div class="flex items-center gap-2 flex-shrink-0">
+          ${progressBadge}
+          <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 group-hover:text-indigo-500 transition-transform group-hover:translate-x-0.5"></i>
+        </div>
       </div>
-      <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 group-hover:text-indigo-500 flex-shrink-0 transition-transform group-hover:translate-x-0.5"></i>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 
   if (!showAll && filteredTodos.length > 6) {
     html += `
@@ -233,13 +267,13 @@ window.openTodo = function(id) {
   }
 };
 
-function handleHashRouting() {
+window.addEventListener('hashchange', () => {
   const hash = window.location.hash.replace('#', '');
   if (hash) {
     const found = allTodos.find(t => t.id === hash);
     if (found) renderDailyTodo(found);
   }
-}
+});
 
 // SURPRISE BUTTON
 if (surpriseBtn) {
