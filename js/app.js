@@ -1,9 +1,11 @@
+// Global State
 let indexTodos = [];
 let filteredIndex = [];
 let currentCategory = 'all';
 let currentSearchQuery = '';
+let activeTodoData = null; // Holds current open modal checklist data
 
-// Safely get DOM elements
+// Utility DOM Helper
 const getEl = (id) => document.getElementById(id);
 
 // Initialize Application
@@ -31,7 +33,7 @@ async function fetchIndex() {
     console.error('Error loading 5todos index:', err);
     if (todosContainer) {
       todosContainer.innerHTML = `
-        <div class="text-center py-12">
+        <div class="text-center py-12 col-span-full">
           <p class="text-red-500 font-medium">Failed to load checklists.</p>
           <p class="text-xs text-gray-400 mt-1">${err.message}</p>
         </div>`;
@@ -64,13 +66,13 @@ function renderDailyCard() {
   `;
 }
 
-// 3. Filter Logic
+// 3. Filter Logic (Hides Daily Card when specific category or search is active)
 function filterTodos(query = '', category = 'all') {
   const dailyCardContainer = getEl('daily-card');
   currentSearchQuery = (query || '').toLowerCase().trim();
   currentCategory = category || 'all';
 
-  // Toggle Daily Card Visibility
+  // Toggle Daily Card Visibility via Tailwind class
   if (dailyCardContainer) {
     if (currentCategory !== 'all' || currentSearchQuery !== '') {
       dailyCardContainer.classList.add('hidden');
@@ -79,7 +81,7 @@ function filterTodos(query = '', category = 'all') {
     }
   }
 
-  // Filter List
+  // Filter items
   filteredIndex = indexTodos.filter(item => {
     if (!item) return false;
     
@@ -120,7 +122,7 @@ function renderListings() {
   `).join('');
 }
 
-// 5. Open Full Checklist Modal
+// 5. Open Modal with Interactive Checkboxes & Export Features
 async function openTodoModal(id) {
   const modal = getEl('todo-modal');
   const modalContent = getEl('modal-content');
@@ -135,25 +137,59 @@ async function openTodoModal(id) {
     const res = await fetch(`data/todos/${id}.json`);
     if (!res.ok) throw new Error('Checklist details not found');
     const data = await res.json();
+    activeTodoData = data;
+
+    // Retrieve saved checked states from LocalStorage
+    const savedStates = JSON.parse(localStorage.getItem(`5todos_checked_${id}`) || '{}');
 
     const todosList = Array.isArray(data.todos) ? data.todos : [];
 
     modalContent.innerHTML = `
-      <div class="mb-4">
+      <!-- Checklist Header -->
+      <div class="mb-4 pr-6">
         <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">${data.category || 'General'}</span>
         <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-2">${data.title || 'Checklist'}</h2>
-        <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">${data.desc || ''}</p>
+        ${data.desc ? `<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">${data.desc}</p>` : ''}
       </div>
 
-      <div class="space-y-3 my-6">
-        ${todosList.map((step, idx) => `
-          <div class="flex items-start gap-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/40">
-            <span class="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-indigo-600 text-white font-bold text-xs">${idx + 1}</span>
-            <p class="text-sm text-gray-800 dark:text-gray-200 font-medium pt-0.5">${step}</p>
-          </div>
-        `).join('')}
+      <!-- Action / Export Toolbar -->
+      <div class="flex items-center gap-2 mb-4 pb-3 border-b border-gray-100 dark:border-gray-700/60 text-xs">
+        <button onclick="copyChecklistToClipboard()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 font-medium transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span id="copy-btn-text">Copy List</span>
+        </button>
+        <button onclick="printChecklist()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 font-medium transition-colors">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          Print / PDF
+        </button>
+        <button onclick="resetChecklistProgress('${id}')" class="ml-auto text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-xs font-medium">
+          Reset Progress
+        </button>
       </div>
 
+      <!-- Interactive Steps -->
+      <div class="space-y-3 my-4">
+        ${todosList.map((step, idx) => {
+          const isChecked = !!savedStates[idx];
+          return `
+            <label class="flex items-start gap-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/40 cursor-pointer select-none hover:bg-indigo-50/50 dark:hover:bg-indigo-950/20 transition-colors">
+              <input 
+                type="checkbox" 
+                class="step-checkbox mt-1 w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500 cursor-pointer" 
+                data-id="${id}" 
+                data-idx="${idx}" 
+                ${isChecked ? 'checked' : ''} 
+                onchange="toggleStepCheck(this)"
+              />
+              <span class="text-sm font-medium ${isChecked ? 'line-through text-gray-400 dark:text-gray-500' : 'text-gray-800 dark:text-gray-200'}">
+                ${step}
+              </span>
+            </label>
+          `;
+        }).join('')}
+      </div>
+
+      <!-- Source Verification Footer -->
       ${data.sourceName && data.sourceUrl ? `
         <div class="pt-4 border-t border-gray-100 dark:border-gray-700 text-xs text-gray-400 flex items-center justify-between">
           <span>Source verification:</span>
@@ -167,21 +203,86 @@ async function openTodoModal(id) {
   }
 }
 
-// 6. Setup Event Listeners
+// 6. Interactive Checkbox Storage Logic
+function toggleStepCheck(checkbox) {
+  const id = checkbox.getAttribute('data-id');
+  const idx = checkbox.getAttribute('data-idx');
+  const isChecked = checkbox.checked;
+
+  const storageKey = `5todos_checked_${id}`;
+  const savedStates = JSON.parse(localStorage.getItem(storageKey) || '{}');
+
+  if (isChecked) {
+    savedStates[idx] = true;
+  } else {
+    delete savedStates[idx];
+  }
+
+  localStorage.setItem(storageKey, JSON.stringify(savedStates));
+
+  // Toggle strikethrough class on text element
+  const textSpan = checkbox.nextElementSibling;
+  if (textSpan) {
+    if (isChecked) {
+      textSpan.classList.add('line-through', 'text-gray-400', 'dark:text-gray-500');
+      textSpan.classList.remove('text-gray-800', 'dark:text-gray-200');
+    } else {
+      textSpan.classList.remove('line-through', 'text-gray-400', 'dark:text-gray-500');
+      textSpan.classList.add('text-gray-800', 'dark:text-gray-200');
+    }
+  }
+}
+
+function resetChecklistProgress(id) {
+  localStorage.removeItem(`5todos_checked_${id}`);
+  document.querySelectorAll('.step-checkbox').forEach(cb => {
+    cb.checked = false;
+    const textSpan = cb.nextElementSibling;
+    if (textSpan) {
+      textSpan.classList.remove('line-through', 'text-gray-400', 'dark:text-gray-500');
+      textSpan.classList.add('text-gray-800', 'dark:text-gray-200');
+    }
+  });
+}
+
+// 7. Export / Copy / Print Helper Functions
+function copyChecklistToClipboard() {
+  if (!activeTodoData) return;
+
+  const title = activeTodoData.title || '5todos Checklist';
+  const steps = Array.isArray(activeTodoData.todos) ? activeTodoData.todos : [];
+  const textFormatted = `${title}\n\n` + steps.map((s, i) => `[ ] Step ${i + 1}: ${s}`).join('\n') + `\n\nVia 5todos`;
+
+  navigator.clipboard.writeText(textFormatted).then(() => {
+    const btnText = getEl('copy-btn-text');
+    if (btnText) {
+      btnText.textContent = 'Copied!';
+      setTimeout(() => { btnText.textContent = 'Copy List'; }, 2000);
+    }
+  }).catch(err => {
+    console.error('Failed to copy checklist:', err);
+  });
+}
+
+function printChecklist() {
+  window.print();
+}
+
+// 8. Event Listener Setup
 function setupEventListeners() {
   const searchInput = getEl('search-input');
   const categoryPills = getEl('category-pills');
   const closeModalBtn = getEl('close-modal');
   const modal = getEl('todo-modal');
 
-  // Search input
+  // Search input with auto filter
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       filterTodos(e.target.value, currentCategory);
     });
   }
 
-  // Category Pills
+  // Category Pills delegation
   if (categoryPills) {
     categoryPills.addEventListener('click', (e) => {
       const btn = e.target.closest('.cat-btn');
@@ -200,7 +301,7 @@ function setupEventListeners() {
     });
   }
 
-  // Modal events
+  // Modal dismissal listeners
   if (closeModalBtn) {
     closeModalBtn.addEventListener('click', closeModal);
   }
