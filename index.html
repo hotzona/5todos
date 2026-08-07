@@ -2,7 +2,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>5todos - Clear, verified 5-step checklists</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -24,77 +24,77 @@
   </script>
   <style>
     .scrollbar-none::-webkit-scrollbar { display: none; }
-    .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+    .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col font-sans antialiased">
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col font-sans antialiased overflow-x-hidden w-full">
 
-  <!-- Clean Original Header -->
-  <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700/80 sticky top-0 z-30">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-      <a href="/" class="text-2xl font-black tracking-tight text-gray-900 dark:text-white">
-        5<span class="text-indigo-600 dark:text-indigo-400">todos</span>
+  <!-- Header -->
+  <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700/80 sticky top-0 z-30 w-full">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
+      <a href="/" class="text-xl sm:text-2xl font-black tracking-tight text-gray-900 dark:text-white flex items-center gap-0.5">
+        <span>5</span><span class="text-indigo-600 dark:text-indigo-400">todos</span>
       </a>
-      <a href="/creator.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
+      <a href="/creator.html" class="text-xs font-semibold px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors active:scale-95">
         + Add Checklist
       </a>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex-1 w-full space-y-6">
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8 flex-1 w-full space-y-6">
     
     <!-- Title Tagline -->
-    <div class="text-center max-w-xl mx-auto">
+    <div class="text-center max-w-xl mx-auto px-2">
       <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
         The first 5 things to do when...
       </h1>
-      <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">
+      <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1.5">
         Clear, verified checklists for life, tech, travel, health, and emergencies.
       </p>
     </div>
 
     <!-- Search & Category Filters -->
-    <div class="space-y-4 max-w-3xl mx-auto">
+    <div class="space-y-3.5 max-w-3xl mx-auto w-full">
       <!-- Search Input -->
-      <div class="relative">
+      <div class="relative w-full">
         <input 
           type="text" 
           id="search-input" 
-          placeholder="Search checklists (e.g. car accident, router, passport)..." 
-          class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 shadow-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all text-sm"
+          placeholder="Search checklists (e.g. car accident, passport)..." 
+          class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 shadow-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all text-sm appearance-none"
         />
-        <svg class="w-5 h-5 absolute left-3.5 top-3.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-5 h-5 absolute left-3.5 top-3.5 text-gray-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
         </svg>
       </div>
 
       <!-- Category Filter Pills -->
-      <div id="category-pills" class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-        <button data-category="all" class="cat-btn px-4 py-1.5 rounded-full font-semibold text-xs sm:text-sm transition-all bg-indigo-600 text-white shadow-xs">All</button>
-        <button data-category="tech" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Tech</button>
-        <button data-category="travel" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Travel</button>
-        <button data-category="health" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Health</button>
-        <button data-category="finance" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Finance</button>
-        <button data-category="emergencies" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Emergencies</button>
+      <div id="category-pills" class="flex items-center gap-2 overflow-x-auto pb-2 pt-1 scrollbar-none w-full px-0.5">
+        <button data-category="all" class="cat-btn flex-shrink-0 px-4 py-2 rounded-full font-semibold text-xs sm:text-sm transition-all bg-indigo-600 text-white shadow-xs">All</button>
+        <button data-category="tech" class="cat-btn flex-shrink-0 px-4 py-2 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Tech</button>
+        <button data-category="travel" class="cat-btn flex-shrink-0 px-4 py-2 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Travel</button>
+        <button data-category="health" class="cat-btn flex-shrink-0 px-4 py-2 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Health</button>
+        <button data-category="finance" class="cat-btn flex-shrink-0 px-4 py-2 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Finance</button>
+        <button data-category="emergencies" class="cat-btn flex-shrink-0 px-4 py-2 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Emergencies</button>
       </div>
     </div>
 
     <!-- Featured Daily Card Container -->
-    <div id="daily-card" class="max-w-3xl mx-auto"></div>
+    <div id="daily-card" class="max-w-3xl mx-auto w-full"></div>
 
     <!-- Checklist Cards Grid Container -->
-    <div id="todos-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div id="todos-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 w-full">
       <!-- Dynamically populated by js/app.js -->
     </div>
 
   </main>
 
   <!-- Modal for Checklist Details -->
-  <div id="todo-modal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
-    <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-gray-100 dark:border-gray-700 relative max-h-[90vh] overflow-y-auto">
-      <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-1 rounded-lg transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <div id="todo-modal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden items-center justify-center p-3 sm:p-4 w-full h-full">
+    <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-lg w-full p-5 sm:p-6 shadow-2xl border border-gray-100 dark:border-gray-700 relative max-h-[85vh] sm:max-h-[90vh] overflow-y-auto">
+      <button id="close-modal" class="absolute top-3.5 right-3.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-2 rounded-lg transition-colors active:bg-gray-100 dark:active:bg-gray-700">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
         </svg>
       </button>
@@ -103,7 +103,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 py-6 mt-12 text-center text-xs text-gray-400">
+  <footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 py-6 mt-12 text-center text-xs text-gray-400 w-full">
     <p>&copy; 5todos. Clear protocols when you need them most.</p>
   </footer>
 
