@@ -1,0 +1,22 @@
+{
+  "id": "multi-country-backpacking",
+  "title": "What to do when planning a multi-country backpacking trip",
+  "desc": "Organize visas, international logistics, and budget safety across borders.",
+  "category": "travel",
+  "sourceName": "U.S. Department of State Smart Traveler",
+  "sourceUrl": "https://step.state.gov",
+  "tags": [
+    "backpacking",
+    "travel",
+    "international",
+    "budget",
+    "packing"
+  ],
+  "todos": [
+    "Register your trip itinerary with your country's embassy travel registry (e.g., STEP program).",
+    "Verify entry visa requirements and passport blank-page count for every country on your route.",
+    "Purchase comprehensive international travel and emergency medical evacuation insurance.",
+    "Carry two no-foreign-transaction-fee debit/credit cards stored in separate bags.",
+    "Pack a multi-country universal plug adapter and portable power bank."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "airport-car-rental",
+  "title": "What to do when renting a car at an airport",
+  "desc": "Avoid extra fees, bogus damage claims, and toll surprise charges.",
+  "category": "travel",
+  "sourceName": "FTC Rental Car Advice",
+  "sourceUrl": "https://consumer.ftc.gov",
+  "tags": [
+    "car rental",
+    "travel",
+    "driving",
+    "airport",
+    "vacation"
+  ],
+  "todos": [
+    "Inspect the entire exterior and interior, recording a continuous walk-around video of any dents or scratches.",
+    "Ensure the rental agency agent notes pre-existing damage on the physical or digital contract before leaving.",
+    "Verify fuel tank fill level and understand the return refueling policy to avoid steep gas surcharges.",
+    "Check auto insurance coverage with your personal policy or credit card to decline unnecessary rental counter insurance.",
+    "Configure your preferred toll payment option or bring your own transponder to skip rental toll fees."
+  ]
+}

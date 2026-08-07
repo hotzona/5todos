@@ -1,0 +1,22 @@
+{
+  "id": "arriving-airbnb-rental",
+  "title": "What to do immediately upon arriving at an Airbnb or vacation rental",
+  "desc": "Inspect safety, document pre-existing damage, and verify amenities.",
+  "category": "travel",
+  "sourceName": "Travel Safety & Guest Rights Guide",
+  "sourceUrl": "https://www.consumerfinance.gov",
+  "tags": [
+    "airbnb",
+    "rental",
+    "travel",
+    "vacation",
+    "hotel"
+  ],
+  "todos": [
+    "Locate emergency exits, fire extinguishers, and smoke/carbon monoxide detectors.",
+    "Inspect the property for pre-existing damage, stains, or cleanliness issues and photo-document them.",
+    "Report any discrepancy or broken amenity to the host via in-app messaging within 24 hours.",
+    "Verify Wi-Fi network connectivity and key lockbox or smart lock operation.",
+    "Locate the main circuit breaker and water shutoff valve in case of emergency."
+  ]
+}

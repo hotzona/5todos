@@ -1,0 +1,22 @@
+{
+  "id": "first-day-college",
+  "title": "What to do on your first day of college or university",
+  "desc": "Navigate campus life, syllabus week, and academic administrative prep.",
+  "category": "health",
+  "sourceName": "College Academic Advising Guidelines",
+  "sourceUrl": "https://www.ed.gov",
+  "tags": [
+    "college",
+    "school",
+    "students",
+    "education",
+    "campus"
+  ],
+  "todos": [
+    "Locate your lecture halls and classroom buildings 30 minutes before your first class starts.",
+    "Download and review the course syllabus for grading criteria, office hours, and exam dates.",
+    "Obtain your official student ID card and test campus housing/library building access.",
+    "Connect your laptop and phone to the campus secure Wi-Fi network.",
+    "Verify your digital course material access or hold off buying textbooks until professors confirm editions."
+  ]
+}

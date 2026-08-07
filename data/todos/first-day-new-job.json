@@ -1,0 +1,22 @@
+{
+  "id": "first-day-new-job",
+  "title": "What to do on your first day at a new job",
+  "desc": "Set a strong professional tone and tackle orientation administration smoothly.",
+  "category": "finance",
+  "sourceName": "Harvard Business Review Workplace Setup",
+  "sourceUrl": "https://hbr.org",
+  "tags": [
+    "work",
+    "career",
+    "job",
+    "onboarding",
+    "office"
+  ],
+  "todos": [
+    "Arrive 10 minutes early with required HR identification (passport or driver's license and SSN card).",
+    "Complete tax withholding forms (W-4 / I-9) and submit direct deposit banking instructions.",
+    "Set up work email, communication tools (Slack/Teams), and test hardware access permissions.",
+    "Take structured notes during team introductions, key software logins, and team workflows.",
+    "Confirm initial expectations and 30-day goals with your direct supervisor before logging off."
+  ]
+}

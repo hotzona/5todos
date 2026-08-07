@@ -1,0 +1,22 @@
+{
+  "id": "pre-flight-24hr",
+  "title": "What to do 24 hours before an international flight",
+  "desc": "Seamless pre-departure steps to avoid airport delays and missing documents.",
+  "category": "travel",
+  "sourceName": "TSA & Airline Travel Guidelines",
+  "sourceUrl": "https://www.tsa.gov",
+  "tags": [
+    "travel",
+    "flight",
+    "international",
+    "packing",
+    "airport"
+  ],
+  "todos": [
+    "Check in online 24 hours in advance to secure seat assignments and mobile boarding passes.",
+    "Verify passport validity (at least 6 months remaining) and download offline entry visas or QR codes.",
+    "Review airline carry-on weight limits and place liquid items under 3.4 oz (100ml) in a clear bag.",
+    "Notify your credit card issuers of travel dates to prevent fraud blocks on international purchases.",
+    "Download offline maps, translation apps, and digital copies of your itinerary and hotel reservations."
+  ]
+}

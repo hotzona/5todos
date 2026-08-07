@@ -1,246 +1,246 @@
 const fs = require('fs');
 const path = require('path');
 
-// BATCH 2: TECH & DIGITAL SECURITY (ITEMS 11-25)
+// BATCH 3: TRAVEL, MOVING & LIFE MILESTONES (ITEMS 26-40)
 const batch = [
   {
-    id: "new-phone-setup",
-    title: "What to do when setting up a brand-new smartphone",
-    desc: "Migrate data, configure security, and optimize battery settings on a new device.",
-    category: "tech",
-    sourceName: "Apple & Google Device Setup",
-    sourceUrl: "https://support.apple.com",
-    tags: ["phone", "iphone", "android", "setup", "mobile"],
+    id: "pre-flight-24hr",
+    title: "What to do 24 hours before an international flight",
+    desc: "Seamless pre-departure steps to avoid airport delays and missing documents.",
+    category: "travel",
+    sourceName: "TSA & Airline Travel Guidelines",
+    sourceUrl: "https://www.tsa.gov",
+    tags: ["travel", "flight", "international", "packing", "airport"],
     todos: [
-      "Perform a full backup of your old phone to cloud storage or a computer before powering down.",
-      "Use direct device-to-device transfer during initial boot to migrate apps, photos, and messages.",
-      "Set up screen lock, biometric authentication (Face ID/Fingerprint), and Find My device tracking.",
-      "Sign in to your password manager and verify Two-Factor Authentication (2FA) apps are active.",
-      "Review privacy settings, location permissions, and automated background app refresh."
+      "Check in online 24 hours in advance to secure seat assignments and mobile boarding passes.",
+      "Verify passport validity (at least 6 months remaining) and download offline entry visas or QR codes.",
+      "Review airline carry-on weight limits and place liquid items under 3.4 oz (100ml) in a clear bag.",
+      "Notify your credit card issuers of travel dates to prevent fraud blocks on international purchases.",
+      "Download offline maps, translation apps, and digital copies of your itinerary and hotel reservations."
     ]
   },
   {
-    id: "prep-laptop-sale",
-    title: "What to do before selling, trading, or recycling a laptop",
-    desc: "Wipe sensitive personal data completely and remove hardware account locks.",
-    category: "tech",
-    sourceName: "Federal Trade Commission",
+    id: "rental-deposit-return",
+    title: "What to do when moving out of a rental apartment",
+    desc: "Maximize your security deposit refund and ensure a smooth landlord sign-off.",
+    category: "travel",
+    sourceName: "U.S. Tenants Rights Guide",
+    sourceUrl: "https://www.hud.gov",
+    tags: ["moving", "apartment", "rental", "deposit", "home"],
+    todos: [
+      "Review your lease agreement notice requirements and provide formal written move-out notice.",
+      "Schedule a joint move-out walk-through inspection with your landlord or property manager.",
+      "Deep clean the apartment, patch minor wall nail holes, and restore original fixtures.",
+      "Take timestamped photos and video of every room, appliance, and window as proof of condition.",
+      "Provide your landlord with a written forwarding address for mailing your security deposit return."
+    ]
+  },
+  {
+    id: "first-day-new-job",
+    title: "What to do on your first day at a new job",
+    desc: "Set a strong professional tone and tackle orientation administration smoothly.",
+    category: "finance",
+    sourceName: "Harvard Business Review Workplace Setup",
+    sourceUrl: "https://hbr.org",
+    tags: ["work", "career", "job", "onboarding", "office"],
+    todos: [
+      "Arrive 10 minutes early with required HR identification (passport or driver's license and SSN card).",
+      "Complete tax withholding forms (W-4 / I-9) and submit direct deposit banking instructions.",
+      "Set up work email, communication tools (Slack/Teams), and test hardware access permissions.",
+      "Take structured notes during team introductions, key software logins, and team workflows.",
+      "Confirm initial expectations and 30-day goals with your direct supervisor before logging off."
+    ]
+  },
+  {
+    id: "buy-used-car-private",
+    title: "What to do when buying a used car from a private seller",
+    desc: "Protect yourself from hidden vehicle damage, title scams, and overpaying.",
+    category: "finance",
+    sourceName: "DMV Used Vehicle Purchase Guide",
+    sourceUrl: "https://www.dmv.org",
+    tags: ["car", "buying", "auto", "used car", "finance"],
+    todos: [
+      "Run a complete vehicle history report (Carfax or AutoCheck) using the vehicle's 17-digit VIN.",
+      "Schedule an independent pre-purchase inspection with a certified mechanic.",
+      "Verify the seller's photo ID matches the name printed on the physical vehicle title.",
+      "Check the title status for liens, salvage brandings, or odometer discrepancy flags.",
+      "Complete a bill of sale, transfer title signatures, and obtain temporary insurance before driving."
+    ]
+  },
+  {
+    id: "week-before-moving-house",
+    title: "What to do the week before moving into a new house",
+    desc: "Essential utility, address change, and logistics prep before moving day.",
+    category: "emergencies",
+    sourceName: "USPS Official Moving Guide",
+    sourceUrl: "https://www.usps.com",
+    tags: ["moving", "house", "home", "utilities", "relocation"],
+    todos: [
+      "Schedule electric, water, gas, and internet utilities to activate on or before move-in day.",
+      "Submit an official change-of-address request with the Postal Service (USPS) and update primary banks.",
+      "Pack an 'Essential Day One' box containing toilet paper, basic tools, phone chargers, and bed linens.",
+      "Confirm arrival time, contract terms, and payment method with your professional moving crew.",
+      "Measure entry doorways and hallways to plan large furniture positioning before trucks arrive."
+    ]
+  },
+  {
+    id: "close-house-long-vacation",
+    title: "What to do when closing down a house for an extended vacation",
+    desc: "Prevent leaks, break-ins, and high utility bills while away from home.",
+    category: "travel",
+    sourceName: "Home Safety Council Guidelines",
+    sourceUrl: "https://www.redcross.org",
+    tags: ["vacation", "home", "travel", "security", "house"],
+    todos: [
+      "Turn off the main indoor water shutoff valve to prevent catastrophic plumbing leaks.",
+      "Set smart thermostats to eco mode (60°F/15°C in winter, 85°F/29°C in summer).",
+      "Unplug non-essential electronics, small appliances, and TVs to stop phantom energy draw.",
+      "Set interior lights on automated smart timers to simulate daily occupancy.",
+      "Dispose of perishable food from the refrigerator and empty all household trash cans."
+    ]
+  },
+  {
+    id: "first-pet-adoption",
+    title: "What to do when adopting a new dog or cat for the first time",
+    desc: "Prepare your home and transition a rescue pet safely into your routine.",
+    category: "health",
+    sourceName: "ASPCA Pet Care Guidelines",
+    sourceUrl: "https://www.aspca.org",
+    tags: ["pet", "dog", "cat", "adoption", "animals"],
+    todos: [
+      "Pet-proof living areas by securing loose wires, toxic house plants, and cleaning chemicals.",
+      "Set up a dedicated safe quiet zone with water, food bowls, bedding, and a litter box or crate.",
+      "Schedule an initial wellness checkup with a local veterinarian within the first 7 days.",
+      "Update microchip registry records with your current address and phone contact details.",
+      "Purchase food matching their current shelter diet to prevent digestive stress."
+    ]
+  },
+  {
+    id: "arriving-airbnb-rental",
+    title: "What to do immediately upon arriving at an Airbnb or vacation rental",
+    desc: "Inspect safety, document pre-existing damage, and verify amenities.",
+    category: "travel",
+    sourceName: "Travel Safety & Guest Rights Guide",
+    sourceUrl: "https://www.consumerfinance.gov",
+    tags: ["airbnb", "rental", "travel", "vacation", "hotel"],
+    todos: [
+      "Locate emergency exits, fire extinguishers, and smoke/carbon monoxide detectors.",
+      "Inspect the property for pre-existing damage, stains, or cleanliness issues and photo-document them.",
+      "Report any discrepancy or broken amenity to the host via in-app messaging within 24 hours.",
+      "Verify Wi-Fi network connectivity and key lockbox or smart lock operation.",
+      "Locate the main circuit breaker and water shutoff valve in case of emergency."
+    ]
+  },
+  {
+    id: "prep-winter-road-trip",
+    title: "What to do before going on a winter road trip",
+    desc: "Winterize your vehicle and stock emergency gear for cold-weather driving.",
+    category: "travel",
+    sourceName: "National Highway Traffic Safety Administration",
+    sourceUrl: "https://www.nhtsa.gov",
+    tags: ["driving", "winter", "car", "travel", "road trip"],
+    todos: [
+      "Check tire tread depth, tire pressure, and verify windshield wiper fluid is rated for freezing temps.",
+      "Inspect battery voltage, engine coolant/antifreeze levels, and headlights.",
+      "Pack an emergency winter car trunk kit: ice scraper, jumper cables, blankets, flashlight, and sand/cat litter.",
+      "Keep fuel tank at least half-full at all times to prevent fuel line freeze and preserve heat if stranded.",
+      "Share your planned route and expected destination arrival times with family or friends."
+    ]
+  },
+  {
+    id: "start-new-llc",
+    title: "What to do when starting a new LLC or small business",
+    desc: "Set up legal compliance, tax structure, and liability separation correctly.",
+    category: "finance",
+    sourceName: "U.S. Small Business Administration",
+    sourceUrl: "https://www.sba.gov",
+    tags: ["business", "llc", "finance", "startup", "legal"],
+    todos: [
+      "Choose a business name and register your Articles of Organization with your state Secretary of State.",
+      "Apply for a free Federal Employer Identification Number (EIN) on IRS.gov.",
+      "Draft an Operating Agreement defining business ownership percentages and management roles.",
+      "Open a dedicated business bank account to keep business and personal finances completely separate.",
+      "Research local city business licenses, permits, and general liability insurance coverage."
+    ]
+  },
+  {
+    id: "first-day-college",
+    title: "What to do on your first day of college or university",
+    desc: "Navigate campus life, syllabus week, and academic administrative prep.",
+    category: "health",
+    sourceName: "College Academic Advising Guidelines",
+    sourceUrl: "https://www.ed.gov",
+    tags: ["college", "school", "students", "education", "campus"],
+    todos: [
+      "Locate your lecture halls and classroom buildings 30 minutes before your first class starts.",
+      "Download and review the course syllabus for grading criteria, office hours, and exam dates.",
+      "Obtain your official student ID card and test campus housing/library building access.",
+      "Connect your laptop and phone to the campus secure Wi-Fi network.",
+      "Verify your digital course material access or hold off buying textbooks until professors confirm editions."
+    ]
+  },
+  {
+    id: "airport-car-rental",
+    title: "What to do when renting a car at an airport",
+    desc: "Avoid extra fees, bogus damage claims, and toll surprise charges.",
+    category: "travel",
+    sourceName: "FTC Rental Car Advice",
     sourceUrl: "https://consumer.ftc.gov",
-    tags: ["laptop", "mac", "windows", "security", "privacy"],
+    tags: ["car rental", "travel", "driving", "airport", "vacation"],
     todos: [
-      "Back up all local files, documents, and photos to an external drive or cloud storage.",
-      "Sign out of Apple ID, iCloud, Microsoft, and browser accounts to remove activation locks.",
-      "Deauthorize DRM software (iTunes, Adobe Creative Cloud) tied to the machine's hardware ID.",
-      "Perform a full drive wipe and factory reset using built-in system recovery tools.",
-      "Clean physical ports, screen, and keyboard, and safely store original accessories."
+      "Inspect the entire exterior and interior, recording a continuous walk-around video of any dents or scratches.",
+      "Ensure the rental agency agent notes pre-existing damage on the physical or digital contract before leaving.",
+      "Verify fuel tank fill level and understand the return refueling policy to avoid steep gas surcharges.",
+      "Check auto insurance coverage with your personal policy or credit card to decline unnecessary rental counter insurance.",
+      "Configure your preferred toll payment option or bring your own transponder to skip rental toll fees."
     ]
   },
   {
-    id: "new-wifi-router",
-    title: "What to do when setting up a new home Wi-Fi router",
-    desc: "Secure your home network against unauthorized access and speed up your connection.",
-    category: "tech",
-    sourceName: "Cybersecurity and Infrastructure Security Agency",
-    sourceUrl: "https://www.cisa.gov",
-    tags: ["wifi", "router", "network", "internet", "security"],
+    id: "spring-home-prep",
+    title: "What to do when preparing your yard or house for spring",
+    desc: "Seasonal home maintenance to prevent water damage and exterior wear.",
+    category: "emergencies",
+    sourceName: "Home Maintenance Association",
+    sourceUrl: "https://www.hud.gov",
+    tags: ["home", "spring", "maintenance", "yard", "house"],
     todos: [
-      "Change the default admin login username and password on the router management dashboard.",
-      "Update the network SSID name and enable WPA3 or WPA2-AES encryption with a strong passphrase.",
-      "Disable Remote Management, WPS (Wi-Fi Protected Setup), and Universal Plug and Play (UPnP).",
-      "Create a isolated Guest Network for smart home IoT devices and visitor connections.",
-      "Check for and install the latest firmware updates from the hardware manufacturer."
+      "Clean gutters and downspouts of winter debris to ensure water drains away from the foundation.",
+      "Inspect roof shingles, chimney flashing, and exterior siding for winter storm damage.",
+      "Replace HVAC air filters and schedule a professional spring AC system tune-up.",
+      "Check outdoor hose bibs and faucets for freeze damage or pipe leaks.",
+      "Test GFCI outdoor electrical outlets, smoke detectors, and carbon monoxide alarm batteries."
     ]
   },
   {
-    id: "hacked-email-account",
-    title: "What to do if your email account gets hacked",
-    desc: "Regain control of your master account and lock down secondary accounts.",
-    category: "tech",
-    sourceName: "CISA Identity Protection",
-    sourceUrl: "https://www.cisa.gov",
-    tags: ["email", "hacked", "security", "passwords", "privacy"],
+    id: "multi-country-backpacking",
+    title: "What to do when planning a multi-country backpacking trip",
+    desc: "Organize visas, international logistics, and budget safety across borders.",
+    category: "travel",
+    sourceName: "U.S. Department of State Smart Traveler",
+    sourceUrl: "https://step.state.gov",
+    tags: ["backpacking", "travel", "international", "budget", "packing"],
     todos: [
-      "Initiate account recovery immediately to reset your password using backup phone or recovery emails.",
-      "Log out of all active sessions and devices via account security management.",
-      "Check auto-forwarding rules and deleted email folders for unauthorized filter changes.",
-      "Enable Two-Factor Authentication (2FA) using an authenticator app rather than SMS.",
-      "Change passwords on critical financial and social services linked to that email address."
+      "Register your trip itinerary with your country's embassy travel registry (e.g., STEP program).",
+      "Verify entry visa requirements and passport blank-page count for every country on your route.",
+      "Purchase comprehensive international travel and emergency medical evacuation insurance.",
+      "Carry two no-foreign-transaction-fee debit/credit cards stored in separate bags.",
+      "Pack a multi-country universal plug adapter and portable power bank."
     ]
   },
   {
-    id: "new-computer-setup",
-    title: "What to do when setting up a new Mac or Windows PC",
-    desc: "Clean setup steps to remove bloatware, update security, and optimize performance.",
-    category: "tech",
-    sourceName: "Microsoft & Apple Setup Guides",
-    sourceUrl: "https://support.microsoft.com",
-    tags: ["pc", "mac", "windows", "computer", "setup"],
+    id: "pre-tax-return-prep",
+    title: "What to do before submitting your annual income tax return",
+    desc: "Avoid IRS audit triggers and maximize eligible deductions.",
+    category: "finance",
+    sourceName: "IRS Individual Taxpayer Prep",
+    sourceUrl: "https://www.irs.gov",
+    tags: ["taxes", "irs", "finance", "money", "accounting"],
     todos: [
-      "Run system updates immediately to install critical OS patches and hardware drivers.",
-      "Uninstall pre-installed trialware, bloatware, and unwanted background utilities.",
-      "Install a trusted web browser, password manager, and cloud backup utility.",
-      "Enable full-disk encryption (FileVault on Mac, BitLocker on Windows).",
-      "Configure automated system backup software (Time Machine or File History)."
-    ]
-  },
-  {
-    id: "secure-home-wifi",
-    title: "What to do to audit and secure your home Wi-Fi network",
-    desc: "Protect connected home devices from unauthorized intrusions and bandwidth leeching.",
-    category: "tech",
-    sourceName: "National Security Agency Guidelines",
-    sourceUrl: "https://www.nsa.gov",
-    tags: ["wifi", "security", "privacy", "router", "home"],
-    todos: [
-      "Access your router dashboard and review all currently connected devices for unrecognized MAC addresses.",
-      "Update your main Wi-Fi network password and reconnect trusted household devices.",
-      "Ensure router management access is restricted to wired local connections only.",
-      "Disable legacy Wi-Fi protocols (WEP and TKIP) in network settings.",
-      "Enable automatic firmware updates on your router if supported by the manufacturer."
-    ]
-  },
-  {
-    id: "first-password-manager",
-    title: "What to do when setting up a password manager for the first time",
-    desc: "Stop reusing weak passwords and centralize digital security safely.",
-    category: "tech",
-    sourceName: "National Institute of Standards and Technology",
-    sourceUrl: "https://www.nist.gov",
-    tags: ["passwords", "security", "privacy", "tech", "setup"],
-    todos: [
-      "Choose a reputable encrypted password manager (e.g., Bitwarden, 1Password) and create a strong master password.",
-      "Print or securely write down your master recovery key and store it offline in a safe location.",
-      "Enable 2FA on the password manager account using an external authenticator app.",
-      "Import existing passwords from web browsers and delete saved credentials from browser storage.",
-      "Audit existing accounts to generate unique, random passwords for primary email, banking, and social apps."
-    ]
-  },
-  {
-    id: "digital-privacy-audit",
-    title: "What to do to audit your digital privacy and social media settings",
-    desc: "Limit public data exposure, location tracking, and third-party data broker visibility.",
-    category: "tech",
-    sourceName: "Electronic Frontier Foundation",
-    sourceUrl: "https://www.eff.org",
-    tags: ["privacy", "security", "social media", "data", "tech"],
-    todos: [
-      "Review account privacy controls on major social platforms to restrict post visibility to friends only.",
-      "Revoke access for inactive third-party apps connected to Google, Apple, and Facebook logins.",
-      "Audit mobile phone app permissions to turn off unnecessary background location and microphone access.",
-      "Opt out of data broker aggregators and targeted ad profiling in phone privacy settings.",
-      "Replace default search engines with privacy-focused alternatives or enable secure DNS."
-    ]
-  },
-  {
-    id: "pre-update-backup",
-    title: "What to do before doing a major phone or computer software update",
-    desc: "Prevent bricked hardware and lost data before OS upgrade installs.",
-    category: "tech",
-    sourceName: "Apple & Microsoft Support",
-    sourceUrl: "https://support.apple.com",
-    tags: ["update", "backup", "software", "iphone", "windows"],
-    todos: [
-      "Run a complete local or cloud system backup immediately prior to starting the installation.",
-      "Verify that your device has at least 15–20 GB of free storage space available for temporary update files.",
-      "Plug your device into a wall charger to prevent power failure during critical firmware writes.",
-      "Confirm that key productivity apps and software are compatible with the new OS version.",
-      "Connect to a stable, unmetered Wi-Fi network before initiating large file downloads."
-    ]
-  },
-  {
-    id: "hacked-smart-camera",
-    title: "What to do if your smart home camera or IoT device is compromised",
-    desc: "Isolate hijacked smart home hardware and secure local home automation.",
-    category: "tech",
-    sourceName: "FTC Smart Home Security",
-    sourceUrl: "https://consumer.ftc.gov",
-    tags: ["smart home", "security", "camera", "privacy", "iot"],
-    todos: [
-      "Disconnect the compromised device from power and local Wi-Fi instantly.",
-      "Change the account password for the device management app and terminate active logged-in sessions.",
-      "Enable 2FA on your smart home ecosystem accounts (Ring, Nest, Google, Apple).",
-      "Factory reset the physical hardware unit using the pinhole button before reconnecting.",
-      "Move all smart home IoT devices to a segregated Guest Wi-Fi network away from personal computers."
-    ]
-  },
-  {
-    id: "first-computer-backup",
-    title: "What to do when backing up your computer for the first time",
-    desc: "Set up the 3-2-1 backup strategy to ensure complete data protection.",
-    category: "tech",
-    sourceName: "U.S. CERT Backup Guidelines",
-    sourceUrl: "https://www.cisa.gov",
-    tags: ["backup", "computer", "data", "storage", "tech"],
-    todos: [
-      "Identify essential local folders containing personal documents, family photos, and critical work files.",
-      "Connect a dedicated external drive and configure automated OS backup utilities (Time Machine or File History).",
-      "Subscribe to an encrypted cloud backup provider for off-site redundant protection.",
-      "Test restoring a sample file from both local and cloud backups to verify backup integrity.",
-      "Schedule automatic background backups to run daily or weekly without manual intervention."
-    ]
-  },
-  {
-    id: "fix-dropping-wifi",
-    title: "What to do if your Wi-Fi keeps dropping connection",
-    desc: "Troubleshoot home network instability, channel interference, and signal dead zones.",
-    category: "tech",
-    sourceName: "Federal Communications Commission",
-    sourceUrl: "https://www.fcc.gov",
-    tags: ["wifi", "internet", "network", "troubleshooting", "tech"],
-    todos: [
-      "Unplug power from both your modem and router for 30 seconds, then restart modem first.",
-      "Move your router to an elevated, central location clear of thick walls, metal objects, and microwaves.",
-      "Log in to router settings and change the Wi-Fi broadcast channel to reduce neighborhood congestion.",
-      "Separate the 2.4 GHz and 5 GHz network SSIDs to assign high-bandwidth devices to 5 GHz.",
-      "Check connected device network adapter drivers for pending updates or perform a network settings reset."
-    ]
-  },
-  {
-    id: "pre-factory-reset",
-    title: "What to do before wiping your phone for a factory reset",
-    desc: "Ensure complete file retention and account unlinking before full hardware wipe.",
-    category: "tech",
-    sourceName: "Android & iOS Support",
-    sourceUrl: "https://support.google.com",
-    tags: ["phone", "reset", "backup", "security", "mobile"],
-    todos: [
-      "Verify that photos, contacts, app data, and messages are fully synced to cloud backup services.",
-      "Export two-factor authenticator (2FA) codes to a second device or write down backup codes.",
-      "Sign out of Apple ID or Google Account to prevent Factory Reset Protection (FRP) activation locks.",
-      "Deregister iMessage or RCS text services if switching operating systems or phone numbers.",
-      "Remove physical SIM cards or manage eSIM transfer profiles prior to clearing local storage."
-    ]
-  },
-  {
-    id: "setup-2fa-safely",
-    title: "What to do when setting up Two-Factor Authentication (2FA) safely",
-    desc: "Layer account security properly without risking locked accounts.",
-    category: "tech",
-    sourceName: "CISA Cyber Essentials",
-    sourceUrl: "https://www.cisa.gov",
-    tags: ["2fa", "security", "passwords", "privacy", "tech"],
-    todos: [
-      "Choose an authenticator app (Google Authenticator, Authy) or hardware key over SMS-based 2FA.",
-      "Scan the setup QR code on your primary device and verify code generation works.",
-      "Download, print, or copy the provided account Emergency Backup / Recovery Codes immediately.",
-      "Store recovery codes inside your encrypted password manager or an offline vault.",
-      "Set up a secondary backup device (tablet or backup phone) on the authenticator app if supported."
-    ]
-  },
-  {
-    id: "clicking-hard-drive",
-    title: "What to do if your hard drive starts making unusual clicking noises",
-    desc: "Emergency steps to salvage data before mechanical hard drive failure.",
-    category: "tech",
-    sourceName: "Hard Drive Recovery Guidelines",
-    sourceUrl: "https://www.cisa.gov",
-    tags: ["hard drive", "storage", "hardware", "data", "tech"],
-    todos: [
-      "Stop heavy file transfers immediately and copy only irreplaceable personal documents to external storage.",
-      "Do not run drive defragmentation, intensive disk scans, or CHKDSK utilities on physical clicking drives.",
-      "Shut down the computer completely to prevent further mechanical read/write head damage.",
-      "Avoid rebooting or cycling power repeatedly, which accelerates hardware degradation.",
-      "Consult a professional data recovery service if critical unbacked-up files remain on the drive."
+      "Gather all income statements (W-2s, 1099-NEC/MISC/INT/DIV) and verify personal details match SSNs.",
+      "Collect receipts and records for tax-deductible expenses (charitable contributions, health savings, business expenses).",
+      "Verify maximum contribution limits for IRAs and HSAs before the annual tax filing deadline.",
+      "Double-check direct deposit routing and account numbers to prevent refund delays.",
+      "Review the prior year's tax return to compare year-over-year income variances and carryforward credits."
     ]
   }
 ];

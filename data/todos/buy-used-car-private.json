@@ -1,0 +1,22 @@
+{
+  "id": "buy-used-car-private",
+  "title": "What to do when buying a used car from a private seller",
+  "desc": "Protect yourself from hidden vehicle damage, title scams, and overpaying.",
+  "category": "finance",
+  "sourceName": "DMV Used Vehicle Purchase Guide",
+  "sourceUrl": "https://www.dmv.org",
+  "tags": [
+    "car",
+    "buying",
+    "auto",
+    "used car",
+    "finance"
+  ],
+  "todos": [
+    "Run a complete vehicle history report (Carfax or AutoCheck) using the vehicle's 17-digit VIN.",
+    "Schedule an independent pre-purchase inspection with a certified mechanic.",
+    "Verify the seller's photo ID matches the name printed on the physical vehicle title.",
+    "Check the title status for liens, salvage brandings, or odometer discrepancy flags.",
+    "Complete a bill of sale, transfer title signatures, and obtain temporary insurance before driving."
+  ]
+}

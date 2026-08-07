@@ -1,0 +1,22 @@
+{
+  "id": "start-new-llc",
+  "title": "What to do when starting a new LLC or small business",
+  "desc": "Set up legal compliance, tax structure, and liability separation correctly.",
+  "category": "finance",
+  "sourceName": "U.S. Small Business Administration",
+  "sourceUrl": "https://www.sba.gov",
+  "tags": [
+    "business",
+    "llc",
+    "finance",
+    "startup",
+    "legal"
+  ],
+  "todos": [
+    "Choose a business name and register your Articles of Organization with your state Secretary of State.",
+    "Apply for a free Federal Employer Identification Number (EIN) on IRS.gov.",
+    "Draft an Operating Agreement defining business ownership percentages and management roles.",
+    "Open a dedicated business bank account to keep business and personal finances completely separate.",
+    "Research local city business licenses, permits, and general liability insurance coverage."
+  ]
+}

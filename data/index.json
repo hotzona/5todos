@@ -671,5 +671,185 @@
       "data",
       "tech"
     ]
+  },
+  {
+    "id": "pre-flight-24hr",
+    "title": "What to do 24 hours before an international flight",
+    "category": "travel",
+    "tags": [
+      "travel",
+      "flight",
+      "international",
+      "packing",
+      "airport"
+    ]
+  },
+  {
+    "id": "rental-deposit-return",
+    "title": "What to do when moving out of a rental apartment",
+    "category": "travel",
+    "tags": [
+      "moving",
+      "apartment",
+      "rental",
+      "deposit",
+      "home"
+    ]
+  },
+  {
+    "id": "first-day-new-job",
+    "title": "What to do on your first day at a new job",
+    "category": "finance",
+    "tags": [
+      "work",
+      "career",
+      "job",
+      "onboarding",
+      "office"
+    ]
+  },
+  {
+    "id": "buy-used-car-private",
+    "title": "What to do when buying a used car from a private seller",
+    "category": "finance",
+    "tags": [
+      "car",
+      "buying",
+      "auto",
+      "used car",
+      "finance"
+    ]
+  },
+  {
+    "id": "week-before-moving-house",
+    "title": "What to do the week before moving into a new house",
+    "category": "emergencies",
+    "tags": [
+      "moving",
+      "house",
+      "home",
+      "utilities",
+      "relocation"
+    ]
+  },
+  {
+    "id": "close-house-long-vacation",
+    "title": "What to do when closing down a house for an extended vacation",
+    "category": "travel",
+    "tags": [
+      "vacation",
+      "home",
+      "travel",
+      "security",
+      "house"
+    ]
+  },
+  {
+    "id": "first-pet-adoption",
+    "title": "What to do when adopting a new dog or cat for the first time",
+    "category": "health",
+    "tags": [
+      "pet",
+      "dog",
+      "cat",
+      "adoption",
+      "animals"
+    ]
+  },
+  {
+    "id": "arriving-airbnb-rental",
+    "title": "What to do immediately upon arriving at an Airbnb or vacation rental",
+    "category": "travel",
+    "tags": [
+      "airbnb",
+      "rental",
+      "travel",
+      "vacation",
+      "hotel"
+    ]
+  },
+  {
+    "id": "prep-winter-road-trip",
+    "title": "What to do before going on a winter road trip",
+    "category": "travel",
+    "tags": [
+      "driving",
+      "winter",
+      "car",
+      "travel",
+      "road trip"
+    ]
+  },
+  {
+    "id": "start-new-llc",
+    "title": "What to do when starting a new LLC or small business",
+    "category": "finance",
+    "tags": [
+      "business",
+      "llc",
+      "finance",
+      "startup",
+      "legal"
+    ]
+  },
+  {
+    "id": "first-day-college",
+    "title": "What to do on your first day of college or university",
+    "category": "health",
+    "tags": [
+      "college",
+      "school",
+      "students",
+      "education",
+      "campus"
+    ]
+  },
+  {
+    "id": "airport-car-rental",
+    "title": "What to do when renting a car at an airport",
+    "category": "travel",
+    "tags": [
+      "car rental",
+      "travel",
+      "driving",
+      "airport",
+      "vacation"
+    ]
+  },
+  {
+    "id": "spring-home-prep",
+    "title": "What to do when preparing your yard or house for spring",
+    "category": "emergencies",
+    "tags": [
+      "home",
+      "spring",
+      "maintenance",
+      "yard",
+      "house"
+    ]
+  },
+  {
+    "id": "multi-country-backpacking",
+    "title": "What to do when planning a multi-country backpacking trip",
+    "category": "travel",
+    "tags": [
+      "backpacking",
+      "travel",
+      "international",
+      "budget",
+      "packing"
+    ]
+  },
+  {
+    "id": "pre-tax-return-prep",
+    "title": "What to do before submitting your annual income tax return",
+    "category": "finance",
+    "tags": [
+      "taxes",
+      "irs",
+      "finance",
+      "money",
+      "accounting"
+    ]
   }
 ]

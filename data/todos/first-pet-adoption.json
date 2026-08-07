@@ -1,0 +1,22 @@
+{
+  "id": "first-pet-adoption",
+  "title": "What to do when adopting a new dog or cat for the first time",
+  "desc": "Prepare your home and transition a rescue pet safely into your routine.",
+  "category": "health",
+  "sourceName": "ASPCA Pet Care Guidelines",
+  "sourceUrl": "https://www.aspca.org",
+  "tags": [
+    "pet",
+    "dog",
+    "cat",
+    "adoption",
+    "animals"
+  ],
+  "todos": [
+    "Pet-proof living areas by securing loose wires, toxic house plants, and cleaning chemicals.",
+    "Set up a dedicated safe quiet zone with water, food bowls, bedding, and a litter box or crate.",
+    "Schedule an initial wellness checkup with a local veterinarian within the first 7 days.",
+    "Update microchip registry records with your current address and phone contact details.",
+    "Purchase food matching their current shelter diet to prevent digestive stress."
+  ]
+}

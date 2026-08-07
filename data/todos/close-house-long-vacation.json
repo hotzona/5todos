@@ -1,0 +1,22 @@
+{
+  "id": "close-house-long-vacation",
+  "title": "What to do when closing down a house for an extended vacation",
+  "desc": "Prevent leaks, break-ins, and high utility bills while away from home.",
+  "category": "travel",
+  "sourceName": "Home Safety Council Guidelines",
+  "sourceUrl": "https://www.redcross.org",
+  "tags": [
+    "vacation",
+    "home",
+    "travel",
+    "security",
+    "house"
+  ],
+  "todos": [
+    "Turn off the main indoor water shutoff valve to prevent catastrophic plumbing leaks.",
+    "Set smart thermostats to eco mode (60°F/15°C in winter, 85°F/29°C in summer).",
+    "Unplug non-essential electronics, small appliances, and TVs to stop phantom energy draw.",
+    "Set interior lights on automated smart timers to simulate daily occupancy.",
+    "Dispose of perishable food from the refrigerator and empty all household trash cans."
+  ]
+}

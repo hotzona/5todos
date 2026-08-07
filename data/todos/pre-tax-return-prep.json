@@ -1,0 +1,22 @@
+{
+  "id": "pre-tax-return-prep",
+  "title": "What to do before submitting your annual income tax return",
+  "desc": "Avoid IRS audit triggers and maximize eligible deductions.",
+  "category": "finance",
+  "sourceName": "IRS Individual Taxpayer Prep",
+  "sourceUrl": "https://www.irs.gov",
+  "tags": [
+    "taxes",
+    "irs",
+    "finance",
+    "money",
+    "accounting"
+  ],
+  "todos": [
+    "Gather all income statements (W-2s, 1099-NEC/MISC/INT/DIV) and verify personal details match SSNs.",
+    "Collect receipts and records for tax-deductible expenses (charitable contributions, health savings, business expenses).",
+    "Verify maximum contribution limits for IRAs and HSAs before the annual tax filing deadline.",
+    "Double-check direct deposit routing and account numbers to prevent refund delays.",
+    "Review the prior year's tax return to compare year-over-year income variances and carryforward credits."
+  ]
+}

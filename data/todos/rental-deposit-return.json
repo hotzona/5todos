@@ -1,0 +1,22 @@
+{
+  "id": "rental-deposit-return",
+  "title": "What to do when moving out of a rental apartment",
+  "desc": "Maximize your security deposit refund and ensure a smooth landlord sign-off.",
+  "category": "travel",
+  "sourceName": "U.S. Tenants Rights Guide",
+  "sourceUrl": "https://www.hud.gov",
+  "tags": [
+    "moving",
+    "apartment",
+    "rental",
+    "deposit",
+    "home"
+  ],
+  "todos": [
+    "Review your lease agreement notice requirements and provide formal written move-out notice.",
+    "Schedule a joint move-out walk-through inspection with your landlord or property manager.",
+    "Deep clean the apartment, patch minor wall nail holes, and restore original fixtures.",
+    "Take timestamped photos and video of every room, appliance, and window as proof of condition.",
+    "Provide your landlord with a written forwarding address for mailing your security deposit return."
+  ]
+}

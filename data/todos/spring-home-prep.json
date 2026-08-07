@@ -1,0 +1,22 @@
+{
+  "id": "spring-home-prep",
+  "title": "What to do when preparing your yard or house for spring",
+  "desc": "Seasonal home maintenance to prevent water damage and exterior wear.",
+  "category": "emergencies",
+  "sourceName": "Home Maintenance Association",
+  "sourceUrl": "https://www.hud.gov",
+  "tags": [
+    "home",
+    "spring",
+    "maintenance",
+    "yard",
+    "house"
+  ],
+  "todos": [
+    "Clean gutters and downspouts of winter debris to ensure water drains away from the foundation.",
+    "Inspect roof shingles, chimney flashing, and exterior siding for winter storm damage.",
+    "Replace HVAC air filters and schedule a professional spring AC system tune-up.",
+    "Check outdoor hose bibs and faucets for freeze damage or pipe leaks.",
+    "Test GFCI outdoor electrical outlets, smoke detectors, and carbon monoxide alarm batteries."
+  ]
+}

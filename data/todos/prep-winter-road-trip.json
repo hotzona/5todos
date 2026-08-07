@@ -1,0 +1,22 @@
+{
+  "id": "prep-winter-road-trip",
+  "title": "What to do before going on a winter road trip",
+  "desc": "Winterize your vehicle and stock emergency gear for cold-weather driving.",
+  "category": "travel",
+  "sourceName": "National Highway Traffic Safety Administration",
+  "sourceUrl": "https://www.nhtsa.gov",
+  "tags": [
+    "driving",
+    "winter",
+    "car",
+    "travel",
+    "road trip"
+  ],
+  "todos": [
+    "Check tire tread depth, tire pressure, and verify windshield wiper fluid is rated for freezing temps.",
+    "Inspect battery voltage, engine coolant/antifreeze levels, and headlights.",
+    "Pack an emergency winter car trunk kit: ice scraper, jumper cables, blankets, flashlight, and sand/cat litter.",
+    "Keep fuel tank at least half-full at all times to prevent fuel line freeze and preserve heat if stranded.",
+    "Share your planned route and expected destination arrival times with family or friends."
+  ]
+}
