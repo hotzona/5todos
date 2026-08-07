@@ -1,0 +1,22 @@
+{
+  "id": "prevent-cross-contamination",
+  "title": "What to do to prevent cross-contamination during meal prep",
+  "desc": "Keep raw meat bacteria from transferring to fresh, ready-to-eat foods.",
+  "category": "health",
+  "sourceName": "CDC Food Safety Essentials",
+  "sourceUrl": "https://www.cdc.gov",
+  "tags": [
+    "food safety",
+    "cooking",
+    "health",
+    "kitchen",
+    "hygiene"
+  ],
+  "todos": [
+    "Use separate, color-coded cutting boards for raw meat/seafood vs. fresh produce and bread.",
+    "Wash hands with warm water and soap for 20 seconds before and after handling raw animal proteins.",
+    "Never place cooked food back on plates or cutting boards that previously held raw meat.",
+    "Sanitize kitchen counters, utensils, and sink faucets after raw protein preparation.",
+    "Store raw meat on the bottom shelf of the refrigerator in sealed containers so juices cannot drip."
+  ]
+}

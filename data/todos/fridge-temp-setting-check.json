@@ -1,0 +1,22 @@
+{
+  "id": "fridge-temp-setting-check",
+  "title": "What to do to test and calibrate your home refrigerator temperature",
+  "desc": "Keep food out of the danger zone (40°F–140°F) to prevent food poisoning.",
+  "category": "health",
+  "sourceName": "FDA Refrigerator Thermometer Guide",
+  "sourceUrl": "https://www.fda.gov",
+  "tags": [
+    "refrigerator",
+    "food safety",
+    "appliances",
+    "kitchen",
+    "temperature"
+  ],
+  "todos": [
+    "Place a standalone appliance thermometer in the center of the middle shelf.",
+    "Verify refrigerator temperature stays consistently between 35°F and 38°F (1.6°C–3.3°C).",
+    "Check freezer temperature to ensure it reads exactly 0°F (-18°C) or lower.",
+    "Avoid storing milk, eggs, or meat in refrigerator door shelves where temperatures fluctuate most.",
+    "Clean dust from refrigerator condenser coils underneath or behind the unit every 6–12 months."
+  ]
+}

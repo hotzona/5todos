@@ -1,0 +1,22 @@
+{
+  "id": "sharpen-kitchen-knives",
+  "title": "What to do to sharpen and maintain kitchen knives properly",
+  "desc": "Maintain razor-sharp edges safely to reduce cutting slips and fatigue.",
+  "category": "health",
+  "sourceName": "Culinary Knife Maintenance",
+  "sourceUrl": "https://www.popularmechanics.com",
+  "tags": [
+    "knives",
+    "kitchen",
+    "cooking",
+    "sharpening",
+    "tools"
+  ],
+  "todos": [
+    "Use a whetstone (1000/6000 grit) soaked in water at a consistent 15°–20° angle per side for sharpening.",
+    "Use a honing steel before daily cooking to realign microscopic blade edge teeth.",
+    "Always cut on wooden or plastic cutting boards; avoid glass, granite, or ceramic surfaces.",
+    "Hand wash knives immediately after use with warm soapy water and dry by hand.",
+    "NEVER place chef's knives in the dishwasher; high heat and detergents dull and damage blades."
+  ]
+}

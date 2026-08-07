@@ -1,406 +1,326 @@
 const fs = require('fs');
 const path = require('path');
 
-// BATCH 6: AUTOMOTIVE, CAREER & ADVANCED OPERATIONS (ITEMS 76-100)
+// BATCH 7: FOOD, KITCHEN & HOUSEHOLD ESSENTIALS (ITEMS 101-120)
 const batch = [
   {
-    id: "jumpstart-dead-battery",
-    title: "What to do when jump-starting a car with a dead battery",
-    desc: "Safely hook up jumper cables and restart a vehicle without damaging electronics.",
+    id: "food-safety-power-outage",
+    title: "What to do to keep food safe during a power outage",
+    desc: "Prevent foodborne illness and preserve refrigerator and freezer contents.",
     category: "emergencies",
-    sourceName: "AAA Roadside Emergency Guide",
-    sourceUrl: "https://www.aaa.com",
-    tags: ["car", "battery", "jumpstart", "auto", "roadside"],
+    sourceName: "FDA Food Safety Guidelines",
+    sourceUrl: "https://www.fda.gov",
+    tags: ["food safety", "power outage", "refrigerator", "emergencies", "kitchen"],
     todos: [
-      "Park the working vehicle nose-to-nose with the dead car without letting the vehicles touch.",
-      "Connect the RED clamp to the positive (+) terminal of the dead battery, then the other RED clamp to the good battery positive (+).",
-      "Connect the BLACK clamp to the negative (-) terminal of the good battery.",
-      "Attach the remaining BLACK clamp to an unpainted metal surface on the dead car's engine block (ground).",
-      "Start the working car engine, let it idle for 5 minutes, then start the dead car and leave it running for 20 minutes."
+      "Keep refrigerator and freezer doors closed continuously; unopened fridges keep food cold for ~4 hours.",
+      "A full freezer maintains safe temperatures for 48 hours (24 hours if half-full) if left unopened.",
+      "Transfer perishable meat, dairy, and eggs into coolers packed with ice if outage exceeds 4 hours.",
+      "Discard perishable food exposed to temperatures above 40°F (4°C) for 2 hours or more.",
+      "Never taste food to determine safety; when in doubt, throw it out."
     ]
   },
   {
-    id: "resigning-from-job",
-    title: "What to do when officially resigning from a job",
-    desc: "Leave your employer on professional terms while protecting your career reputation.",
-    category: "finance",
-    sourceName: "SHRM HR Best Practices",
-    sourceUrl: "https://www.shrm.org",
-    tags: ["job", "career", "resignation", "work", "hr"],
-    todos: [
-      "Schedule a private 1-on-1 meeting with your direct supervisor to break the news before telling coworkers.",
-      "Draft a concise, professional resignation letter stating your last working day (typically two weeks out).",
-      "Prepare a comprehensive transition document detailing current projects, passwords, and ongoing duties.",
-      "Inquire with HR about final paycheck distribution, accrued PTO payout, and benefits end dates.",
-      "Clean personal files, emails, and browser histories off work hardware before handing over devices."
-    ]
-  },
-  {
-    id: "car-overheating-highway",
-    title: "What to do if your car engine starts overheating on the road",
-    desc: "Prevent severe engine block warping and coolant burns during heat surges.",
-    category: "emergencies",
-    sourceName: "NHTSA Automotive Safety",
-    sourceUrl: "https://www.nhtsa.gov",
-    tags: ["car", "driving", "overheating", "engine", "auto"],
-    todos: [
-      "Turn off the air conditioning immediately and switch on the heater at full power to draw heat away from the engine.",
-      "Pull over safely onto the right shoulder, shift into Park, and shut off the engine completely.",
-      "Pop the hood latch from inside, but DO NOT open the hood manually until steam completely stops rising.",
-      "Wait at least 15 to 30 minutes before touching the radiator cap; opening a hot radiator causes severe steam burns.",
-      "Check coolant reservoir levels once cool, add water/coolant if low, or call roadside assistance."
-    ]
-  },
-  {
-    id: "career-networking-event",
-    title: "What to do to prepare for a professional career networking event",
-    desc: "Make meaningful professional connections and follow up effectively.",
-    category: "finance",
-    sourceName: "Harvard Business Review Career Guide",
-    sourceUrl: "https://hbr.org",
-    tags: ["career", "networking", "work", "business", "jobs"],
-    todos: [
-      "Define a clear goal for the event and refine a 30-second elevator speech explaining your role and background.",
-      "Update your LinkedIn profile, headshot, and digital contact card for quick QR code sharing.",
-      "Research key speakers, attending organizations, or featured guests in advance.",
-      "Focus on asking open-ended questions about others rather than aggressively selling your resume.",
-      "Send personalized LinkedIn connection requests or brief follow-up emails within 24–48 hours."
-    ]
-  },
-  {
-    id: "annual-performance-review",
-    title: "What to do when preparing for your annual performance review",
-    desc: "Document your workplace wins and advocate for promotions or salary increases.",
-    category: "finance",
-    sourceName: "Forbes Career Advancement",
-    sourceUrl: "https://www.forbes.com",
-    tags: ["career", "work", "performance review", "jobs", "salary"],
-    todos: [
-      "Compile a portfolio of key metrics, project completions, and positive client/colleague feedback from the past year.",
-      "Self-assess your performance against last year's performance goals with honest, data-driven reflections.",
-      "Prepare 2–3 forward-looking professional goals and skill development initiatives for the coming year.",
-      "Benchmark market compensation data for your role if you intend to request a salary adjustment.",
-      "Listen actively during feedback delivery, take structured notes, and agree on clear next steps."
-    ]
-  },
-  {
-    id: "prepare-car-for-inspection",
-    title: "What to do to prepare your vehicle for state safety or emissions inspection",
-    desc: "Pass official vehicle inspections on the first attempt without re-test fees.",
-    category: "emergencies",
-    sourceName: "State Department of Motor Vehicles",
-    sourceUrl: "https://www.dmv.org",
-    tags: ["car", "inspection", "auto", "driving", "dmv"],
-    todos: [
-      "Ensure no 'Check Engine' warning lights are illuminated on your dashboard; resolve underlying OBD-II codes.",
-      "Inspect all exterior lighting: headlights, high beams, taillights, brake lights, reverse lights, and turn signals.",
-      "Check tire tread depth and verify windshield wipers clear water effectively without streaking.",
-      "Test windshield washer sprayers, horn functionality, and seatbelt retraction mechanisms.",
-      "Drive the vehicle for at least 15–20 minutes prior to the test so the catalytic converter reaches operating temp."
-    ]
-  },
-  {
-    id: "remote-job-interview",
-    title: "What to do to ace a remote video job interview",
-    desc: "Optimize tech settings, lighting, and presence for virtual job interviews.",
-    category: "finance",
-    sourceName: "LinkedIn Career Advice",
-    sourceUrl: "https://www.linkedin.com",
-    tags: ["interview", "career", "remote", "jobs", "work"],
-    todos: [
-      "Test your webcam, microphone, internet stability, and video software (Zoom/Teams) 30 minutes early.",
-      "Position your camera at eye level with strong, soft lighting facing your front rather than behind you.",
-      "Clear your background of clutter or set up a professional, non-distracting virtual background.",
-      "Place your resume and key talking points in notes near the camera lens to maintain artificial eye contact.",
-      "Dress in full professional attire and send a personalized thank-you note within 24 hours of the call."
-    ]
-  },
-  {
-    id: "car-stuck-in-snow",
-    title: "What to do if your car gets stuck in snow or mud",
-    desc: "Get traction and free your vehicle without damaging the transmission.",
-    category: "emergencies",
-    sourceName: "AAA Winter Driving Prep",
-    sourceUrl: "https://www.aaa.com",
-    tags: ["car", "snow", "driving", "winter", "roadside"],
-    todos: [
-      "Clear snow and slush away from around all four tires, exhaust pipes, and under the frame using a shovel.",
-      "Turn off traction control (ESC) temporarily to allow tires to spin and bite into ground surfaces.",
-      "Pour sand, kitty litter, cardboard, or floor mats directly in front of and behind driving wheels for grip.",
-      "Gently rock the car by shifting between Drive and Reverse, applying light accelerator pressure.",
-      "Steer wheels straight ahead to minimize resistance while attempting to drive out slowly."
-    ]
-  },
-  {
-    id: "burnout-recovery-plan",
-    title: "What to do when experiencing severe job or personal burnout",
-    desc: "Recognize chronic exhaustion symptoms and restore physical and mental energy.",
+    id: "season-cast-iron-skillet",
+    title: "What to do to season and care for a cast iron skillet",
+    desc: "Build a natural non-stick polymer coating and prevent rust.",
     category: "health",
-    sourceName: "World Health Organization Burnout Guide",
-    sourceUrl: "https://www.who.int",
-    tags: ["burnout", "mental health", "wellness", "work", "stress"],
+    sourceName: "Lodge Cast Iron Care Guide",
+    sourceUrl: "https://www.lodgecastiron.com",
+    tags: ["cooking", "cast iron", "kitchen", "skillet", "food"],
     todos: [
-      "Acknowledge physical and emotional exhaustion signs without self-judgment.",
-      "Establish strict work-life boundaries by disabling work notifications outside of business hours.",
-      "Communicate workload constraints with your manager to re-prioritize or delegate non-essential tasks.",
-      "Take available paid time off (PTO) or mental health days to completely disconnect from workplace stressors.",
-      "Engage with a mental health professional, therapist, or counselor to develop coping strategies."
+      "Wash skillet with warm water, mild soap, and a stiff brush (avoid harsh scouring pads).",
+      "Dry immediately and thoroughly using a cloth, then warm on the stove to evaporate residual moisture.",
+      "Apply a thin layer of cooking oil (grape seed, canola, or vegetable oil) to the entire surface inside and out.",
+      "Bake upside down in a preheated 450°F–500°F (230°C–260°C) oven for one hour with foil on the bottom rack.",
+      "Allow the pan to cool completely inside the oven before storing in a dry location."
     ]
   },
   {
-    id: "side-hustle-launch",
-    title: "What to do when launching a freelance business or side hustle",
-    desc: "Turn a personal skill into a profitable, compliant side income stream.",
-    category: "finance",
-    sourceName: "SBA Freelance & Gig Economy Guide",
-    sourceUrl: "https://www.sba.gov",
-    tags: ["freelance", "side hustle", "business", "finance", "work"],
-    todos: [
-      "Define a niche service offering, target client profile, and transparent pricing structure.",
-      "Draft a standard client service agreement or contract covering scope, revision limits, and payment terms.",
-      "Set aside 25%–30% of gross earnings in a separate savings account for quarterly estimated taxes.",
-      "Build a simple portfolio website or digital profile showcasing past projects and client testimonials.",
-      "Track all income and business expenses diligently using dedicated accounting software."
-    ]
-  },
-  {
-    id: "prepare-car-for-storage",
-    title: "What to do when putting a car into long-term storage",
-    desc: "Prevent flat tires, dead batteries, and engine degradation during multi-month storage.",
-    category: "travel",
-    sourceName: "Edmunds Vehicle Storage Guide",
-    sourceUrl: "https://www.edmunds.com",
-    tags: ["car", "storage", "auto", "maintenance", "travel"],
-    todos: [
-      "Wash and wax the exterior thoroughly to protect paint finishes from environmental corrosion.",
-      "Fill the gas tank completely and add a fuel stabilizer to prevent moisture accumulation and fuel breakdown.",
-      "Connect a trickle charger or battery tender to keep the 12V battery maintained, or disconnect the negative terminal.",
-      "Inflate tires to maximum recommended PSI specs to prevent flat spots, or elevate on jack stands.",
-      "Cover the exhaust pipe and air intake openings with steel wool to prevent rodents from nesting inside."
-    ]
-  },
-  {
-    id: "dealing-with-difficult-coworker",
-    title: "What to do when dealing with a difficult or toxic coworker",
-    desc: "Maintain professionalism, set boundaries, and protect your workplace sanity.",
-    category: "finance",
-    sourceName: "Harvard Business Review Workplace Conflict",
-    sourceUrl: "https://hbr.org",
-    tags: ["workplace", "career", "work", "conflict", "communication"],
-    todos: [
-      "Maintain a calm, objective, and professional tone in all communications without escalating emotional reactions.",
-      "Set firm professional boundaries regarding acceptable work behaviors and project responsibilities.",
-      "Document dates, times, specific statements, and objective details of unprofessional incidents.",
-      "Attempt a direct, private 1-on-1 conversation addressing specific working behaviors if safe to do so.",
-      "Escalate the issue to your direct manager or HR with your documented evidence if performance is impacted."
-    ]
-  },
-  {
-    id: "changing-car-oil",
-    title: "What to do when changing your car oil at home",
-    desc: "Perform DIY engine oil and filter maintenance safely and cleanly.",
+    id: "deep-fryer-oil-fire",
+    title: "What to do if a kitchen grease or oil fire starts",
+    desc: "Extinguish stovetop fires instantly without causing dangerous explosions.",
     category: "emergencies",
-    sourceName: "Popular Mechanics DIY Auto",
+    sourceName: "National Fire Protection Association",
+    sourceUrl: "https://www.nfpa.org",
+    tags: ["fire", "kitchen", "grease fire", "emergencies", "safety"],
+    todos: [
+      "NEVER throw water on a grease fire; water vaporizes instantly and creates a dangerous fireball explosion.",
+      "Turn off the burner or heat source immediately if safe to reach.",
+      "Smother flames by sliding a metal lid or baking sheet flat across the top of the pan.",
+      "Pour a generous amount of baking soda or salt on small flare-ups (never use flour or baking powder).",
+      "Use a Class B dry chemical fire extinguisher or evacuate and call 911 if the fire spreads."
+    ]
+  },
+  {
+    id: "thaw-frozen-meat-safely",
+    title: "What to do to thaw frozen meat and poultry safely",
+    desc: "Prevent rapid bacterial growth while defrosting dinner ingredients.",
+    category: "health",
+    sourceName: "USDA Meat Prep Guidelines",
+    sourceUrl: "https://www.fsis.usda.gov",
+    tags: ["cooking", "food safety", "meat", "kitchen", "thawing"],
+    todos: [
+      "Plan ahead and thaw meat inside the refrigerator (requires 24 hours per 5 pounds of meat).",
+      "For quick thawing, submerge leak-proof sealed packages in cold tap water, changing water every 30 minutes.",
+      "Use the microwave defrost setting only if cooking the meat immediately afterward.",
+      "NEVER thaw meat on kitchen counters at room temperature or in warm water.",
+      "Cook thawed poultry and ground meat within 1–2 days; red meat cuts within 3–5 days."
+    ]
+  },
+  {
+    id: "pantry-organize-staples",
+    title: "What to do to organize a kitchen pantry for maximum efficiency",
+    desc: "Reduce food waste, eliminate pantry pests, and speed up meal preparation.",
+    category: "health",
+    sourceName: "Kitchen Organization Best Practices",
+    sourceUrl: "https://www.eatright.org",
+    tags: ["organization", "pantry", "kitchen", "food", "cleaning"],
+    todos: [
+      "Remove all pantry contents, discard expired goods, and wipe down shelves completely.",
+      "Group items into clear functional zones (baking, canned goods, grains/pasta, snacks, spices).",
+      "Store dry grains, flour, sugar, and cereal in airtight glass or BPA-free plastic containers.",
+      "Practice FIFO (First In, First Out) by placing newly purchased items behind older stock.",
+      "Use tiered risers for canned goods and lazy susans for oil and vinegar bottles."
+    ]
+  },
+  {
+    id: "sharpen-kitchen-knives",
+    title: "What to do to sharpen and maintain kitchen knives properly",
+    desc: "Maintain razor-sharp edges safely to reduce cutting slips and fatigue.",
+    category: "health",
+    sourceName: "Culinary Knife Maintenance",
     sourceUrl: "https://www.popularmechanics.com",
-    tags: ["car", "oil change", "auto", "maintenance", "diy"],
+    tags: ["knives", "kitchen", "cooking", "sharpening", "tools"],
     todos: [
-      "Elevate the vehicle securely using jack stands (never rely solely on a hydraulic floor jack) and chock rear wheels.",
-      "Locate the oil drain plug, place a catch basin underneath, unscrew the plug, and allow warm oil to drain completely.",
-      "Remove the old oil filter using a filter wrench, clean the mounting surface, and lubricate the new filter's rubber gasket.",
-      "Reinstall the drain plug with a fresh crush washer, torque to spec, and hand-tighten the new oil filter.",
-      "Fill the engine with recommended viscosity oil, check dipstick levels, and recycle used oil at an auto parts store."
+      "Use a whetstone (1000/6000 grit) soaked in water at a consistent 15°–20° angle per side for sharpening.",
+      "Use a honing steel before daily cooking to realign microscopic blade edge teeth.",
+      "Always cut on wooden or plastic cutting boards; avoid glass, granite, or ceramic surfaces.",
+      "Hand wash knives immediately after use with warm soapy water and dry by hand.",
+      "NEVER place chef's knives in the dishwasher; high heat and detergents dull and damage blades."
     ]
   },
   {
-    id: "prepare-for-layoff-rumors",
-    title: "What to do if your company shows signs of imminent layoffs",
-    desc: "Prepare financially and professionally before corporate downsizing occurs.",
-    category: "finance",
-    sourceName: "Wall Street Journal Career Prep",
-    sourceUrl: "https://www.wsj.com",
-    tags: ["layoff", "career", "work", "finance", "jobs"],
+    id: "clean-garbage-disposal-smell",
+    title: "What to do to clean and deodorize a smelly garbage disposal",
+    desc: "Eliminate organic buildup, mold odors, and grease accumulation under sink drains.",
+    category: "health",
+    sourceName: "Plumbing & Appliance Cleaning Advice",
+    sourceUrl: "https://www.energystar.gov",
+    tags: ["cleaning", "sink", "plumbing", "disposal", "kitchen"],
     todos: [
-      "Download non-confidential work samples, performance reviews, metrics, and personal contacts to personal storage.",
-      "Update your resume, portfolio, and reach out discreetly to key industry network contacts.",
-      "Review your personal emergency fund balance and eliminate non-essential recurring expenditures.",
-      "Schedule pending medical, dental, or eye doctor visits to maximize current insurance benefits while active.",
-      "Research your state's unemployment filing requirements and understand your company's standard severance policies."
+      "Unplug unit or switch off main breaker before performing physical drain inspections.",
+      "Pour 1 cup of baking soda down the disposal, followed by 1 cup of white vinegar; let sit for 10 minutes.",
+      "Flush the drain with boiling water while running cold tap water and the disposal unit.",
+      "Grind citrus peels (lemon or lime) alongside ice cubes and coarse sea salt to scrub blades and freshen smell.",
+      "Wipe under the rubber splash guard baffle using an old toothbrush dipped in soapy water."
     ]
   },
   {
-    id: "starting-first-leadership-role",
-    title: "What to do when stepping into your first managerial or leadership role",
-    desc: "Transition from individual contributor to effective team leader.",
-    category: "finance",
-    sourceName: "McKinsey Leadership Insights",
-    sourceUrl: "https://www.mckinsey.com",
-    tags: ["leadership", "management", "career", "work", "promotion"],
+    id: "prevent-cross-contamination",
+    title: "What to do to prevent cross-contamination during meal prep",
+    desc: "Keep raw meat bacteria from transferring to fresh, ready-to-eat foods.",
+    category: "health",
+    sourceName: "CDC Food Safety Essentials",
+    sourceUrl: "https://www.cdc.gov",
+    tags: ["food safety", "cooking", "health", "kitchen", "hygiene"],
     todos: [
-      "Schedule individual 1-on-1 listening tours with each team member to understand working styles and career goals.",
-      "Shift mindset from completing tasks personally to empowering, delegating, and removing roadblocks for others.",
-      "Establish clear team communication rhythms, project expectations, and feedback channels early.",
-      "Align team performance metrics directly with broader organizational strategies and quarterly goals.",
-      "Seek out a mentor or executive coach who can guide you through tough management decisions."
+      "Use separate, color-coded cutting boards for raw meat/seafood vs. fresh produce and bread.",
+      "Wash hands with warm water and soap for 20 seconds before and after handling raw animal proteins.",
+      "Never place cooked food back on plates or cutting boards that previously held raw meat.",
+      "Sanitize kitchen counters, utensils, and sink faucets after raw protein preparation.",
+      "Store raw meat on the bottom shelf of the refrigerator in sealed containers so juices cannot drip."
     ]
   },
   {
-    id: "car-brake-noise-troubleshoot",
-    title: "What to do if your car brakes start squeaking or grinding",
-    desc: "Diagnose brake wear issues before costly rotor damage or safety hazards occur.",
-    category: "emergencies",
-    sourceName: "Car and Driver Safety Guide",
-    sourceUrl: "https://www.caranddriver.com",
-    tags: ["car", "brakes", "auto", "maintenance", "driving"],
+    id: "coffee-machine-descale",
+    title: "What to do to descale and clean an espresso or drip coffee maker",
+    desc: "Remove hard water mineral scale to restore water pressure and coffee flavor.",
+    category: "tech",
+    sourceName: "Specialty Coffee Association Guidelines",
+    sourceUrl: "https://sca.coffee",
+    tags: ["coffee", "kitchen", "appliances", "cleaning", "descaling"],
     todos: [
-      "Identify the noise type: high-pitched squealing indicates wear indicators, while metallic grinding means bare pads.",
-      "Inspect brake pad thickness visually through wheel spokes; pads under 3mm require immediate replacement.",
-      "Check brake fluid levels inside the engine bay reservoir; low fluid often signals worn pads or system leaks.",
-      "Avoid aggressive high-speed braking or heavy towing until the brake system is inspected.",
-      "Schedule a professional brake service to replace pads, resurface/replace rotors, and bleed brake lines."
+      "Fill the water reservoir with equal parts water and commercial descaling solution (or white vinegar).",
+      "Run a brewing cycle halfway, turn off the machine, and let it sit for 30 minutes to dissolve mineral scale.",
+      "Complete the brew cycle and discard the hot descaling solution from the carafe.",
+      "Run 2–3 full water-only brew cycles to flush out all remaining acid or cleaning solution tastes.",
+      "Clean removable filter baskets, carafes, and steam wands in warm, soapy water."
     ]
   },
   {
-    id: "career-pivoting-strategy",
-    title: "What to do when planning a major career pivot or industry change",
-    desc: "Transfer existing skills to a new career path without starting from scratch.",
-    category: "finance",
-    sourceName: "Fast Company Career Transition",
-    sourceUrl: "https://www.fastcompany.com",
-    tags: ["career", "career change", "jobs", "work", "skills"],
+    id: "prep-thanksgiving-turkey",
+    title: "What to do to prepare and roast a Thanksgiving turkey safely",
+    desc: "Thaw, season, and roast poultry without drying out the meat or causing food illness.",
+    category: "health",
+    sourceName: "USDA Poultry Safety Line",
+    sourceUrl: "https://www.fsis.usda.gov",
+    tags: ["turkey", "cooking", "thanksgiving", "holidays", "food"],
     todos: [
-      "Audit your transferable skills (project management, communication, analysis) that apply across industries.",
-      "Identify skill gaps in your target industry and complete targeted online certifications or bootcamps.",
-      "Rebrand your resume and LinkedIn profile to emphasize relevant achievements over specific past job titles.",
-      "Conduct informational interviews with professionals currently working in your desired target role.",
-      "Consider bridge roles, contract work, or lateral internal transfers to gain industry-specific experience."
+      "Thaw frozen turkey in the refrigerator allowing 24 hours per 4–5 pounds of bird weight.",
+      "Do NOT wash the turkey in the sink; washing splashes raw poultry bacteria across kitchen surfaces.",
+      "Dry the exterior skin thoroughly with paper towels and dry-brine with salt 24–48 hours before cooking.",
+      "Roast at 325°F (165°C) until a digital meat thermometer reads 165°F (74°C) in the thickest part of the thigh.",
+      "Let the turkey rest uncovered for 20–30 minutes before carving to allow juices to redistribute."
     ]
   },
   {
-    id: "windshield-chip-repair",
-    title: "What to do if your car windshield gets a chip or crack",
-    desc: "Fix minor glass chips before temperature changes spread cracks across the glass.",
-    category: "emergencies",
-    sourceName: "Auto Glass Safety Council",
-    sourceUrl: "https://agsc.org",
-    tags: ["car", "windshield", "glass", "auto", "repairs"],
+    id: "first-home-composting",
+    title: "What to do when starting a home composting system",
+    desc: "Turn kitchen scraps into nutrient-rich garden soil without bad smells or pests.",
+    category: "health",
+    sourceName: "EPA Composting at Home Guide",
+    sourceUrl: "https://www.epa.gov",
+    tags: ["compost", "gardening", "kitchen", "sustainability", "environment"],
     todos: [
-      "Apply clear tape over the chip immediately to keep dirt and moisture out of the glass impact crater.",
-      "Avoid blasting high defroster heat or freezing AC directly onto the cracked glass area.",
-      "Measure the crack size; chips smaller than a quarter can usually be repaired without full glass replacement.",
-      "Check your auto insurance policy to see if comprehensive glass repair is covered with zero deductible.",
-      "Schedule mobile glass repair quickly; resin injection prevents chips from expanding into full windshield cracks."
+      "Maintain a balance of 3 parts 'Browns' (dry leaves, cardboard, straw) to 1 part 'Greens' (fruit scraps, coffee grounds).",
+      "Chop large food scraps into small pieces to speed up microbial breakdown.",
+      "Avoid adding meat, dairy, oil, cooked food scraps, or pet waste to prevent odors and rodents.",
+      "Keep compost moist like a wrung-out sponge, turning the pile weekly with a pitchfork for oxygen.",
+      "Harvest rich black finished compost from the bottom of the bin in 3–6 months."
     ]
   },
   {
-    id: "pmp-or-cert-exam-prep",
-    title: "What to do when preparing for a major professional certification exam",
-    desc: "Structure your study plan to pass industry certifications (PMP, AWS, CPA) on the first try.",
-    category: "finance",
-    sourceName: "Project Management Institute / Exam Prep",
-    sourceUrl: "https://www.pmi.org",
-    tags: ["certification", "pmp", "career", "study", "work"],
+    id: "clean-oven-burnt-grease",
+    title: "What to do to clean burnt grease from oven interior walls and glass",
+    desc: "Restore greasy oven interiors without harsh toxic chemical fumes.",
+    category: "health",
+    sourceName: "Home Appliance Cleaning Tips",
+    sourceUrl: "https://www.energystar.gov",
+    tags: ["cleaning", "oven", "kitchen", "appliances", "grease"],
     todos: [
-      "Review the official Exam Content Outline (ECO) to understand domain weighting and core competencies.",
-      "Create a structured 8-to-12-week study schedule allocating daily blocks for reading and practice questions.",
-      "Utilize practice exams and mock tests to simulate real exam pacing and build test-taking endurance.",
-      "Focus revision on incorrect practice question explanations to systematically eliminate weak knowledge areas.",
-      "Schedule the exam for a morning slot when mental energy is high and rest completely the day before."
+      "Mix 1/2 cup baking soda with water to create a thick paste.",
+      "Spread the paste over all interior oven surfaces (avoiding heating elements) and let sit overnight (12 hours).",
+      "Wipe out dried paste using a damp cloth; spray vinegar over remaining residue to cause a gentle scrubbing reaction.",
+      "Clean oven door glass using a razor blade held at a 45° angle to scrape off stubborn baked-on spots.",
+      "Wash oven wire racks separately in a bathtub with dish soap and warm water."
     ]
   },
   {
-    id: "car-hydroplaning-recovery",
-    title: "What to do if your car hydroplanes on a wet highway",
-    desc: "Regain tire traction and control during heavy rain skids.",
-    category: "emergencies",
-    sourceName: "NHTSA Wet Weather Driving",
-    sourceUrl: "https://www.nhtsa.gov",
-    tags: ["car", "driving", "rain", "hydroplane", "safety"],
+    id: "store-fresh-herbs-longer",
+    title: "What to do to store fresh herbs so they stay fresh for weeks",
+    desc: "Keep cilantro, parsley, basil, and rosemary crisp without rotting.",
+    category: "health",
+    sourceName: "Culinary Herb Storage Guide",
+    sourceUrl: "https://www.eatright.org",
+    tags: ["herbs", "kitchen", "food storage", "cooking", "produce"],
     todos: [
-      "Remain calm and avoid slamming on the brakes or jerking the steering wheel violently.",
-      "Ease your foot off the gas pedal gradually to allow the car to slow down on its own.",
-      "Hold the steering wheel firmly and steer straight in the direction you want the front of the vehicle to go.",
-      "Do not pump non-ABS brakes; if equipped with ABS, apply steady, firm pressure if braking becomes necessary.",
-      "Feel for tire traction returning as water disperses, then gently accelerate back to a safe speed."
+      "Treat tender herbs (parsley, cilantro, dill) like flowers: trim stems and stand them upright in a jar of water.",
+      "Cover the herb jar loosely with a plastic bag and store in the refrigerator.",
+      "Keep basil on the kitchen counter in water at room temperature (refrigeration turns basil leaves black).",
+      "Wrap hard herbs (rosemary, thyme, oregano) in damp paper towels and store inside sealed ziplock bags.",
+      "Change jar water every 2–3 days to prevent stem decay and bacteria buildup."
     ]
   },
   {
-    id: "public-speaking-prep",
-    title: "What to do when preparing for a major public speech or presentation",
-    desc: "Deliver clear, persuasive presentations with confidence.",
-    category: "finance",
-    sourceName: "Toastmasters International",
-    sourceUrl: "https://www.toastmasters.org",
-    tags: ["speaking", "presentation", "career", "work", "communication"],
+    id: "wooden-cutting-board-care",
+    title: "What to do to sanitize and condition a wooden cutting board",
+    desc: "Prevent wood cracking, warping, and bacterial penetration.",
+    category: "health",
+    sourceName: "Woodworking & Kitchen Maintenance",
+    sourceUrl: "https://www.popularmechanics.com",
+    tags: ["cutting board", "kitchen", "woodworking", "cleaning", "cooking"],
     todos: [
-      "Structure your speech with a compelling hook, 3 clear core points, and a memorable call to action.",
-      "Rehearse out loud while timing yourself, recording video to polish posture, pacing, and vocal tone.",
-      "Test slide deck formatting, AV cables, clickers, and room sound systems prior to presentation time.",
-      "Arrive early to gauge room acoustics and meet audience members to build rapport before taking the stage.",
-      "Focus on slow deep breathing and eye contact with individuals across different sections of the audience."
+      "Wash wooden boards immediately after use with warm water and mild soap; never submerge or soak in water.",
+      "Sanitize using white vinegar or rubbing half a lemon with coarse salt over the board surface.",
+      "Dry thoroughly upright on edge to prevent wood warping.",
+      "Apply food-grade mineral oil or beeswax cream monthly to hydrate wood fibers.",
+      "Never put wooden cutting boards in a dishwasher or use vegetable/olive oils (which go rancid)."
     ]
   },
   {
-    id: "car-flooded-water-crossing",
-    title: "What to do if your car gets caught in a flash flood or standing water",
-    desc: "Survive vehicle submersion risks and prevent hydrolocking your engine.",
-    category: "emergencies",
-    sourceName: "National Weather Service Turn Around Don't Drown",
-    sourceUrl: "https://www.weather.gov",
-    tags: ["flood", "car", "driving", "emergency", "safety"],
+    id: "canning-food-preservation",
+    title: "What to do when home canning fruits, jams, and vegetables safely",
+    desc: "Preserve garden harvests safely without botulism contamination.",
+    category: "health",
+    sourceName: "National Center for Home Food Preservation",
+    sourceUrl: "https://nchfp.uga.edu",
+    tags: ["canning", "preservation", "kitchen", "gardening", "food safety"],
     todos: [
-      "Never attempt to drive through flooded roads; 6 inches of water can knock you down and 12 inches can float a car.",
-      "If engine stalls in rising water, DO NOT attempt to restart it; restarting ingests water into the intake and destroys the engine.",
-      "Unbuckle seatbelts immediately and roll down windows before electronic power systems short-circuit.",
-      "If windows will not roll down, use an emergency window breaker tool or heavy object to shatter a side window.",
-      "Escape through the window onto the roof of the car and call 911 for water rescue assistance."
+      "Use tested, scientifically validated canning recipes (USDA or Ball Home Canning guides).",
+      "Inspect mason jars for cracks or chips and use brand-new flat sealing lids for every batch.",
+      "Use water-bath canning only for high-acid foods (jam, pickles, tomatoes) and pressure canning for low-acid foods (veggies, meats).",
+      "Process filled jars in boiling water or pressure cookers for the exact minutes specified for your altitude.",
+      "Allow processed jars to cool undisturbed for 12–24 hours, then check that lid centers pressed down flat and sealed."
     ]
   },
   {
-    id: "returning-from-sabbatical",
-    title: "What to do when returning to work after an extended career break or parental leave",
-    desc: "Re-enter the workforce smoothly after extended leave.",
-    category: "finance",
-    sourceName: "LeanIn.org Re-Entry Guide",
-    sourceUrl: "https://leanin.org",
-    tags: ["parental leave", "sabbatical", "career", "work", "re-entry"],
+    id: "organize-spices-cabinet",
+    title: "What to do to organize and refresh a kitchen spice rack",
+    desc: "Identify stale spices, maximize cooking flavor, and streamline cabinet storage.",
+    category: "health",
+    sourceName: "Spice Shelf Life Guidelines",
+    sourceUrl: "https://www.mccormick.com",
+    tags: ["spices", "kitchen", "organization", "cooking", "pantry"],
     todos: [
-      "Schedule a pre-return sync with your manager two weeks out to review team updates and priority shifts.",
-      "Block off your calendar for the first 3–5 days to process emails, catch up on docs, and complete HR tasks.",
-      "Set up catch-up 1-on-1s with key team members to understand new workflows and ongoing projects.",
-      "Establish realistic workplace boundaries and adjust home logistics to accommodate your new daily routine.",
-      "Grant yourself grace during the first month as you build back workplace stamina and context."
+      "Check freshness: ground spices last ~1–2 years, whole spices last 3–4 years, dried herbs last 1 year.",
+      "Perform the aroma test: crush a small amount in your palm; if it lacks fragrance, discard and replace.",
+      "Transfer spices into matching clear glass jars labeled with name and purchase/expiration date.",
+      "Store spices in a cool, dark cabinet away from direct heat sources like stoves or dishwashers.",
+      "Arrange spices alphabetically or by cuisine type (Italian, Mexican, Baking) using a tiered organizer."
     ]
   },
   {
-    id: "buying-car-tires-guide",
-    title: "What to do when choosing and buying new tires for your car",
-    desc: "Select the correct tire specs, treadwear ratings, and installation packages.",
-    category: "emergencies",
-    sourceName: "Tire Rack Selection Guide",
-    sourceUrl: "https://www.tirerack.com",
-    tags: ["car", "tires", "auto", "maintenance", "driving"],
+    id: "clean-microwave-splatters",
+    title: "What to do to clean baked-on microwave splatters in 5 minutes",
+    desc: "Steam clean microwave walls naturally without harsh scrubbing.",
+    category: "health",
+    sourceName: "Appliance Cleaning Quick Guides",
+    sourceUrl: "https://www.energystar.gov",
+    tags: ["cleaning", "microwave", "kitchen", "appliances", "quick"],
     todos: [
-      "Check your driver's door jamb sticker for exact manufacturer tire size, load index, and speed rating specs.",
-      "Choose tire categories matched to your climate: All-Season, Summer Performance, or dedicated Winter tires.",
-      "Review UTQG ratings on tires for Treadwear, Traction, and Temperature ratings.",
-      "Purchase tires in matching pairs (front/rear) or full sets of four to maintain balanced handling.",
-      "Include wheel balancing, new valve stems, and a 4-wheel alignment check during installation."
+      "Fill a microwave-safe bowl with 1 cup of water and 2 tablespoons of white vinegar or lemon slices.",
+      "Microwave on high power for 3–5 minutes until the liquid boils and steam coats the interior window.",
+      "Leave the door closed for 5 minutes to allow trapped steam to loosen baked-on food splatters.",
+      "Unplug or open the door and wipe interior walls clean using a soft sponge or microfiber cloth.",
+      "Remove glass turntable plate and wash with warm, soapy dishwater."
     ]
   },
   {
-    id: "executing-100-day-plan",
-    title: "What to do when executing a 30-60-90 day plan for a new executive role",
-    desc: "Hit the ground running and deliver strategic value in leadership positions.",
-    category: "finance",
-    sourceName: "Harvard Business Review Executive Leadership",
-    sourceUrl: "https://hbr.org",
-    tags: ["executive", "leadership", "30-60-90", "career", "management"],
+    id: "fix-oversalted-soup-sauce",
+    title: "What to do if you accidentally over-salt a soup, stew, or sauce",
+    desc: "Balance salty dishes quickly using acid, dairy, starch, or liquid diluents.",
+    category: "health",
+    sourceName: "Culinary Emergency Fixes",
+    sourceUrl: "https://www.eatright.org",
+    tags: ["cooking", "kitchen", "culinary", "fix", "food"],
     todos: [
-      "Days 1–30: Focus strictly on learning, listening to stakeholders, auditing systems, and assessing team talent.",
-      "Days 31–60: Identify quick wins, evaluate existing processes, and begin drafting strategic recommendations.",
-      "Days 61–90: Implement operational adjustments, lock in long-term KPIs, and execute strategic initiatives.",
-      "Maintain weekly communication channels with senior leadership to communicate milestones and roadblocks.",
-      "Build cross-functional relationships with peers in adjacent departments to break down organizational silos."
+      "Dilute the salt concentration by adding un-salted stock, water, or unsalted canned tomatoes.",
+      "Add a splash of acid (lemon juice, lime juice, or vinegar) or a pinch of sugar to mask salty perception.",
+      "Incorporate dairy elements like heavy cream, sour cream, yogurt, or butter to coat tastebuds.",
+      "Simmer raw peeled potato chunks in the liquid for 15 minutes to absorb salt, then discard potatoes.",
+      "Bulk up the recipe volume by adding unsalted beans, rice, pasta, or fresh vegetables."
+    ]
+  },
+  {
+    id: "fridge-temp-setting-check",
+    title: "What to do to test and calibrate your home refrigerator temperature",
+    desc: "Keep food out of the danger zone (40°F–140°F) to prevent food poisoning.",
+    category: "health",
+    sourceName: "FDA Refrigerator Thermometer Guide",
+    sourceUrl: "https://www.fda.gov",
+    tags: ["refrigerator", "food safety", "appliances", "kitchen", "temperature"],
+    todos: [
+      "Place a standalone appliance thermometer in the center of the middle shelf.",
+      "Verify refrigerator temperature stays consistently between 35°F and 38°F (1.6°C–3.3°C).",
+      "Check freezer temperature to ensure it reads exactly 0°F (-18°C) or lower.",
+      "Avoid storing milk, eggs, or meat in refrigerator door shelves where temperatures fluctuate most.",
+      "Clean dust from refrigerator condenser coils underneath or behind the unit every 6–12 months."
+    ]
+  },
+  {
+    id: "prep-meal-for-sick-friend",
+    title: "What to do when preparing and dropping off a meal for a sick friend",
+    desc: "Deliver comforting, hygienic, easy-to-reheat meals during recovery.",
+    category: "health",
+    sourceName: "Hospitality & Food Safety Care",
+    sourceUrl: "https://www.redcross.org",
+    tags: ["meal train", "hosting", "care", "cooking", "health"],
+    todos: [
+      "Confirm dietary restrictions, food allergies, and household headcounts beforehand.",
+      "Prepare easily reheatable, comforting dishes like soups, casseroles, or baked pastas in disposable containers.",
+      "Package hot food and cold salads/sides in separate containers.",
+      "Include printed heating instructions, ingredients list, and serving suggestions on the box lid.",
+      "Text before drop-off so they know food has arrived, leaving it on the porch if they need rest."
     ]
   }
 ];

@@ -1,0 +1,22 @@
+{
+  "id": "prep-meal-for-sick-friend",
+  "title": "What to do when preparing and dropping off a meal for a sick friend",
+  "desc": "Deliver comforting, hygienic, easy-to-reheat meals during recovery.",
+  "category": "health",
+  "sourceName": "Hospitality & Food Safety Care",
+  "sourceUrl": "https://www.redcross.org",
+  "tags": [
+    "meal train",
+    "hosting",
+    "care",
+    "cooking",
+    "health"
+  ],
+  "todos": [
+    "Confirm dietary restrictions, food allergies, and household headcounts beforehand.",
+    "Prepare easily reheatable, comforting dishes like soups, casseroles, or baked pastas in disposable containers.",
+    "Package hot food and cold salads/sides in separate containers.",
+    "Include printed heating instructions, ingredients list, and serving suggestions on the box lid.",
+    "Text before drop-off so they know food has arrived, leaving it on the porch if they need rest."
+  ]
+}

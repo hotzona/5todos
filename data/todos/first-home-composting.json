@@ -1,0 +1,22 @@
+{
+  "id": "first-home-composting",
+  "title": "What to do when starting a home composting system",
+  "desc": "Turn kitchen scraps into nutrient-rich garden soil without bad smells or pests.",
+  "category": "health",
+  "sourceName": "EPA Composting at Home Guide",
+  "sourceUrl": "https://www.epa.gov",
+  "tags": [
+    "compost",
+    "gardening",
+    "kitchen",
+    "sustainability",
+    "environment"
+  ],
+  "todos": [
+    "Maintain a balance of 3 parts 'Browns' (dry leaves, cardboard, straw) to 1 part 'Greens' (fruit scraps, coffee grounds).",
+    "Chop large food scraps into small pieces to speed up microbial breakdown.",
+    "Avoid adding meat, dairy, oil, cooked food scraps, or pet waste to prevent odors and rodents.",
+    "Keep compost moist like a wrung-out sponge, turning the pile weekly with a pitchfork for oxygen.",
+    "Harvest rich black finished compost from the bottom of the bin in 3–6 months."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "thaw-frozen-meat-safely",
+  "title": "What to do to thaw frozen meat and poultry safely",
+  "desc": "Prevent rapid bacterial growth while defrosting dinner ingredients.",
+  "category": "health",
+  "sourceName": "USDA Meat Prep Guidelines",
+  "sourceUrl": "https://www.fsis.usda.gov",
+  "tags": [
+    "cooking",
+    "food safety",
+    "meat",
+    "kitchen",
+    "thawing"
+  ],
+  "todos": [
+    "Plan ahead and thaw meat inside the refrigerator (requires 24 hours per 5 pounds of meat).",
+    "For quick thawing, submerge leak-proof sealed packages in cold tap water, changing water every 30 minutes.",
+    "Use the microwave defrost setting only if cooking the meat immediately afterward.",
+    "NEVER thaw meat on kitchen counters at room temperature or in warm water.",
+    "Cook thawed poultry and ground meat within 1–2 days; red meat cuts within 3–5 days."
+  ]
+}

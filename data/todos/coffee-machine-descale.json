@@ -1,0 +1,22 @@
+{
+  "id": "coffee-machine-descale",
+  "title": "What to do to descale and clean an espresso or drip coffee maker",
+  "desc": "Remove hard water mineral scale to restore water pressure and coffee flavor.",
+  "category": "tech",
+  "sourceName": "Specialty Coffee Association Guidelines",
+  "sourceUrl": "https://sca.coffee",
+  "tags": [
+    "coffee",
+    "kitchen",
+    "appliances",
+    "cleaning",
+    "descaling"
+  ],
+  "todos": [
+    "Fill the water reservoir with equal parts water and commercial descaling solution (or white vinegar).",
+    "Run a brewing cycle halfway, turn off the machine, and let it sit for 30 minutes to dissolve mineral scale.",
+    "Complete the brew cycle and discard the hot descaling solution from the carafe.",
+    "Run 2–3 full water-only brew cycles to flush out all remaining acid or cleaning solution tastes.",
+    "Clean removable filter baskets, carafes, and steam wands in warm, soapy water."
+  ]
+}

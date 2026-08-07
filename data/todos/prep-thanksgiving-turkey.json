@@ -1,0 +1,22 @@
+{
+  "id": "prep-thanksgiving-turkey",
+  "title": "What to do to prepare and roast a Thanksgiving turkey safely",
+  "desc": "Thaw, season, and roast poultry without drying out the meat or causing food illness.",
+  "category": "health",
+  "sourceName": "USDA Poultry Safety Line",
+  "sourceUrl": "https://www.fsis.usda.gov",
+  "tags": [
+    "turkey",
+    "cooking",
+    "thanksgiving",
+    "holidays",
+    "food"
+  ],
+  "todos": [
+    "Thaw frozen turkey in the refrigerator allowing 24 hours per 4–5 pounds of bird weight.",
+    "Do NOT wash the turkey in the sink; washing splashes raw poultry bacteria across kitchen surfaces.",
+    "Dry the exterior skin thoroughly with paper towels and dry-brine with salt 24–48 hours before cooking.",
+    "Roast at 325°F (165°C) until a digital meat thermometer reads 165°F (74°C) in the thickest part of the thigh.",
+    "Let the turkey rest uncovered for 20–30 minutes before carving to allow juices to redistribute."
+  ]
+}

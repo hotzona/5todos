@@ -1,0 +1,22 @@
+{
+  "id": "deep-fryer-oil-fire",
+  "title": "What to do if a kitchen grease or oil fire starts",
+  "desc": "Extinguish stovetop fires instantly without causing dangerous explosions.",
+  "category": "emergencies",
+  "sourceName": "National Fire Protection Association",
+  "sourceUrl": "https://www.nfpa.org",
+  "tags": [
+    "fire",
+    "kitchen",
+    "grease fire",
+    "emergencies",
+    "safety"
+  ],
+  "todos": [
+    "NEVER throw water on a grease fire; water vaporizes instantly and creates a dangerous fireball explosion.",
+    "Turn off the burner or heat source immediately if safe to reach.",
+    "Smother flames by sliding a metal lid or baking sheet flat across the top of the pan.",
+    "Pour a generous amount of baking soda or salt on small flare-ups (never use flour or baking powder).",
+    "Use a Class B dry chemical fire extinguisher or evacuate and call 911 if the fire spreads."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "food-safety-power-outage",
+  "title": "What to do to keep food safe during a power outage",
+  "desc": "Prevent foodborne illness and preserve refrigerator and freezer contents.",
+  "category": "emergencies",
+  "sourceName": "FDA Food Safety Guidelines",
+  "sourceUrl": "https://www.fda.gov",
+  "tags": [
+    "food safety",
+    "power outage",
+    "refrigerator",
+    "emergencies",
+    "kitchen"
+  ],
+  "todos": [
+    "Keep refrigerator and freezer doors closed continuously; unopened fridges keep food cold for ~4 hours.",
+    "A full freezer maintains safe temperatures for 48 hours (24 hours if half-full) if left unopened.",
+    "Transfer perishable meat, dairy, and eggs into coolers packed with ice if outage exceeds 4 hours.",
+    "Discard perishable food exposed to temperatures above 40°F (4°C) for 2 hours or more.",
+    "Never taste food to determine safety; when in doubt, throw it out."
+  ]
+}

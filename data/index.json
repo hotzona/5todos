@@ -1571,5 +1571,245 @@
       "career",
       "management"
     ]
+  },
+  {
+    "id": "food-safety-power-outage",
+    "title": "What to do to keep food safe during a power outage",
+    "category": "emergencies",
+    "tags": [
+      "food safety",
+      "power outage",
+      "refrigerator",
+      "emergencies",
+      "kitchen"
+    ]
+  },
+  {
+    "id": "season-cast-iron-skillet",
+    "title": "What to do to season and care for a cast iron skillet",
+    "category": "health",
+    "tags": [
+      "cooking",
+      "cast iron",
+      "kitchen",
+      "skillet",
+      "food"
+    ]
+  },
+  {
+    "id": "deep-fryer-oil-fire",
+    "title": "What to do if a kitchen grease or oil fire starts",
+    "category": "emergencies",
+    "tags": [
+      "fire",
+      "kitchen",
+      "grease fire",
+      "emergencies",
+      "safety"
+    ]
+  },
+  {
+    "id": "thaw-frozen-meat-safely",
+    "title": "What to do to thaw frozen meat and poultry safely",
+    "category": "health",
+    "tags": [
+      "cooking",
+      "food safety",
+      "meat",
+      "kitchen",
+      "thawing"
+    ]
+  },
+  {
+    "id": "pantry-organize-staples",
+    "title": "What to do to organize a kitchen pantry for maximum efficiency",
+    "category": "health",
+    "tags": [
+      "organization",
+      "pantry",
+      "kitchen",
+      "food",
+      "cleaning"
+    ]
+  },
+  {
+    "id": "sharpen-kitchen-knives",
+    "title": "What to do to sharpen and maintain kitchen knives properly",
+    "category": "health",
+    "tags": [
+      "knives",
+      "kitchen",
+      "cooking",
+      "sharpening",
+      "tools"
+    ]
+  },
+  {
+    "id": "clean-garbage-disposal-smell",
+    "title": "What to do to clean and deodorize a smelly garbage disposal",
+    "category": "health",
+    "tags": [
+      "cleaning",
+      "sink",
+      "plumbing",
+      "disposal",
+      "kitchen"
+    ]
+  },
+  {
+    "id": "prevent-cross-contamination",
+    "title": "What to do to prevent cross-contamination during meal prep",
+    "category": "health",
+    "tags": [
+      "food safety",
+      "cooking",
+      "health",
+      "kitchen",
+      "hygiene"
+    ]
+  },
+  {
+    "id": "coffee-machine-descale",
+    "title": "What to do to descale and clean an espresso or drip coffee maker",
+    "category": "tech",
+    "tags": [
+      "coffee",
+      "kitchen",
+      "appliances",
+      "cleaning",
+      "descaling"
+    ]
+  },
+  {
+    "id": "prep-thanksgiving-turkey",
+    "title": "What to do to prepare and roast a Thanksgiving turkey safely",
+    "category": "health",
+    "tags": [
+      "turkey",
+      "cooking",
+      "thanksgiving",
+      "holidays",
+      "food"
+    ]
+  },
+  {
+    "id": "first-home-composting",
+    "title": "What to do when starting a home composting system",
+    "category": "health",
+    "tags": [
+      "compost",
+      "gardening",
+      "kitchen",
+      "sustainability",
+      "environment"
+    ]
+  },
+  {
+    "id": "clean-oven-burnt-grease",
+    "title": "What to do to clean burnt grease from oven interior walls and glass",
+    "category": "health",
+    "tags": [
+      "cleaning",
+      "oven",
+      "kitchen",
+      "appliances",
+      "grease"
+    ]
+  },
+  {
+    "id": "store-fresh-herbs-longer",
+    "title": "What to do to store fresh herbs so they stay fresh for weeks",
+    "category": "health",
+    "tags": [
+      "herbs",
+      "kitchen",
+      "food storage",
+      "cooking",
+      "produce"
+    ]
+  },
+  {
+    "id": "wooden-cutting-board-care",
+    "title": "What to do to sanitize and condition a wooden cutting board",
+    "category": "health",
+    "tags": [
+      "cutting board",
+      "kitchen",
+      "woodworking",
+      "cleaning",
+      "cooking"
+    ]
+  },
+  {
+    "id": "canning-food-preservation",
+    "title": "What to do when home canning fruits, jams, and vegetables safely",
+    "category": "health",
+    "tags": [
+      "canning",
+      "preservation",
+      "kitchen",
+      "gardening",
+      "food safety"
+    ]
+  },
+  {
+    "id": "organize-spices-cabinet",
+    "title": "What to do to organize and refresh a kitchen spice rack",
+    "category": "health",
+    "tags": [
+      "spices",
+      "kitchen",
+      "organization",
+      "cooking",
+      "pantry"
+    ]
+  },
+  {
+    "id": "clean-microwave-splatters",
+    "title": "What to do to clean baked-on microwave splatters in 5 minutes",
+    "category": "health",
+    "tags": [
+      "cleaning",
+      "microwave",
+      "kitchen",
+      "appliances",
+      "quick"
+    ]
+  },
+  {
+    "id": "fix-oversalted-soup-sauce",
+    "title": "What to do if you accidentally over-salt a soup, stew, or sauce",
+    "category": "health",
+    "tags": [
+      "cooking",
+      "kitchen",
+      "culinary",
+      "fix",
+      "food"
+    ]
+  },
+  {
+    "id": "fridge-temp-setting-check",
+    "title": "What to do to test and calibrate your home refrigerator temperature",
+    "category": "health",
+    "tags": [
+      "refrigerator",
+      "food safety",
+      "appliances",
+      "kitchen",
+      "temperature"
+    ]
+  },
+  {
+    "id": "prep-meal-for-sick-friend",
+    "title": "What to do when preparing and dropping off a meal for a sick friend",
+    "category": "health",
+    "tags": [
+      "meal train",
+      "hosting",
+      "care",
+      "cooking",
+      "health"
+    ]
   }
 ]

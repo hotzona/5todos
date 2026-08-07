@@ -1,0 +1,22 @@
+{
+  "id": "canning-food-preservation",
+  "title": "What to do when home canning fruits, jams, and vegetables safely",
+  "desc": "Preserve garden harvests safely without botulism contamination.",
+  "category": "health",
+  "sourceName": "National Center for Home Food Preservation",
+  "sourceUrl": "https://nchfp.uga.edu",
+  "tags": [
+    "canning",
+    "preservation",
+    "kitchen",
+    "gardening",
+    "food safety"
+  ],
+  "todos": [
+    "Use tested, scientifically validated canning recipes (USDA or Ball Home Canning guides).",
+    "Inspect mason jars for cracks or chips and use brand-new flat sealing lids for every batch.",
+    "Use water-bath canning only for high-acid foods (jam, pickles, tomatoes) and pressure canning for low-acid foods (veggies, meats).",
+    "Process filled jars in boiling water or pressure cookers for the exact minutes specified for your altitude.",
+    "Allow processed jars to cool undisturbed for 12–24 hours, then check that lid centers pressed down flat and sealed."
+  ]
+}
