@@ -1,8 +1,9 @@
 // MASTER STATE
-let allTodos = [];
-let filteredTodos = [];
+let indexTodos = [];      // Lightweight search index
+let filteredIndex = [];   // Search/filtered subset
 let activeCategory = 'all';
-let showAll = false;
+let displayLimit = 20;    // Incremental loading limit
+let currentLoadedTodo = null;
 
 // DOM ELEMENTS
 const dailySection = document.getElementById('daily-section');
@@ -12,42 +13,69 @@ const searchInput = document.getElementById('search-input');
 const surpriseBtn = document.getElementById('surprise-btn');
 const categoryPills = document.getElementById('category-pills');
 
-// 1. FETCH JSON DATA
-async function loadTodos() {
+// 1. FETCH INDEX DATA
+async function loadApp() {
   try {
-    const response = await fetch('data/todos.json');
-    if (!response.ok) throw new Error('Failed to load checklist data.');
-    allTodos = await response.json();
-    filteredTodos = [...allTodos];
+    const response = await fetch('data/index.json');
+    if (!response.ok) throw new Error('Failed to load checklist index.');
+    indexTodos = await response.json();
+    filteredIndex = [...indexTodos];
 
-    // Priority to hash routing on load
+    // Priority to deep link hash
     const hash = window.location.hash.replace('#', '');
-    const foundHash = hash ? allTodos.find(t => t.id === hash) : null;
+    if (hash) {
+      await loadAndRenderTodoById(hash);
+    } else {
+      await renderDailyTodo();
+    }
 
-    renderDailyTodo(foundHash);
     renderListings();
   } catch (error) {
-    console.error('Error loading 5todos:', error);
+    console.error('Error starting 5todos:', error);
     if (dailyContainer) {
-      dailyContainer.innerHTML = `<div class="p-4 text-center text-red-400 text-xs">Failed to load checklists.</div>`;
+      dailyContainer.innerHTML = `<div class="p-4 text-center text-red-400 text-xs">Failed to load index data.</div>`;
     }
   }
 }
 
-// 2. DAILY & ACTIVE CHECKLIST RENDERER
-function renderDailyTodo(overrideTodo = null) {
-  if (!allTodos.length) return;
-
-  let selected;
-  if (overrideTodo) {
-    selected = overrideTodo;
-  } else {
-    const today = new Date();
-    const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
-    const dailyIndex = dayOfYear % allTodos.length;
-    selected = allTodos[dailyIndex];
+// 2. FETCH SINGLE TODO ON DEMAND
+async function fetchTodoById(id) {
+  try {
+    const res = await fetch(`data/todos/${id}.json`);
+    if (!res.ok) throw new Error(`Todo ${id} not found.`);
+    return await res.json();
+  } catch (err) {
+    console.error(err);
+    return null;
   }
+}
 
+// 3. DAILY SEEDED ALGORITHM
+async function renderDailyTodo() {
+  if (!indexTodos.length) return;
+
+  const today = new Date();
+  const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 86400000);
+  const dailyIndex = dayOfYear % indexTodos.length;
+  const targetId = indexTodos[dailyIndex].id;
+
+  const fullTodo = await fetchTodoById(targetId);
+  if (fullTodo) {
+    renderActiveCard(fullTodo, false);
+  }
+}
+
+async function loadAndRenderTodoById(id) {
+  const fullTodo = await fetchTodoById(id);
+  if (fullTodo) {
+    renderActiveCard(fullTodo, true);
+  } else {
+    renderDailyTodo();
+  }
+}
+
+function renderActiveCard(selected, isOverride = false) {
+  currentLoadedTodo = selected;
   const storageKey = `progress-${selected.id}`;
   let savedState = JSON.parse(localStorage.getItem(storageKey)) || [false, false, false, false, false];
 
@@ -55,7 +83,7 @@ function renderDailyTodo(overrideTodo = null) {
     <div class="bg-white dark:bg-gray-800/90 rounded-2xl border border-gray-200 dark:border-gray-700/80 p-5 shadow-xs relative overflow-hidden transition-all">
       <div class="flex items-center justify-between gap-3 mb-3">
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-indigo-50 text-indigo-600 dark:bg-indigo-950/60 dark:text-indigo-300">
-          <i data-lucide="sparkles" class="w-3 h-3"></i> ${overrideTodo ? 'Active Checklist' : 'Daily 5todo'}
+          <i data-lucide="sparkles" class="w-3 h-3"></i> ${isOverride ? 'Active Checklist' : 'Daily 5todo'}
         </span>
         ${selected.sourceName ? `
           <a href="${selected.sourceUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-gray-400 hover:text-indigo-500 transition-colors">
@@ -116,7 +144,7 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
       savedState[idx] = !savedState[idx];
       localStorage.setItem(storageKey, JSON.stringify(savedState));
       renderChecklistItems(todoObj, savedState, storageKey);
-      renderListings(); // Refresh library list badges
+      renderListings();
     });
 
     listEl.appendChild(li);
@@ -124,7 +152,6 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
 
   updateCounter();
 
-  // NATIVE SHARE / EXPORT
   document.getElementById('export-btn').onclick = async () => {
     const shareUrl = `${window.location.origin}${window.location.pathname}#${todoObj.id}`;
     let shareText = `📋 5todos.com: ${todoObj.title.replace('...', '')}\n${todoObj.desc}\n\n`;
@@ -140,9 +167,7 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
           text: shareText,
           url: shareUrl
         });
-      } catch (err) {
-        // Fallback if user cancels share dialog
-      }
+      } catch (err) {}
     } else {
       navigator.clipboard.writeText(shareText).then(() => {
         const btn = document.getElementById('export-btn');
@@ -156,17 +181,16 @@ function renderChecklistItems(todoObj, savedState, storageKey) {
   };
 }
 
-// 3. SEARCH & FILTERING LOGIC
+// 4. SEARCH & FILTERING LOGIC
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
     const query = e.target.value.toLowerCase().trim();
+    displayLimit = 20; // reset limit on new search
     
     if (query.length > 0) {
       dailySection.classList.add('hidden');
-      showAll = true;
     } else {
       dailySection.classList.remove('hidden');
-      showAll = false;
     }
     
     filterTodos(query, activeCategory);
@@ -179,6 +203,7 @@ if (categoryPills) {
     if (!btn) return;
     
     activeCategory = btn.dataset.category;
+    displayLimit = 20;
     document.querySelectorAll('.cat-btn').forEach(b => {
       b.className = 'cat-btn px-3.5 py-1 rounded-full font-medium transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white';
     });
@@ -189,27 +214,26 @@ if (categoryPills) {
 }
 
 function filterTodos(query = '', category = 'all') {
-  filteredTodos = allTodos.filter(item => {
+  filteredIndex = indexTodos.filter(item => {
     const matchesCat = category === 'all' || item.category === category;
     const matchesQuery = !query || 
       item.title.toLowerCase().includes(query) ||
-      item.desc.toLowerCase().includes(query) ||
-      item.tags.some(tag => tag.toLowerCase().includes(query));
+      (item.tags && item.tags.some(tag => tag.toLowerCase().includes(query)));
     return matchesCat && matchesQuery;
   });
   renderListings();
 }
 
-// 4. COMPACT ROW RENDERER WITH PROGRESS BADGES
+// 5. COMPACT ROW RENDERER WITH INCREMENTAL LOAD
 function renderListings() {
   if (!listingsContainer) return;
 
-  if (!filteredTodos.length) {
+  if (!filteredIndex.length) {
     listingsContainer.innerHTML = `<div class="text-center py-6 text-gray-400 text-xs">No matching 5todos found.</div>`;
     return;
   }
 
-  const displayList = showAll ? filteredTodos : filteredTodos.slice(0, 6);
+  const displayList = filteredIndex.slice(0, displayLimit);
 
   let html = displayList.map(item => {
     const savedState = JSON.parse(localStorage.getItem(`progress-${item.id}`)) || [];
@@ -236,10 +260,10 @@ function renderListings() {
     `;
   }).join('');
 
-  if (!showAll && filteredTodos.length > 6) {
+  if (filteredIndex.length > displayLimit) {
     html += `
       <button id="show-more-btn" class="w-full py-2.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline text-center">
-        Show all ${filteredTodos.length} checklists →
+        Show more checklists (${filteredIndex.length - displayLimit} remaining) →
       </button>
     `;
   }
@@ -250,42 +274,32 @@ function renderListings() {
   const showMoreBtn = document.getElementById('show-more-btn');
   if (showMoreBtn) {
     showMoreBtn.addEventListener('click', () => {
-      showAll = true;
+      displayLimit += 20;
       renderListings();
     });
   }
 }
 
-window.openTodo = function(id) {
-  const found = allTodos.find(t => t.id === id);
-  if (found) {
-    window.location.hash = id;
-    renderDailyTodo(found);
-    searchInput.value = '';
-    dailySection.classList.remove('hidden');
-    window.scrollTo({ top: dailySection.offsetTop - 80, behavior: 'smooth' });
-  }
+window.openTodo = async function(id) {
+  window.location.hash = id;
+  await loadAndRenderTodoById(id);
+  searchInput.value = '';
+  dailySection.classList.remove('hidden');
+  window.scrollTo({ top: dailySection.offsetTop - 80, behavior: 'smooth' });
 };
 
-window.addEventListener('hashchange', () => {
+window.addEventListener('hashchange', async () => {
   const hash = window.location.hash.replace('#', '');
-  if (hash) {
-    const found = allTodos.find(t => t.id === hash);
-    if (found) renderDailyTodo(found);
-  }
+  if (hash) await loadAndRenderTodoById(hash);
 });
 
 // SURPRISE BUTTON
 if (surpriseBtn) {
-  surpriseBtn.addEventListener('click', () => {
-    if (!allTodos.length) return;
-    const randomIndex = Math.floor(Math.random() * allTodos.length);
-    const randomTodo = allTodos[randomIndex];
-    window.location.hash = randomTodo.id;
-    renderDailyTodo(randomTodo);
-    searchInput.value = '';
-    dailySection.classList.remove('hidden');
-    window.scrollTo({ top: dailySection.offsetTop - 80, behavior: 'smooth' });
+  surpriseBtn.addEventListener('click', async () => {
+    if (!indexTodos.length) return;
+    const randomIndex = Math.floor(Math.random() * indexTodos.length);
+    const randomItem = indexTodos[randomIndex];
+    await window.openTodo(randomItem.id);
   });
 }
 
@@ -301,4 +315,4 @@ document.getElementById('theme-toggle')?.addEventListener('click', () => {
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-loadTodos();
+loadApp();
