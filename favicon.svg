@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#3730a3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Indigo Background Tile -->
+  <rect width="512" height="512" rx="128" fill="url(#grad)"/>
+  
+  <!-- Regular 5-Sided Pentagon Outline -->
+  <polygon points="256,70 435,200 366,410 146,410 77,200" 
+           fill="none" 
+           stroke="#a5b4fc" 
+           stroke-width="24" 
+           stroke-linejoin="round" />
+
+  <!-- Bold Central Verification Checkmark -->
+  <path d="M185 260 L235 310 L335 195" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="48" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+</svg>
