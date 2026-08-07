@@ -3,18 +3,23 @@ let indexTodos = [];
 let filteredIndex = [];
 let currentCategory = 'all';
 let currentSearchQuery = '';
-let activeTodoData = null; // Holds current open modal checklist data
+let activeTodoData = null;
 
-// Utility DOM Helper
+// Utility Helper
 const getEl = (id) => document.getElementById(id);
 
-// Initialize Application
+// Get progress count for a given checklist ID
+function getChecklistProgress(id) {
+  const savedStates = JSON.parse(localStorage.getItem(`5todos_checked_${id}`) || '{}');
+  return Object.keys(savedStates).length;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   fetchIndex();
   setupEventListeners();
 });
 
-// 1. Fetch data/index.json
+// 1. Fetch Index Data
 async function fetchIndex() {
   const todosContainer = getEl('todos-container');
   try {
@@ -52,11 +57,16 @@ function renderDailyCard() {
 
   if (!dailyItem) return;
 
+  const progress = getChecklistProgress(dailyItem.id);
+
   dailyCardContainer.innerHTML = `
-    <div class="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-2xl p-6 text-white shadow-lg cursor-pointer transform transition hover:-translate-y-0.5" onclick="openTodoModal('${dailyItem.id}')">
+    <div class="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-2xl p-5 sm:p-6 text-white shadow-lg cursor-pointer transform transition hover:-translate-y-0.5 active:scale-[0.99]" onclick="openTodoModal('${dailyItem.id}')">
       <div class="flex items-center justify-between mb-2">
         <span class="bg-white/20 text-xs font-semibold px-2.5 py-1 rounded-full uppercase tracking-wider">Featured Today</span>
-        <span class="text-xs uppercase font-medium opacity-80">${dailyItem.category || 'General'}</span>
+        <div class="flex items-center gap-2">
+          <span class="bg-black/20 text-white text-xs font-bold px-2 py-0.5 rounded-full" id="daily-progress-${dailyItem.id}">${progress}/5</span>
+          <span class="text-xs uppercase font-medium opacity-80">${dailyItem.category || 'General'}</span>
+        </div>
       </div>
       <h2 class="text-xl md:text-2xl font-bold mb-2">${dailyItem.title || 'Featured Checklist'}</h2>
       <p class="text-sm text-indigo-100 flex items-center gap-1 font-medium">
@@ -66,13 +76,12 @@ function renderDailyCard() {
   `;
 }
 
-// 3. Filter Logic (Hides Daily Card when specific category or search is active)
+// 3. Filter Todos
 function filterTodos(query = '', category = 'all') {
   const dailyCardContainer = getEl('daily-card');
   currentSearchQuery = (query || '').toLowerCase().trim();
   currentCategory = category || 'all';
 
-  // Toggle Daily Card Visibility via Tailwind class
   if (dailyCardContainer) {
     if (currentCategory !== 'all' || currentSearchQuery !== '') {
       dailyCardContainer.classList.add('hidden');
@@ -81,7 +90,6 @@ function filterTodos(query = '', category = 'all') {
     }
   }
 
-  // Filter items
   filteredIndex = indexTodos.filter(item => {
     if (!item) return false;
     
@@ -98,7 +106,7 @@ function filterTodos(query = '', category = 'all') {
   renderListings();
 }
 
-// 4. Render Checklist Cards List
+// 4. Render Grid Listings with X/5 Progress Badges
 function renderListings() {
   const todosContainer = getEl('todos-container');
   if (!todosContainer) return;
@@ -112,17 +120,27 @@ function renderListings() {
     return;
   }
 
-  todosContainer.innerHTML = filteredIndex.map(item => `
-    <div onclick="openTodoModal('${item.id}')" class="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700/60 rounded-xl p-5 shadow-xs hover:shadow-md transition-all cursor-pointer group">
-      <div class="flex items-center justify-between mb-2">
-        <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">${item.category || 'General'}</span>
+  todosContainer.innerHTML = filteredIndex.map(item => {
+    const progress = getChecklistProgress(item.id);
+    const isComplete = progress === 5;
+
+    return `
+      <div onclick="openTodoModal('${item.id}')" class="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700/60 rounded-xl p-5 shadow-xs hover:shadow-md transition-all cursor-pointer group flex flex-col justify-between active:bg-gray-50 dark:active:bg-gray-700/50">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">${item.category || 'General'}</span>
+            <span id="card-progress-${item.id}" class="text-xs font-bold px-2 py-0.5 rounded-full ${isComplete ? 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' : progress > 0 ? 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300' : 'bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-gray-400'}">
+              ${progress}/5
+            </span>
+          </div>
+          <h3 class="font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">${item.title || 'Untitled Checklist'}</h3>
+        </div>
       </div>
-      <h3 class="font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">${item.title || 'Untitled Checklist'}</h3>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
-// 5. Open Modal with Interactive Checkboxes & Export Features
+// 5. Open Checklist Modal
 async function openTodoModal(id) {
   const modal = getEl('todo-modal');
   const modalContent = getEl('modal-content');
@@ -139,49 +157,56 @@ async function openTodoModal(id) {
     const data = await res.json();
     activeTodoData = data;
 
-    // Retrieve saved checked states from LocalStorage
     const savedStates = JSON.parse(localStorage.getItem(`5todos_checked_${id}`) || '{}');
-
     const todosList = Array.isArray(data.todos) ? data.todos : [];
 
     modalContent.innerHTML = `
-      <!-- Checklist Header -->
-      <div class="mb-4 pr-6">
-        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">${data.category || 'General'}</span>
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-2">${data.title || 'Checklist'}</h2>
-        ${data.desc ? `<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">${data.desc}</p>` : ''}
+      <!-- Header -->
+      <div class="mb-4 pr-8">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">${data.category || 'General'}</span>
+          <span id="modal-progress-badge" class="text-xs font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">
+            ${Object.keys(savedStates).length}/5
+          </span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">${data.title || 'Checklist'}</h2>
+        ${data.desc ? `<p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-1">${data.desc}</p>` : ''}
       </div>
 
-      <!-- Action / Export Toolbar -->
-      <div class="flex items-center gap-2 mb-4 pb-3 border-b border-gray-100 dark:border-gray-700/60 text-xs">
-        <button onclick="copyChecklistToClipboard()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 font-medium transition-colors">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-          <span id="copy-btn-text">Copy List</span>
+      <!-- Action Toolbar (iOS Native Share + Copy + Print) -->
+      <div class="flex items-center gap-2 mb-4 pb-3 border-b border-gray-100 dark:border-gray-700/60 text-xs overflow-x-auto scrollbar-none">
+        <button onclick="shareChecklist()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 font-medium transition-colors active:scale-95 flex-shrink-0">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+          <span>Share</span>
         </button>
-        <button onclick="printChecklist()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 font-medium transition-colors">
+        <button onclick="copyChecklistToClipboard()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 font-medium transition-colors flex-shrink-0">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          <span id="copy-btn-text">Copy</span>
+        </button>
+        <button onclick="printChecklist()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 font-medium transition-colors flex-shrink-0">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
           Print / PDF
         </button>
-        <button onclick="resetChecklistProgress('${id}')" class="ml-auto text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-xs font-medium">
-          Reset Progress
+        <button onclick="resetChecklistProgress('${id}')" class="ml-auto text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-xs font-medium flex-shrink-0 pl-2">
+          Reset
         </button>
       </div>
 
       <!-- Interactive Steps -->
-      <div class="space-y-3 my-4">
+      <div class="space-y-2.5 my-4">
         ${todosList.map((step, idx) => {
           const isChecked = !!savedStates[idx];
           return `
             <label class="flex items-start gap-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/40 cursor-pointer select-none hover:bg-indigo-50/50 dark:hover:bg-indigo-950/20 transition-colors">
               <input 
                 type="checkbox" 
-                class="step-checkbox mt-1 w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500 cursor-pointer" 
+                class="step-checkbox mt-0.5 w-4 h-4 text-indigo-600 rounded border-gray-300 focus:ring-indigo-500 cursor-pointer flex-shrink-0" 
                 data-id="${id}" 
                 data-idx="${idx}" 
                 ${isChecked ? 'checked' : ''} 
                 onchange="toggleStepCheck(this)"
               />
-              <span class="text-sm font-medium ${isChecked ? 'line-through text-gray-400 dark:text-gray-500' : 'text-gray-800 dark:text-gray-200'}">
+              <span class="text-sm font-medium leading-tight ${isChecked ? 'line-through text-gray-400 dark:text-gray-500' : 'text-gray-800 dark:text-gray-200'}">
                 ${step}
               </span>
             </label>
@@ -189,9 +214,9 @@ async function openTodoModal(id) {
         }).join('')}
       </div>
 
-      <!-- Source Verification Footer -->
+      <!-- Source Link -->
       ${data.sourceName && data.sourceUrl ? `
-        <div class="pt-4 border-t border-gray-100 dark:border-gray-700 text-xs text-gray-400 flex items-center justify-between">
+        <div class="pt-3 border-t border-gray-100 dark:border-gray-700 text-xs text-gray-400 flex items-center justify-between">
           <span>Source verification:</span>
           <a href="${data.sourceUrl}" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 hover:underline font-medium">${data.sourceName} &rarr;</a>
         </div>
@@ -203,7 +228,7 @@ async function openTodoModal(id) {
   }
 }
 
-// 6. Interactive Checkbox Storage Logic
+// 6. Interactive Checkbox & Real-time Progress Update
 function toggleStepCheck(checkbox) {
   const id = checkbox.getAttribute('data-id');
   const idx = checkbox.getAttribute('data-idx');
@@ -220,7 +245,7 @@ function toggleStepCheck(checkbox) {
 
   localStorage.setItem(storageKey, JSON.stringify(savedStates));
 
-  // Toggle strikethrough class on text element
+  // Toggle strikethrough text
   const textSpan = checkbox.nextElementSibling;
   if (textSpan) {
     if (isChecked) {
@@ -231,6 +256,18 @@ function toggleStepCheck(checkbox) {
       textSpan.classList.add('text-gray-800', 'dark:text-gray-200');
     }
   }
+
+  // Update real-time counters
+  const totalCount = Object.keys(savedStates).length;
+  
+  const modalBadge = getEl('modal-progress-badge');
+  if (modalBadge) modalBadge.textContent = `${totalCount}/5`;
+
+  const cardBadge = getEl(`card-progress-${id}`);
+  if (cardBadge) cardBadge.textContent = `${totalCount}/5`;
+
+  const dailyBadge = getEl(`daily-progress-${id}`);
+  if (dailyBadge) dailyBadge.textContent = `${totalCount}/5`;
 }
 
 function resetChecklistProgress(id) {
@@ -243,9 +280,39 @@ function resetChecklistProgress(id) {
       textSpan.classList.add('text-gray-800', 'dark:text-gray-200');
     }
   });
+
+  const modalBadge = getEl('modal-progress-badge');
+  if (modalBadge) modalBadge.textContent = `0/5`;
+
+  const cardBadge = getEl(`card-progress-${id}`);
+  if (cardBadge) cardBadge.textContent = `0/5`;
+
+  const dailyBadge = getEl(`daily-progress-${id}`);
+  if (dailyBadge) dailyBadge.textContent = `0/5`;
 }
 
-// 7. Export / Copy / Print Helper Functions
+// 7. Native iOS/Desktop Share API + Fallbacks
+async function shareChecklist() {
+  if (!activeTodoData) return;
+
+  const title = activeTodoData.title || '5todos Checklist';
+  const url = window.location.href;
+
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: title,
+        text: `Check out this 5-step checklist: ${title}`,
+        url: url
+      });
+    } catch (err) {
+      if (err.name !== 'AbortError') console.error('Share failed:', err);
+    }
+  } else {
+    copyChecklistToClipboard();
+  }
+}
+
 function copyChecklistToClipboard() {
   if (!activeTodoData) return;
 
@@ -257,7 +324,7 @@ function copyChecklistToClipboard() {
     const btnText = getEl('copy-btn-text');
     if (btnText) {
       btnText.textContent = 'Copied!';
-      setTimeout(() => { btnText.textContent = 'Copy List'; }, 2000);
+      setTimeout(() => { btnText.textContent = 'Copy'; }, 2000);
     }
   }).catch(err => {
     console.error('Failed to copy checklist:', err);
@@ -275,14 +342,12 @@ function setupEventListeners() {
   const closeModalBtn = getEl('close-modal');
   const modal = getEl('todo-modal');
 
-  // Search input with auto filter
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       filterTodos(e.target.value, currentCategory);
     });
   }
 
-  // Category Pills delegation
   if (categoryPills) {
     categoryPills.addEventListener('click', (e) => {
       const btn = e.target.closest('.cat-btn');
@@ -301,7 +366,6 @@ function setupEventListeners() {
     });
   }
 
-  // Modal dismissal listeners
   if (closeModalBtn) {
     closeModalBtn.addEventListener('click', closeModal);
   }
