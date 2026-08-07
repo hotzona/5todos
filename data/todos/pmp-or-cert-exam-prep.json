@@ -1,0 +1,22 @@
+{
+  "id": "pmp-or-cert-exam-prep",
+  "title": "What to do when preparing for a major professional certification exam",
+  "desc": "Structure your study plan to pass industry certifications (PMP, AWS, CPA) on the first try.",
+  "category": "finance",
+  "sourceName": "Project Management Institute / Exam Prep",
+  "sourceUrl": "https://www.pmi.org",
+  "tags": [
+    "certification",
+    "pmp",
+    "career",
+    "study",
+    "work"
+  ],
+  "todos": [
+    "Review the official Exam Content Outline (ECO) to understand domain weighting and core competencies.",
+    "Create a structured 8-to-12-week study schedule allocating daily blocks for reading and practice questions.",
+    "Utilize practice exams and mock tests to simulate real exam pacing and build test-taking endurance.",
+    "Focus revision on incorrect practice question explanations to systematically eliminate weak knowledge areas.",
+    "Schedule the exam for a morning slot when mental energy is high and rest completely the day before."
+  ]
+}

@@ -1,326 +1,406 @@
 const fs = require('fs');
 const path = require('path');
 
-// BATCH 5: HEALTH, HOME MAINTENANCE & OPTIMIZATION (ITEMS 56-75)
+// BATCH 6: AUTOMOTIVE, CAREER & ADVANCED OPERATIONS (ITEMS 76-100)
 const batch = [
   {
-    id: "winterize-home",
-    title: "What to do to winterize your house or apartment",
-    desc: "Protect pipes, reduce heating bills, and seal air leaks before freezing weather.",
+    id: "jumpstart-dead-battery",
+    title: "What to do when jump-starting a car with a dead battery",
+    desc: "Safely hook up jumper cables and restart a vehicle without damaging electronics.",
     category: "emergencies",
-    sourceName: "U.S. Department of Energy",
-    sourceUrl: "https://www.energy.gov",
-    tags: ["home", "winter", "heating", "maintenance", "house"],
-    todos: [
-      "Disconnect and drain outdoor garden hoses, shut off exterior water valves, and insulate spigots.",
-      "Inspect window and door seals, applying weatherstripping or caulk to prevent cold drafts.",
-      "Service your heating furnace or heat pump and replace air filters for efficient winter operation.",
-      "Clean gutters and downspouts to allow proper drainage and prevent ice dam formation on the roof.",
-      "Reverse ceiling fan rotation to clockwise on low speed to push trapped warm air downward."
-    ]
-  },
-  {
-    id: "start-exercise-routine",
-    title: "What to do when starting a new exercise or workout routine",
-    desc: "Build sustainable fitness habits while preventing injury and burnout.",
-    category: "health",
-    sourceName: "CDC Physical Activity Guidelines",
-    sourceUrl: "https://www.cdc.gov",
-    tags: ["fitness", "health", "workout", "exercise", "wellness"],
-    todos: [
-      "Consult a healthcare professional for physical clearance if managing prior injuries or conditions.",
-      "Establish realistic, measurable goals focused on consistency rather than rapid intensity.",
-      "Schedule workout sessions on your primary calendar like non-negotiable appointments.",
-      "Learn foundational movement mechanics with lighter weights before increasing resistance.",
-      "Prioritize recovery by getting 7–9 hours of sleep and taking designated rest days."
-    ]
-  },
-  {
-    id: "storm-outage-prep",
-    title: "What to do to prepare your home for a long power outage",
-    desc: "Safeguard food, water, light, and power reserves before severe weather hits.",
-    category: "emergencies",
-    sourceName: "Ready.gov Severe Weather Prep",
-    sourceUrl: "https://www.ready.gov",
-    tags: ["emergency", "power outage", "storm", "home", "safety"],
-    todos: [
-      "Stock at least 1 gallon of drinking water per person per day for a minimum 3-day supply.",
-      "Assemble non-perishable food, manual can openers, flashlights, and extra fresh batteries.",
-      "Charge all mobile phones, laptops, and portable USB power banks fully before the storm arrives.",
-      "Set refrigerator and freezer temperatures to the coldest settings to preserve food longer.",
-      "Keep a backup supply of required prescription medications and a complete first-aid kit on hand."
-    ]
-  },
-  {
-    id: "hvac-summer-prep",
-    title: "What to do when prepping your AC or HVAC unit for summer",
-    desc: "Maximize cooling efficiency and avoid mid-summer air conditioning breakdowns.",
-    category: "emergencies",
-    sourceName: "Energy Star Maintenance Guide",
-    sourceUrl: "https://www.energystar.gov",
-    tags: ["hvac", "ac", "home", "summer", "maintenance"],
-    todos: [
-      "Replace dirty air filter units with fresh MERV-rated filters for proper airflow.",
-      "Clear leaves, grass clippings, and debris at least 2 feet around the outdoor AC condenser unit.",
-      "Clean interior supply and return vents, ensuring furniture or rugs are not blocking airflow.",
-      "Inspect the condensate drain line to confirm water drains freely without backup.",
-      "Test cooling operation on your thermostat early in the season before heatwaves begin."
-    ]
-  },
-  {
-    id: "prep-planned-surgery",
-    title: "What to do when preparing for a planned medical surgery",
-    desc: "Streamline pre-op requirements and set up a smooth home recovery environment.",
-    category: "health",
-    sourceName: "American College of Surgeons",
-    sourceUrl: "https://www.facs.org",
-    tags: ["health", "surgery", "medical", "recovery", "hospital"],
-    todos: [
-      "Follow all doctor fasting guidelines regarding food, drink, and morning medication restriction.",
-      "Arrange a trusted adult to drive you home and assist during the first 24–48 hours post-op.",
-      "Prepare a ground-floor recovery area stocked with ice packs, extra pillows, and easy prescription access.",
-      "Pre-cook or purchase soft, easily digestible meals and stock up on hydration beverages.",
-      "Complete pre-admission paperwork, medical directives, and verify insurance coverage in advance."
-    ]
-  },
-  {
-    id: "deep-clean-refrigerator",
-    title: "What to do to deep clean a refrigerator and pantry safely",
-    desc: "Sanitize food storage surfaces and eliminate hidden bacteria and spoiled items.",
-    category: "health",
-    sourceName: "USDA Food Safety and Inspection Service",
-    sourceUrl: "https://www.fsis.usda.gov",
-    tags: ["cleaning", "refrigerator", "pantry", "food safety", "home"],
-    todos: [
-      "Empty all contents into coolers to keep perishables cold while cleaning.",
-      "Check expiration dates, discarding spoiled produce, expired condiments, and freezer-burned goods.",
-      "Remove shelves and drawers, washing them in warm soapy water after reaching room temperature.",
-      "Sanitize interior walls using a mixture of water and mild dish soap or baking soda solution.",
-      "Wipe down exterior door handles, door seals, and vacuum dust from refrigerator condenser coils."
-    ]
-  },
-  {
-    id: "hire-home-contractor",
-    title: "What to do when hiring a home contractor for renovations",
-    desc: "Avoid renovation scams, cost overruns, and poor quality workmanship.",
-    category: "emergencies",
-    sourceName: "Federal Trade Commission",
-    sourceUrl: "https://consumer.ftc.gov",
-    tags: ["home", "contractor", "renovation", "remodeling", "repairs"],
-    todos: [
-      "Obtain detailed written estimates from at least three licensed, insured, and bonded contractors.",
-      "Verify professional licenses and check state contractor board records for past complaints.",
-      "Contact at least two recent references to inspect past work quality and communication.",
-      "Sign a comprehensive written contract outlining detailed scope, timeline, and material specs.",
-      "Establish a milestone payment plan linked to completed work rather than paying up front."
-    ]
-  },
-  {
-    id: "optimize-bedroom-sleep",
-    title: "What to do to optimize your bedroom for better sleep hygiene",
-    desc: "Transform your sleeping space to fall asleep faster and stay asleep longer.",
-    category: "health",
-    sourceName: "National Sleep Foundation",
-    sourceUrl: "https://www.sleepfoundation.org",
-    tags: ["sleep", "health", "bedroom", "wellness", "rest"],
-    todos: [
-      "Keep bedroom temperature cool, ideally between 60°F and 67°F (15°C–19°C) for optimal rest.",
-      "Install blackout curtains or use a contoured eye mask to block all ambient light source exposure.",
-      "Remove TVs, computers, and tablets from the bedroom to eliminate disruptive light and stimuli.",
-      "Use white noise machines or earplugs to mask intrusive exterior sounds.",
-      "Invest in a supportive mattress and breathable, moisture-wicking bedding materials."
-    ]
-  },
-  {
-    id: "home-insect-infestation",
-    title: "What to do when dealing with an insect infestation at home",
-    desc: "Identify, contain, and eliminate household pests effectively.",
-    category: "emergencies",
-    sourceName: "EPA Pest Control Guidelines",
-    sourceUrl: "https://www.epa.gov",
-    tags: ["bugs", "pests", "home", "insects", "cleaning"],
-    todos: [
-      "Identify the specific pest species to select targeted, effective treatment methods.",
-      "Seal food in airtight glass or thick plastic containers and eliminate standing water sources.",
-      "Vacuum carpets, baseboards, and furniture thoroughly, disposing of vacuum bags immediately.",
-      "Caulk exterior wall cracks, gap openings around pipes, and repair damaged window screens.",
-      "Consult a certified pest control professional if DIY treatments do not resolve the issue quickly."
-    ]
-  },
-  {
-    id: "car-cross-country-prep",
-    title: "What to do when preparing your car for a long road trip",
-    desc: "Prevent mechanical breakdowns and ensure highway safety across long distances.",
-    category: "travel",
-    sourceName: "AAA Long-Distance Travel Prep",
+    sourceName: "AAA Roadside Emergency Guide",
     sourceUrl: "https://www.aaa.com",
-    tags: ["driving", "car", "road trip", "travel", "maintenance"],
+    tags: ["car", "battery", "jumpstart", "auto", "roadside"],
     todos: [
-      "Check engine oil, transmission fluid, coolant, brake fluid, and windshield washer levels.",
-      "Inspect tire tread depth, sidewalls, and inflate all tires (including spare) to proper PSI specs.",
-      "Test headlights, taillights, brake indicators, and replace worn wiper blades.",
-      "Inspect brake pads and belt tension for signs of excess wear or squealing noises.",
-      "Pack a fully stocked roadside kit: jumper cables, tire pressure gauge, flashlight, and basic tools."
+      "Park the working vehicle nose-to-nose with the dead car without letting the vehicles touch.",
+      "Connect the RED clamp to the positive (+) terminal of the dead battery, then the other RED clamp to the good battery positive (+).",
+      "Connect the BLACK clamp to the negative (-) terminal of the good battery.",
+      "Attach the remaining BLACK clamp to an unpainted metal surface on the dead car's engine block (ground).",
+      "Start the working car engine, let it idle for 5 minutes, then start the dead car and leave it running for 20 minutes."
     ]
   },
   {
-    id: "child-proof-living-room",
-    title: "What to do to child-proof or pet-proof a living area",
-    desc: "Eliminate household hazards for infants, toddlers, and new pets.",
-    category: "health",
-    sourceName: "American Academy of Pediatrics Safety",
-    sourceUrl: "https://www.aap.org",
-    tags: ["safety", "kids", "pets", "baby-proofing", "home"],
+    id: "resigning-from-job",
+    title: "What to do when officially resigning from a job",
+    desc: "Leave your employer on professional terms while protecting your career reputation.",
+    category: "finance",
+    sourceName: "SHRM HR Best Practices",
+    sourceUrl: "https://www.shrm.org",
+    tags: ["job", "career", "resignation", "work", "hr"],
     todos: [
-      "Anchor heavy furniture pieces, dressers, bookcases, and TVs securely to wall studs using safety straps.",
-      "Install safety covers on all open electrical outlets within reach.",
-      "Keep dangerous blind cords wrapped high on cleats or install cordless window treatments.",
-      "Attach padded corner guards to sharp coffee table edges and low glass furniture.",
-      "Store toxic house plants, cleaning agents, and small swallowing hazards well out of reach."
+      "Schedule a private 1-on-1 meeting with your direct supervisor to break the news before telling coworkers.",
+      "Draft a concise, professional resignation letter stating your last working day (typically two weeks out).",
+      "Prepare a comprehensive transition document detailing current projects, passwords, and ongoing duties.",
+      "Inquire with HR about final paycheck distribution, accrued PTO payout, and benefits end dates.",
+      "Clean personal files, emails, and browser histories off work hardware before handing over devices."
     ]
   },
   {
-    id: "test-smoke-co-detectors",
-    title: "What to do when testing and replacing home smoke and CO detectors",
-    desc: "Keep life-saving early warning systems operational throughout your home.",
+    id: "car-overheating-highway",
+    title: "What to do if your car engine starts overheating on the road",
+    desc: "Prevent severe engine block warping and coolant burns during heat surges.",
     category: "emergencies",
-    sourceName: "National Fire Protection Association",
-    sourceUrl: "https://www.nfpa.org",
-    tags: ["fire", "safety", "smoke detector", "home", "emergency"],
+    sourceName: "NHTSA Automotive Safety",
+    sourceUrl: "https://www.nhtsa.gov",
+    tags: ["car", "driving", "overheating", "engine", "auto"],
     todos: [
-      "Press and hold the test button on every smoke and CO detector monthly to verify siren functionality.",
-      "Replace alarm batteries at least once per year or whenever chirp warning signals begin.",
-      "Install detectors inside every bedroom, outside sleeping areas, and on every level of the home.",
-      "Clean detector covers using a vacuum soft brush attachment to remove dust and cobwebs.",
-      "Replace entire detector units every 10 years (or 5–7 years for carbon monoxide units)."
+      "Turn off the air conditioning immediately and switch on the heater at full power to draw heat away from the engine.",
+      "Pull over safely onto the right shoulder, shift into Park, and shut off the engine completely.",
+      "Pop the hood latch from inside, but DO NOT open the hood manually until steam completely stops rising.",
+      "Wait at least 15 to 30 minutes before touching the radiator cap; opening a hot radiator causes severe steam burns.",
+      "Check coolant reservoir levels once cool, add water/coolant if low, or call roadside assistance."
     ]
   },
   {
-    id: "start-indoor-garden",
-    title: "What to do when starting an indoor plant or vegetable garden",
-    desc: "Grow healthy house plants and fresh herbs indoors successfully.",
-    category: "health",
-    sourceName: "USDA Gardening Basics",
-    sourceUrl: "https://www.usda.gov",
-    tags: ["gardening", "plants", "home", "herbs", "hobbies"],
+    id: "career-networking-event",
+    title: "What to do to prepare for a professional career networking event",
+    desc: "Make meaningful professional connections and follow up effectively.",
+    category: "finance",
+    sourceName: "Harvard Business Review Career Guide",
+    sourceUrl: "https://hbr.org",
+    tags: ["career", "networking", "work", "business", "jobs"],
     todos: [
-      "Select indoor plants matched to your room's natural sunlight conditions (bright vs. indirect vs. low light).",
-      "Use pots with functional drainage holes to prevent root rot from excess moisture.",
-      "Plant in high-quality potting mix formulated for indoor containers rather than outdoor garden soil.",
-      "Water thoroughly only when the top 1–2 inches of soil feel dry to the touch.",
-      "Rotate plant pots weekly to ensure balanced growth toward light sources."
+      "Define a clear goal for the event and refine a 30-second elevator speech explaining your role and background.",
+      "Update your LinkedIn profile, headshot, and digital contact card for quick QR code sharing.",
+      "Research key speakers, attending organizations, or featured guests in advance.",
+      "Focus on asking open-ended questions about others rather than aggressively selling your resume.",
+      "Send personalized LinkedIn connection requests or brief follow-up emails within 24–48 hours."
     ]
   },
   {
-    id: "digital-detox-plan",
-    title: "What to do when taking a digital detox break from screen time",
-    desc: "Reduce mental fatigue, improve focus, and restore healthy sleep patterns.",
-    category: "health",
-    sourceName: "American Psychological Association",
-    sourceUrl: "https://www.apa.org",
-    tags: ["mental health", "digital detox", "wellness", "screens", "focus"],
+    id: "annual-performance-review",
+    title: "What to do when preparing for your annual performance review",
+    desc: "Document your workplace wins and advocate for promotions or salary increases.",
+    category: "finance",
+    sourceName: "Forbes Career Advancement",
+    sourceUrl: "https://www.forbes.com",
+    tags: ["career", "work", "performance review", "jobs", "salary"],
     todos: [
-      "Turn off non-essential app push notifications on mobile phones and computers.",
-      "Establish screen-free physical zones in your home, especially bedrooms and dining tables.",
-      "Set strict daily app time limits or use app blockers during work or family hours.",
-      "Replace mindless screen scrolling with offline hobbies, reading, or outdoor walking.",
-      "Inform close contacts of your intentional screen pause to set response expectations."
+      "Compile a portfolio of key metrics, project completions, and positive client/colleague feedback from the past year.",
+      "Self-assess your performance against last year's performance goals with honest, data-driven reflections.",
+      "Prepare 2–3 forward-looking professional goals and skill development initiatives for the coming year.",
+      "Benchmark market compensation data for your role if you intend to request a salary adjustment.",
+      "Listen actively during feedback delivery, take structured notes, and agree on clear next steps."
     ]
   },
   {
-    id: "weekly-meal-prep",
-    title: "What to do when prepping meals for a busy work week",
-    desc: "Save time, lower food costs, and maintain healthy eating habits.",
-    category: "health",
-    sourceName: "Academy of Nutrition and Dietetics",
-    sourceUrl: "https://www.eatright.org",
-    tags: ["nutrition", "meal prep", "food", "health", "cooking"],
-    todos: [
-      "Plan a weekly menu using overlapping ingredients to minimize grocery costs and waste.",
-      "Create a structured grocery shopping list and stick strictly to ingredients needed.",
-      "Dedicate a 2-hour cooking block to batch-prepare grains, proteins, and roasted vegetables.",
-      "Store prepped meals in glass, airtight, portion-controlled containers.",
-      "Label containers with preparation dates and freeze portions needed later in the week."
-    ]
-  },
-  {
-    id: "appliance-maintenance-washers",
-    title: "What to do to clean and maintain major household washing appliances",
-    desc: "Prevent mold smells, extend appliance life, and improve washing performance.",
+    id: "prepare-car-for-inspection",
+    title: "What to do to prepare your vehicle for state safety or emissions inspection",
+    desc: "Pass official vehicle inspections on the first attempt without re-test fees.",
     category: "emergencies",
-    sourceName: "Major Appliance Consumer Advice",
-    sourceUrl: "https://www.energystar.gov",
-    tags: ["appliances", "cleaning", "home", "maintenance", "laundry"],
+    sourceName: "State Department of Motor Vehicles",
+    sourceUrl: "https://www.dmv.org",
+    tags: ["car", "inspection", "auto", "driving", "dmv"],
     todos: [
-      "Run a hot tub-clean cycle on your washing machine monthly using vinegar or washer cleaner.",
-      "Wipe rubber door gaskets dry after washing loads to prevent mold and mildew odors.",
-      "Clean lint filters after every dryer cycle and inspect exterior dryer vent ductwork annually.",
-      "Inspect washing machine water fill hoses for cracks, bulges, or corrosion leaks every 6 months.",
-      "Clean dishwasher filter traps and spray arms to remove food debris and hard water scale."
+      "Ensure no 'Check Engine' warning lights are illuminated on your dashboard; resolve underlying OBD-II codes.",
+      "Inspect all exterior lighting: headlights, high beams, taillights, brake lights, reverse lights, and turn signals.",
+      "Check tire tread depth and verify windshield wipers clear water effectively without streaking.",
+      "Test windshield washer sprayers, horn functionality, and seatbelt retraction mechanisms.",
+      "Drive the vehicle for at least 15–20 minutes prior to the test so the catalytic converter reaches operating temp."
     ]
   },
   {
-    id: "home-first-aid-kit",
-    title: "What to do when setting up a home emergency first-aid kit",
-    desc: "Assemble essential medical supplies to handle common household injuries.",
+    id: "remote-job-interview",
+    title: "What to do to ace a remote video job interview",
+    desc: "Optimize tech settings, lighting, and presence for virtual job interviews.",
+    category: "finance",
+    sourceName: "LinkedIn Career Advice",
+    sourceUrl: "https://www.linkedin.com",
+    tags: ["interview", "career", "remote", "jobs", "work"],
+    todos: [
+      "Test your webcam, microphone, internet stability, and video software (Zoom/Teams) 30 minutes early.",
+      "Position your camera at eye level with strong, soft lighting facing your front rather than behind you.",
+      "Clear your background of clutter or set up a professional, non-distracting virtual background.",
+      "Place your resume and key talking points in notes near the camera lens to maintain artificial eye contact.",
+      "Dress in full professional attire and send a personalized thank-you note within 24 hours of the call."
+    ]
+  },
+  {
+    id: "car-stuck-in-snow",
+    title: "What to do if your car gets stuck in snow or mud",
+    desc: "Get traction and free your vehicle without damaging the transmission.",
     category: "emergencies",
-    sourceName: "American Red Cross First Aid Prep",
-    sourceUrl: "https://www.redcross.org",
-    tags: ["first aid", "emergency", "medical", "safety", "home"],
+    sourceName: "AAA Winter Driving Prep",
+    sourceUrl: "https://www.aaa.com",
+    tags: ["car", "snow", "driving", "winter", "roadside"],
     todos: [
-      "Include adhesive bandages in multiple sizes, sterile gauze pads, and adhesive medical tape.",
-      "Add antiseptic wipes, antibiotic ointment, hydrocortisone cream, and burn gel packets.",
-      "Stock basic medications: pain relievers, antihistamines, antacids, and anti-diarrheal tablets.",
-      "Include essential tools: blunt scissors, tweezers, digital thermometer, and instant cold packs.",
-      "Check expiration dates on medications and sterile supplies every six months to replace old stock."
+      "Clear snow and slush away from around all four tires, exhaust pipes, and under the frame using a shovel.",
+      "Turn off traction control (ESC) temporarily to allow tires to spin and bite into ground surfaces.",
+      "Pour sand, kitty litter, cardboard, or floor mats directly in front of and behind driving wheels for grip.",
+      "Gently rock the car by shifting between Drive and Reverse, applying light accelerator pressure.",
+      "Steer wheels straight ahead to minimize resistance while attempting to drive out slowly."
     ]
   },
   {
-    id: "seasonal-allergy-home-prep",
-    title: "What to do when dealing with seasonal allergies at home",
-    desc: "Reduce indoor pollen, dust mites, and airborne triggers.",
+    id: "burnout-recovery-plan",
+    title: "What to do when experiencing severe job or personal burnout",
+    desc: "Recognize chronic exhaustion symptoms and restore physical and mental energy.",
     category: "health",
-    sourceName: "Asthma and Allergy Foundation of America",
-    sourceUrl: "https://www.aafa.org",
-    tags: ["allergies", "health", "home", "wellness", "air quality"],
+    sourceName: "World Health Organization Burnout Guide",
+    sourceUrl: "https://www.who.int",
+    tags: ["burnout", "mental health", "wellness", "work", "stress"],
     todos: [
-      "Keep windows closed during high pollen days and run air conditioning with clean HEPA filters.",
-      "Wash bed sheets, pillowcases, and blankets weekly in hot water (130°F / 54°C).",
-      "Shower and wash hair after returning from outdoor activities to remove trapped pollen.",
-      "Vacuum carpeted areas twice weekly using a vacuum equipped with a certified HEPA filter.",
-      "Use allergen-proof zip covers on mattresses, box springs, and pillows."
+      "Acknowledge physical and emotional exhaustion signs without self-judgment.",
+      "Establish strict work-life boundaries by disabling work notifications outside of business hours.",
+      "Communicate workload constraints with your manager to re-prioritize or delegate non-essential tasks.",
+      "Take available paid time off (PTO) or mental health days to completely disconnect from workplace stressors.",
+      "Engage with a mental health professional, therapist, or counselor to develop coping strategies."
     ]
   },
   {
-    id: "prep-overnight-guests",
-    title: "What to do to prepare your home before hosting overnight guests",
-    desc: "Create a welcoming, comfortable environment for visitors.",
-    category: "health",
-    sourceName: "Hospitality Home Preparation Guide",
-    sourceUrl: "https://www.hud.gov",
-    tags: ["hosting", "guests", "home", "cleaning", "hospitality"],
+    id: "side-hustle-launch",
+    title: "What to do when launching a freelance business or side hustle",
+    desc: "Turn a personal skill into a profitable, compliant side income stream.",
+    category: "finance",
+    sourceName: "SBA Freelance & Gig Economy Guide",
+    sourceUrl: "https://www.sba.gov",
+    tags: ["freelance", "side hustle", "business", "finance", "work"],
     todos: [
-      "Wash and dress guest beds with fresh sheets, extra blankets, and a choice of firm and soft pillows.",
-      "Stock the guest bathroom with fresh towels, bathmat, extra toilet paper, and basic travel toiletries.",
-      "Clear closet hanging space or drawer storage so visitors can unpack comfortably.",
-      "Share your home Wi-Fi network password and basic TV remote instructions on a printed card.",
-      "Check in on dietary preferences, allergies, or coffee/tea habits prior to their arrival."
+      "Define a niche service offering, target client profile, and transparent pricing structure.",
+      "Draft a standard client service agreement or contract covering scope, revision limits, and payment terms.",
+      "Set aside 25%–30% of gross earnings in a separate savings account for quarterly estimated taxes.",
+      "Build a simple portfolio website or digital profile showcasing past projects and client testimonials.",
+      "Track all income and business expenses diligently using dedicated accounting software."
     ]
   },
   {
-    id: "store-seasonal-clothing",
-    title: "What to do when storing seasonal clothing long-term",
-    desc: "Prevent fabric damage, moth infestations, and musty odors during off-seasons.",
-    category: "health",
-    sourceName: "Textile Preservation Guidelines",
-    sourceUrl: "https://www.si.edu",
-    tags: ["organization", "clothing", "storage", "home", "closet"],
+    id: "prepare-car-for-storage",
+    title: "What to do when putting a car into long-term storage",
+    desc: "Prevent flat tires, dead batteries, and engine degradation during multi-month storage.",
+    category: "travel",
+    sourceName: "Edmunds Vehicle Storage Guide",
+    sourceUrl: "https://www.edmunds.com",
+    tags: ["car", "storage", "auto", "maintenance", "travel"],
     todos: [
-      "Wash or dry clean all garments before storage to remove body oils and food residues that attract pests.",
-      "Fold heavy knits and sweaters loosely rather than hanging them to prevent shoulder stretching.",
-      "Use breathable fabric storage bins or canvas garment bags instead of sealed plastic bags.",
-      "Store clothing in a cool, dry, dark, climate-controlled room away from direct sunlight and humidity.",
-      "Add natural cedar blocks or lavender sachets to repel insects without chemical mothball smells."
+      "Wash and wax the exterior thoroughly to protect paint finishes from environmental corrosion.",
+      "Fill the gas tank completely and add a fuel stabilizer to prevent moisture accumulation and fuel breakdown.",
+      "Connect a trickle charger or battery tender to keep the 12V battery maintained, or disconnect the negative terminal.",
+      "Inflate tires to maximum recommended PSI specs to prevent flat spots, or elevate on jack stands.",
+      "Cover the exhaust pipe and air intake openings with steel wool to prevent rodents from nesting inside."
+    ]
+  },
+  {
+    id: "dealing-with-difficult-coworker",
+    title: "What to do when dealing with a difficult or toxic coworker",
+    desc: "Maintain professionalism, set boundaries, and protect your workplace sanity.",
+    category: "finance",
+    sourceName: "Harvard Business Review Workplace Conflict",
+    sourceUrl: "https://hbr.org",
+    tags: ["workplace", "career", "work", "conflict", "communication"],
+    todos: [
+      "Maintain a calm, objective, and professional tone in all communications without escalating emotional reactions.",
+      "Set firm professional boundaries regarding acceptable work behaviors and project responsibilities.",
+      "Document dates, times, specific statements, and objective details of unprofessional incidents.",
+      "Attempt a direct, private 1-on-1 conversation addressing specific working behaviors if safe to do so.",
+      "Escalate the issue to your direct manager or HR with your documented evidence if performance is impacted."
+    ]
+  },
+  {
+    id: "changing-car-oil",
+    title: "What to do when changing your car oil at home",
+    desc: "Perform DIY engine oil and filter maintenance safely and cleanly.",
+    category: "emergencies",
+    sourceName: "Popular Mechanics DIY Auto",
+    sourceUrl: "https://www.popularmechanics.com",
+    tags: ["car", "oil change", "auto", "maintenance", "diy"],
+    todos: [
+      "Elevate the vehicle securely using jack stands (never rely solely on a hydraulic floor jack) and chock rear wheels.",
+      "Locate the oil drain plug, place a catch basin underneath, unscrew the plug, and allow warm oil to drain completely.",
+      "Remove the old oil filter using a filter wrench, clean the mounting surface, and lubricate the new filter's rubber gasket.",
+      "Reinstall the drain plug with a fresh crush washer, torque to spec, and hand-tighten the new oil filter.",
+      "Fill the engine with recommended viscosity oil, check dipstick levels, and recycle used oil at an auto parts store."
+    ]
+  },
+  {
+    id: "prepare-for-layoff-rumors",
+    title: "What to do if your company shows signs of imminent layoffs",
+    desc: "Prepare financially and professionally before corporate downsizing occurs.",
+    category: "finance",
+    sourceName: "Wall Street Journal Career Prep",
+    sourceUrl: "https://www.wsj.com",
+    tags: ["layoff", "career", "work", "finance", "jobs"],
+    todos: [
+      "Download non-confidential work samples, performance reviews, metrics, and personal contacts to personal storage.",
+      "Update your resume, portfolio, and reach out discreetly to key industry network contacts.",
+      "Review your personal emergency fund balance and eliminate non-essential recurring expenditures.",
+      "Schedule pending medical, dental, or eye doctor visits to maximize current insurance benefits while active.",
+      "Research your state's unemployment filing requirements and understand your company's standard severance policies."
+    ]
+  },
+  {
+    id: "starting-first-leadership-role",
+    title: "What to do when stepping into your first managerial or leadership role",
+    desc: "Transition from individual contributor to effective team leader.",
+    category: "finance",
+    sourceName: "McKinsey Leadership Insights",
+    sourceUrl: "https://www.mckinsey.com",
+    tags: ["leadership", "management", "career", "work", "promotion"],
+    todos: [
+      "Schedule individual 1-on-1 listening tours with each team member to understand working styles and career goals.",
+      "Shift mindset from completing tasks personally to empowering, delegating, and removing roadblocks for others.",
+      "Establish clear team communication rhythms, project expectations, and feedback channels early.",
+      "Align team performance metrics directly with broader organizational strategies and quarterly goals.",
+      "Seek out a mentor or executive coach who can guide you through tough management decisions."
+    ]
+  },
+  {
+    id: "car-brake-noise-troubleshoot",
+    title: "What to do if your car brakes start squeaking or grinding",
+    desc: "Diagnose brake wear issues before costly rotor damage or safety hazards occur.",
+    category: "emergencies",
+    sourceName: "Car and Driver Safety Guide",
+    sourceUrl: "https://www.caranddriver.com",
+    tags: ["car", "brakes", "auto", "maintenance", "driving"],
+    todos: [
+      "Identify the noise type: high-pitched squealing indicates wear indicators, while metallic grinding means bare pads.",
+      "Inspect brake pad thickness visually through wheel spokes; pads under 3mm require immediate replacement.",
+      "Check brake fluid levels inside the engine bay reservoir; low fluid often signals worn pads or system leaks.",
+      "Avoid aggressive high-speed braking or heavy towing until the brake system is inspected.",
+      "Schedule a professional brake service to replace pads, resurface/replace rotors, and bleed brake lines."
+    ]
+  },
+  {
+    id: "career-pivoting-strategy",
+    title: "What to do when planning a major career pivot or industry change",
+    desc: "Transfer existing skills to a new career path without starting from scratch.",
+    category: "finance",
+    sourceName: "Fast Company Career Transition",
+    sourceUrl: "https://www.fastcompany.com",
+    tags: ["career", "career change", "jobs", "work", "skills"],
+    todos: [
+      "Audit your transferable skills (project management, communication, analysis) that apply across industries.",
+      "Identify skill gaps in your target industry and complete targeted online certifications or bootcamps.",
+      "Rebrand your resume and LinkedIn profile to emphasize relevant achievements over specific past job titles.",
+      "Conduct informational interviews with professionals currently working in your desired target role.",
+      "Consider bridge roles, contract work, or lateral internal transfers to gain industry-specific experience."
+    ]
+  },
+  {
+    id: "windshield-chip-repair",
+    title: "What to do if your car windshield gets a chip or crack",
+    desc: "Fix minor glass chips before temperature changes spread cracks across the glass.",
+    category: "emergencies",
+    sourceName: "Auto Glass Safety Council",
+    sourceUrl: "https://agsc.org",
+    tags: ["car", "windshield", "glass", "auto", "repairs"],
+    todos: [
+      "Apply clear tape over the chip immediately to keep dirt and moisture out of the glass impact crater.",
+      "Avoid blasting high defroster heat or freezing AC directly onto the cracked glass area.",
+      "Measure the crack size; chips smaller than a quarter can usually be repaired without full glass replacement.",
+      "Check your auto insurance policy to see if comprehensive glass repair is covered with zero deductible.",
+      "Schedule mobile glass repair quickly; resin injection prevents chips from expanding into full windshield cracks."
+    ]
+  },
+  {
+    id: "pmp-or-cert-exam-prep",
+    title: "What to do when preparing for a major professional certification exam",
+    desc: "Structure your study plan to pass industry certifications (PMP, AWS, CPA) on the first try.",
+    category: "finance",
+    sourceName: "Project Management Institute / Exam Prep",
+    sourceUrl: "https://www.pmi.org",
+    tags: ["certification", "pmp", "career", "study", "work"],
+    todos: [
+      "Review the official Exam Content Outline (ECO) to understand domain weighting and core competencies.",
+      "Create a structured 8-to-12-week study schedule allocating daily blocks for reading and practice questions.",
+      "Utilize practice exams and mock tests to simulate real exam pacing and build test-taking endurance.",
+      "Focus revision on incorrect practice question explanations to systematically eliminate weak knowledge areas.",
+      "Schedule the exam for a morning slot when mental energy is high and rest completely the day before."
+    ]
+  },
+  {
+    id: "car-hydroplaning-recovery",
+    title: "What to do if your car hydroplanes on a wet highway",
+    desc: "Regain tire traction and control during heavy rain skids.",
+    category: "emergencies",
+    sourceName: "NHTSA Wet Weather Driving",
+    sourceUrl: "https://www.nhtsa.gov",
+    tags: ["car", "driving", "rain", "hydroplane", "safety"],
+    todos: [
+      "Remain calm and avoid slamming on the brakes or jerking the steering wheel violently.",
+      "Ease your foot off the gas pedal gradually to allow the car to slow down on its own.",
+      "Hold the steering wheel firmly and steer straight in the direction you want the front of the vehicle to go.",
+      "Do not pump non-ABS brakes; if equipped with ABS, apply steady, firm pressure if braking becomes necessary.",
+      "Feel for tire traction returning as water disperses, then gently accelerate back to a safe speed."
+    ]
+  },
+  {
+    id: "public-speaking-prep",
+    title: "What to do when preparing for a major public speech or presentation",
+    desc: "Deliver clear, persuasive presentations with confidence.",
+    category: "finance",
+    sourceName: "Toastmasters International",
+    sourceUrl: "https://www.toastmasters.org",
+    tags: ["speaking", "presentation", "career", "work", "communication"],
+    todos: [
+      "Structure your speech with a compelling hook, 3 clear core points, and a memorable call to action.",
+      "Rehearse out loud while timing yourself, recording video to polish posture, pacing, and vocal tone.",
+      "Test slide deck formatting, AV cables, clickers, and room sound systems prior to presentation time.",
+      "Arrive early to gauge room acoustics and meet audience members to build rapport before taking the stage.",
+      "Focus on slow deep breathing and eye contact with individuals across different sections of the audience."
+    ]
+  },
+  {
+    id: "car-flooded-water-crossing",
+    title: "What to do if your car gets caught in a flash flood or standing water",
+    desc: "Survive vehicle submersion risks and prevent hydrolocking your engine.",
+    category: "emergencies",
+    sourceName: "National Weather Service Turn Around Don't Drown",
+    sourceUrl: "https://www.weather.gov",
+    tags: ["flood", "car", "driving", "emergency", "safety"],
+    todos: [
+      "Never attempt to drive through flooded roads; 6 inches of water can knock you down and 12 inches can float a car.",
+      "If engine stalls in rising water, DO NOT attempt to restart it; restarting ingests water into the intake and destroys the engine.",
+      "Unbuckle seatbelts immediately and roll down windows before electronic power systems short-circuit.",
+      "If windows will not roll down, use an emergency window breaker tool or heavy object to shatter a side window.",
+      "Escape through the window onto the roof of the car and call 911 for water rescue assistance."
+    ]
+  },
+  {
+    id: "returning-from-sabbatical",
+    title: "What to do when returning to work after an extended career break or parental leave",
+    desc: "Re-enter the workforce smoothly after extended leave.",
+    category: "finance",
+    sourceName: "LeanIn.org Re-Entry Guide",
+    sourceUrl: "https://leanin.org",
+    tags: ["parental leave", "sabbatical", "career", "work", "re-entry"],
+    todos: [
+      "Schedule a pre-return sync with your manager two weeks out to review team updates and priority shifts.",
+      "Block off your calendar for the first 3–5 days to process emails, catch up on docs, and complete HR tasks.",
+      "Set up catch-up 1-on-1s with key team members to understand new workflows and ongoing projects.",
+      "Establish realistic workplace boundaries and adjust home logistics to accommodate your new daily routine.",
+      "Grant yourself grace during the first month as you build back workplace stamina and context."
+    ]
+  },
+  {
+    id: "buying-car-tires-guide",
+    title: "What to do when choosing and buying new tires for your car",
+    desc: "Select the correct tire specs, treadwear ratings, and installation packages.",
+    category: "emergencies",
+    sourceName: "Tire Rack Selection Guide",
+    sourceUrl: "https://www.tirerack.com",
+    tags: ["car", "tires", "auto", "maintenance", "driving"],
+    todos: [
+      "Check your driver's door jamb sticker for exact manufacturer tire size, load index, and speed rating specs.",
+      "Choose tire categories matched to your climate: All-Season, Summer Performance, or dedicated Winter tires.",
+      "Review UTQG ratings on tires for Treadwear, Traction, and Temperature ratings.",
+      "Purchase tires in matching pairs (front/rear) or full sets of four to maintain balanced handling.",
+      "Include wheel balancing, new valve stems, and a 4-wheel alignment check during installation."
+    ]
+  },
+  {
+    id: "executing-100-day-plan",
+    title: "What to do when executing a 30-60-90 day plan for a new executive role",
+    desc: "Hit the ground running and deliver strategic value in leadership positions.",
+    category: "finance",
+    sourceName: "Harvard Business Review Executive Leadership",
+    sourceUrl: "https://hbr.org",
+    tags: ["executive", "leadership", "30-60-90", "career", "management"],
+    todos: [
+      "Days 1–30: Focus strictly on learning, listening to stakeholders, auditing systems, and assessing team talent.",
+      "Days 31–60: Identify quick wins, evaluate existing processes, and begin drafting strategic recommendations.",
+      "Days 61–90: Implement operational adjustments, lock in long-term KPIs, and execute strategic initiatives.",
+      "Maintain weekly communication channels with senior leadership to communicate milestones and roadblocks.",
+      "Build cross-functional relationships with peers in adjacent departments to break down organizational silos."
     ]
   }
 ];

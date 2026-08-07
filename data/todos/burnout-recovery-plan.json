@@ -1,0 +1,22 @@
+{
+  "id": "burnout-recovery-plan",
+  "title": "What to do when experiencing severe job or personal burnout",
+  "desc": "Recognize chronic exhaustion symptoms and restore physical and mental energy.",
+  "category": "health",
+  "sourceName": "World Health Organization Burnout Guide",
+  "sourceUrl": "https://www.who.int",
+  "tags": [
+    "burnout",
+    "mental health",
+    "wellness",
+    "work",
+    "stress"
+  ],
+  "todos": [
+    "Acknowledge physical and emotional exhaustion signs without self-judgment.",
+    "Establish strict work-life boundaries by disabling work notifications outside of business hours.",
+    "Communicate workload constraints with your manager to re-prioritize or delegate non-essential tasks.",
+    "Take available paid time off (PTO) or mental health days to completely disconnect from workplace stressors.",
+    "Engage with a mental health professional, therapist, or counselor to develop coping strategies."
+  ]
+}

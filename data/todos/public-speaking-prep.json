@@ -1,0 +1,22 @@
+{
+  "id": "public-speaking-prep",
+  "title": "What to do when preparing for a major public speech or presentation",
+  "desc": "Deliver clear, persuasive presentations with confidence.",
+  "category": "finance",
+  "sourceName": "Toastmasters International",
+  "sourceUrl": "https://www.toastmasters.org",
+  "tags": [
+    "speaking",
+    "presentation",
+    "career",
+    "work",
+    "communication"
+  ],
+  "todos": [
+    "Structure your speech with a compelling hook, 3 clear core points, and a memorable call to action.",
+    "Rehearse out loud while timing yourself, recording video to polish posture, pacing, and vocal tone.",
+    "Test slide deck formatting, AV cables, clickers, and room sound systems prior to presentation time.",
+    "Arrive early to gauge room acoustics and meet audience members to build rapport before taking the stage.",
+    "Focus on slow deep breathing and eye contact with individuals across different sections of the audience."
+  ]
+}

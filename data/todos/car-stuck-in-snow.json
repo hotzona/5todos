@@ -1,0 +1,22 @@
+{
+  "id": "car-stuck-in-snow",
+  "title": "What to do if your car gets stuck in snow or mud",
+  "desc": "Get traction and free your vehicle without damaging the transmission.",
+  "category": "emergencies",
+  "sourceName": "AAA Winter Driving Prep",
+  "sourceUrl": "https://www.aaa.com",
+  "tags": [
+    "car",
+    "snow",
+    "driving",
+    "winter",
+    "roadside"
+  ],
+  "todos": [
+    "Clear snow and slush away from around all four tires, exhaust pipes, and under the frame using a shovel.",
+    "Turn off traction control (ESC) temporarily to allow tires to spin and bite into ground surfaces.",
+    "Pour sand, kitty litter, cardboard, or floor mats directly in front of and behind driving wheels for grip.",
+    "Gently rock the car by shifting between Drive and Reverse, applying light accelerator pressure.",
+    "Steer wheels straight ahead to minimize resistance while attempting to drive out slowly."
+  ]
+}

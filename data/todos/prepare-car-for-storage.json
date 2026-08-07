@@ -1,0 +1,22 @@
+{
+  "id": "prepare-car-for-storage",
+  "title": "What to do when putting a car into long-term storage",
+  "desc": "Prevent flat tires, dead batteries, and engine degradation during multi-month storage.",
+  "category": "travel",
+  "sourceName": "Edmunds Vehicle Storage Guide",
+  "sourceUrl": "https://www.edmunds.com",
+  "tags": [
+    "car",
+    "storage",
+    "auto",
+    "maintenance",
+    "travel"
+  ],
+  "todos": [
+    "Wash and wax the exterior thoroughly to protect paint finishes from environmental corrosion.",
+    "Fill the gas tank completely and add a fuel stabilizer to prevent moisture accumulation and fuel breakdown.",
+    "Connect a trickle charger or battery tender to keep the 12V battery maintained, or disconnect the negative terminal.",
+    "Inflate tires to maximum recommended PSI specs to prevent flat spots, or elevate on jack stands.",
+    "Cover the exhaust pipe and air intake openings with steel wool to prevent rodents from nesting inside."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "prepare-car-for-inspection",
+  "title": "What to do to prepare your vehicle for state safety or emissions inspection",
+  "desc": "Pass official vehicle inspections on the first attempt without re-test fees.",
+  "category": "emergencies",
+  "sourceName": "State Department of Motor Vehicles",
+  "sourceUrl": "https://www.dmv.org",
+  "tags": [
+    "car",
+    "inspection",
+    "auto",
+    "driving",
+    "dmv"
+  ],
+  "todos": [
+    "Ensure no 'Check Engine' warning lights are illuminated on your dashboard; resolve underlying OBD-II codes.",
+    "Inspect all exterior lighting: headlights, high beams, taillights, brake lights, reverse lights, and turn signals.",
+    "Check tire tread depth and verify windshield wipers clear water effectively without streaking.",
+    "Test windshield washer sprayers, horn functionality, and seatbelt retraction mechanisms.",
+    "Drive the vehicle for at least 15–20 minutes prior to the test so the catalytic converter reaches operating temp."
+  ]
+}

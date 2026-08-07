@@ -1271,5 +1271,305 @@
       "home",
       "closet"
     ]
+  },
+  {
+    "id": "jumpstart-dead-battery",
+    "title": "What to do when jump-starting a car with a dead battery",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "battery",
+      "jumpstart",
+      "auto",
+      "roadside"
+    ]
+  },
+  {
+    "id": "resigning-from-job",
+    "title": "What to do when officially resigning from a job",
+    "category": "finance",
+    "tags": [
+      "job",
+      "career",
+      "resignation",
+      "work",
+      "hr"
+    ]
+  },
+  {
+    "id": "car-overheating-highway",
+    "title": "What to do if your car engine starts overheating on the road",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "driving",
+      "overheating",
+      "engine",
+      "auto"
+    ]
+  },
+  {
+    "id": "career-networking-event",
+    "title": "What to do to prepare for a professional career networking event",
+    "category": "finance",
+    "tags": [
+      "career",
+      "networking",
+      "work",
+      "business",
+      "jobs"
+    ]
+  },
+  {
+    "id": "annual-performance-review",
+    "title": "What to do when preparing for your annual performance review",
+    "category": "finance",
+    "tags": [
+      "career",
+      "work",
+      "performance review",
+      "jobs",
+      "salary"
+    ]
+  },
+  {
+    "id": "prepare-car-for-inspection",
+    "title": "What to do to prepare your vehicle for state safety or emissions inspection",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "inspection",
+      "auto",
+      "driving",
+      "dmv"
+    ]
+  },
+  {
+    "id": "remote-job-interview",
+    "title": "What to do to ace a remote video job interview",
+    "category": "finance",
+    "tags": [
+      "interview",
+      "career",
+      "remote",
+      "jobs",
+      "work"
+    ]
+  },
+  {
+    "id": "car-stuck-in-snow",
+    "title": "What to do if your car gets stuck in snow or mud",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "snow",
+      "driving",
+      "winter",
+      "roadside"
+    ]
+  },
+  {
+    "id": "burnout-recovery-plan",
+    "title": "What to do when experiencing severe job or personal burnout",
+    "category": "health",
+    "tags": [
+      "burnout",
+      "mental health",
+      "wellness",
+      "work",
+      "stress"
+    ]
+  },
+  {
+    "id": "side-hustle-launch",
+    "title": "What to do when launching a freelance business or side hustle",
+    "category": "finance",
+    "tags": [
+      "freelance",
+      "side hustle",
+      "business",
+      "finance",
+      "work"
+    ]
+  },
+  {
+    "id": "prepare-car-for-storage",
+    "title": "What to do when putting a car into long-term storage",
+    "category": "travel",
+    "tags": [
+      "car",
+      "storage",
+      "auto",
+      "maintenance",
+      "travel"
+    ]
+  },
+  {
+    "id": "dealing-with-difficult-coworker",
+    "title": "What to do when dealing with a difficult or toxic coworker",
+    "category": "finance",
+    "tags": [
+      "workplace",
+      "career",
+      "work",
+      "conflict",
+      "communication"
+    ]
+  },
+  {
+    "id": "changing-car-oil",
+    "title": "What to do when changing your car oil at home",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "oil change",
+      "auto",
+      "maintenance",
+      "diy"
+    ]
+  },
+  {
+    "id": "prepare-for-layoff-rumors",
+    "title": "What to do if your company shows signs of imminent layoffs",
+    "category": "finance",
+    "tags": [
+      "layoff",
+      "career",
+      "work",
+      "finance",
+      "jobs"
+    ]
+  },
+  {
+    "id": "starting-first-leadership-role",
+    "title": "What to do when stepping into your first managerial or leadership role",
+    "category": "finance",
+    "tags": [
+      "leadership",
+      "management",
+      "career",
+      "work",
+      "promotion"
+    ]
+  },
+  {
+    "id": "car-brake-noise-troubleshoot",
+    "title": "What to do if your car brakes start squeaking or grinding",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "brakes",
+      "auto",
+      "maintenance",
+      "driving"
+    ]
+  },
+  {
+    "id": "career-pivoting-strategy",
+    "title": "What to do when planning a major career pivot or industry change",
+    "category": "finance",
+    "tags": [
+      "career",
+      "career change",
+      "jobs",
+      "work",
+      "skills"
+    ]
+  },
+  {
+    "id": "windshield-chip-repair",
+    "title": "What to do if your car windshield gets a chip or crack",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "windshield",
+      "glass",
+      "auto",
+      "repairs"
+    ]
+  },
+  {
+    "id": "pmp-or-cert-exam-prep",
+    "title": "What to do when preparing for a major professional certification exam",
+    "category": "finance",
+    "tags": [
+      "certification",
+      "pmp",
+      "career",
+      "study",
+      "work"
+    ]
+  },
+  {
+    "id": "car-hydroplaning-recovery",
+    "title": "What to do if your car hydroplanes on a wet highway",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "driving",
+      "rain",
+      "hydroplane",
+      "safety"
+    ]
+  },
+  {
+    "id": "public-speaking-prep",
+    "title": "What to do when preparing for a major public speech or presentation",
+    "category": "finance",
+    "tags": [
+      "speaking",
+      "presentation",
+      "career",
+      "work",
+      "communication"
+    ]
+  },
+  {
+    "id": "car-flooded-water-crossing",
+    "title": "What to do if your car gets caught in a flash flood or standing water",
+    "category": "emergencies",
+    "tags": [
+      "flood",
+      "car",
+      "driving",
+      "emergency",
+      "safety"
+    ]
+  },
+  {
+    "id": "returning-from-sabbatical",
+    "title": "What to do when returning to work after an extended career break or parental leave",
+    "category": "finance",
+    "tags": [
+      "parental leave",
+      "sabbatical",
+      "career",
+      "work",
+      "re-entry"
+    ]
+  },
+  {
+    "id": "buying-car-tires-guide",
+    "title": "What to do when choosing and buying new tires for your car",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "tires",
+      "auto",
+      "maintenance",
+      "driving"
+    ]
+  },
+  {
+    "id": "executing-100-day-plan",
+    "title": "What to do when executing a 30-60-90 day plan for a new executive role",
+    "category": "finance",
+    "tags": [
+      "executive",
+      "leadership",
+      "30-60-90",
+      "career",
+      "management"
+    ]
   }
 ]

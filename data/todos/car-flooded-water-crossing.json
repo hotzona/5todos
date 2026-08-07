@@ -1,0 +1,22 @@
+{
+  "id": "car-flooded-water-crossing",
+  "title": "What to do if your car gets caught in a flash flood or standing water",
+  "desc": "Survive vehicle submersion risks and prevent hydrolocking your engine.",
+  "category": "emergencies",
+  "sourceName": "National Weather Service Turn Around Don't Drown",
+  "sourceUrl": "https://www.weather.gov",
+  "tags": [
+    "flood",
+    "car",
+    "driving",
+    "emergency",
+    "safety"
+  ],
+  "todos": [
+    "Never attempt to drive through flooded roads; 6 inches of water can knock you down and 12 inches can float a car.",
+    "If engine stalls in rising water, DO NOT attempt to restart it; restarting ingests water into the intake and destroys the engine.",
+    "Unbuckle seatbelts immediately and roll down windows before electronic power systems short-circuit.",
+    "If windows will not roll down, use an emergency window breaker tool or heavy object to shatter a side window.",
+    "Escape through the window onto the roof of the car and call 911 for water rescue assistance."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "changing-car-oil",
+  "title": "What to do when changing your car oil at home",
+  "desc": "Perform DIY engine oil and filter maintenance safely and cleanly.",
+  "category": "emergencies",
+  "sourceName": "Popular Mechanics DIY Auto",
+  "sourceUrl": "https://www.popularmechanics.com",
+  "tags": [
+    "car",
+    "oil change",
+    "auto",
+    "maintenance",
+    "diy"
+  ],
+  "todos": [
+    "Elevate the vehicle securely using jack stands (never rely solely on a hydraulic floor jack) and chock rear wheels.",
+    "Locate the oil drain plug, place a catch basin underneath, unscrew the plug, and allow warm oil to drain completely.",
+    "Remove the old oil filter using a filter wrench, clean the mounting surface, and lubricate the new filter's rubber gasket.",
+    "Reinstall the drain plug with a fresh crush washer, torque to spec, and hand-tighten the new oil filter.",
+    "Fill the engine with recommended viscosity oil, check dipstick levels, and recycle used oil at an auto parts store."
+  ]
+}

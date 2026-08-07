@@ -1,0 +1,22 @@
+{
+  "id": "car-hydroplaning-recovery",
+  "title": "What to do if your car hydroplanes on a wet highway",
+  "desc": "Regain tire traction and control during heavy rain skids.",
+  "category": "emergencies",
+  "sourceName": "NHTSA Wet Weather Driving",
+  "sourceUrl": "https://www.nhtsa.gov",
+  "tags": [
+    "car",
+    "driving",
+    "rain",
+    "hydroplane",
+    "safety"
+  ],
+  "todos": [
+    "Remain calm and avoid slamming on the brakes or jerking the steering wheel violently.",
+    "Ease your foot off the gas pedal gradually to allow the car to slow down on its own.",
+    "Hold the steering wheel firmly and steer straight in the direction you want the front of the vehicle to go.",
+    "Do not pump non-ABS brakes; if equipped with ABS, apply steady, firm pressure if braking becomes necessary.",
+    "Feel for tire traction returning as water disperses, then gently accelerate back to a safe speed."
+  ]
+}

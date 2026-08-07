@@ -1,0 +1,22 @@
+{
+  "id": "car-brake-noise-troubleshoot",
+  "title": "What to do if your car brakes start squeaking or grinding",
+  "desc": "Diagnose brake wear issues before costly rotor damage or safety hazards occur.",
+  "category": "emergencies",
+  "sourceName": "Car and Driver Safety Guide",
+  "sourceUrl": "https://www.caranddriver.com",
+  "tags": [
+    "car",
+    "brakes",
+    "auto",
+    "maintenance",
+    "driving"
+  ],
+  "todos": [
+    "Identify the noise type: high-pitched squealing indicates wear indicators, while metallic grinding means bare pads.",
+    "Inspect brake pad thickness visually through wheel spokes; pads under 3mm require immediate replacement.",
+    "Check brake fluid levels inside the engine bay reservoir; low fluid often signals worn pads or system leaks.",
+    "Avoid aggressive high-speed braking or heavy towing until the brake system is inspected.",
+    "Schedule a professional brake service to replace pads, resurface/replace rotors, and bleed brake lines."
+  ]
+}

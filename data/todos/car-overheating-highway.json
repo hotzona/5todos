@@ -1,0 +1,22 @@
+{
+  "id": "car-overheating-highway",
+  "title": "What to do if your car engine starts overheating on the road",
+  "desc": "Prevent severe engine block warping and coolant burns during heat surges.",
+  "category": "emergencies",
+  "sourceName": "NHTSA Automotive Safety",
+  "sourceUrl": "https://www.nhtsa.gov",
+  "tags": [
+    "car",
+    "driving",
+    "overheating",
+    "engine",
+    "auto"
+  ],
+  "todos": [
+    "Turn off the air conditioning immediately and switch on the heater at full power to draw heat away from the engine.",
+    "Pull over safely onto the right shoulder, shift into Park, and shut off the engine completely.",
+    "Pop the hood latch from inside, but DO NOT open the hood manually until steam completely stops rising.",
+    "Wait at least 15 to 30 minutes before touching the radiator cap; opening a hot radiator causes severe steam burns.",
+    "Check coolant reservoir levels once cool, add water/coolant if low, or call roadside assistance."
+  ]
+}

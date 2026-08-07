@@ -1,0 +1,22 @@
+{
+  "id": "jumpstart-dead-battery",
+  "title": "What to do when jump-starting a car with a dead battery",
+  "desc": "Safely hook up jumper cables and restart a vehicle without damaging electronics.",
+  "category": "emergencies",
+  "sourceName": "AAA Roadside Emergency Guide",
+  "sourceUrl": "https://www.aaa.com",
+  "tags": [
+    "car",
+    "battery",
+    "jumpstart",
+    "auto",
+    "roadside"
+  ],
+  "todos": [
+    "Park the working vehicle nose-to-nose with the dead car without letting the vehicles touch.",
+    "Connect the RED clamp to the positive (+) terminal of the dead battery, then the other RED clamp to the good battery positive (+).",
+    "Connect the BLACK clamp to the negative (-) terminal of the good battery.",
+    "Attach the remaining BLACK clamp to an unpainted metal surface on the dead car's engine block (ground).",
+    "Start the working car engine, let it idle for 5 minutes, then start the dead car and leave it running for 20 minutes."
+  ]
+}

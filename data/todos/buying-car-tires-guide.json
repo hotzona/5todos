@@ -1,0 +1,22 @@
+{
+  "id": "buying-car-tires-guide",
+  "title": "What to do when choosing and buying new tires for your car",
+  "desc": "Select the correct tire specs, treadwear ratings, and installation packages.",
+  "category": "emergencies",
+  "sourceName": "Tire Rack Selection Guide",
+  "sourceUrl": "https://www.tirerack.com",
+  "tags": [
+    "car",
+    "tires",
+    "auto",
+    "maintenance",
+    "driving"
+  ],
+  "todos": [
+    "Check your driver's door jamb sticker for exact manufacturer tire size, load index, and speed rating specs.",
+    "Choose tire categories matched to your climate: All-Season, Summer Performance, or dedicated Winter tires.",
+    "Review UTQG ratings on tires for Treadwear, Traction, and Temperature ratings.",
+    "Purchase tires in matching pairs (front/rear) or full sets of four to maintain balanced handling.",
+    "Include wheel balancing, new valve stems, and a 4-wheel alignment check during installation."
+  ]
+}
