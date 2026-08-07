@@ -1,0 +1,23 @@
+﻿{
+    "id":  "hostel-first-night",
+    "category":  "travel",
+    "title":  "...stay in a shared hostel room for the first time",
+    "desc":  "Keep your personal items safe while being a courteous room occupant.",
+    "tags":  [
+                 "hostel",
+                 "travel",
+                 "backpacking",
+                 "budget",
+                 "safety"
+             ],
+    "sourceName":  "Hostelling International Safety Guide",
+    "sourceUrl":  "https://hihostels.com",
+    "affiliate":  null,
+    "todos":  [
+                  "Secure passport, wallet, and electronics inside locker using your own padlock.",
+                  "Pack a small shower bag and flip-flops for shared bathroom facilities.",
+                  "Keep headlamp or phone light low when entering dorm rooms late at night.",
+                  "Identify accessible power outlets near your bunk for overnight device charging.",
+                  "Store luggage neatly under your bed space to keep common walkways clear."
+              ]
+}

@@ -1,0 +1,23 @@
+﻿{
+    "id":  "choking-adult",
+    "category":  "health",
+    "title":  "...help a conscious adult who is choking",
+    "desc":  "Perform abdominal thrusts to clear obstructed airway safely.",
+    "tags":  [
+                 "choking",
+                 "heimlich",
+                 "emergency",
+                 "firstaid",
+                 "health"
+             ],
+    "sourceName":  "Mayo Clinic First Aid",
+    "sourceUrl":  "https://www.mayoclinic.org",
+    "affiliate":  null,
+    "todos":  [
+                  "Ask \u0027Are you choking?\u0027 â€” if they cannot speak, cough, or breathe, act immediately.",
+                  "Stand behind person, lean them forward slightly, and give 5 sharp back blows between shoulder blades.",
+                  "Wrap arms around waist, place fist just above navel, and deliver 5 quick inward/upward abdominal thrusts.",
+                  "Alternate 5 back blows and 5 abdominal thrusts until object is dislodged.",
+                  "Call 911 immediately if person loses consciousness and begin CPR."
+              ]
+}

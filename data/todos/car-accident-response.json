@@ -1,0 +1,23 @@
+﻿{
+    "id":  "car-accident-response",
+    "category":  "life",
+    "title":  "...get into a minor fender bender car accident",
+    "desc":  "Keep a clear head, gather evidence, and protect yourself legally on the road.",
+    "tags":  [
+                 "car",
+                 "driving",
+                 "insurance",
+                 "accident",
+                 "emergency"
+             ],
+    "sourceName":  "Insurance Information Institute",
+    "sourceUrl":  "https://www.iii.org",
+    "affiliate":  null,
+    "todos":  [
+                  "Move your vehicle safely out of traffic and turn on hazard flashers.",
+                  "Check all passengers for injuries and call 911 immediately if required.",
+                  "Photograph vehicle damage, street signs, license plates, and overall scene.",
+                  "Exchange contact, insurance policy, and driver\u0027s license details with other driver.",
+                  "Report the incident to your auto insurance provider and file a police report."
+              ]
+}

@@ -1,0 +1,23 @@
+﻿{
+    "id":  "foreign-airport-arrival",
+    "category":  "travel",
+    "title":  "...land in a foreign country where you don\u0027t speak the language",
+    "desc":  "Navigate customs, transit, and connectivity safely upon arrival.",
+    "tags":  [
+                 "travel",
+                 "airport",
+                 "transit",
+                 "language",
+                 "international"
+             ],
+    "sourceName":  "CDC Travelers\u0027 Health",
+    "sourceUrl":  "https://wwwnc.cdc.gov/travel",
+    "affiliate":  null,
+    "todos":  [
+                  "Connect to official airport Wi-Fi or activate an international eSIM/data plan.",
+                  "Withdraw a small amount of local currency from an official airport bank ATM.",
+                  "Confirm local transit options or use verified ride-share/official airport taxis.",
+                  "Save hotel address written in the local native language on your phone.",
+                  "Keep passport, entry customs declaration forms, and valuables in secured daypack."
+              ]
+}

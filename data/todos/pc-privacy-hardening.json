@@ -1,0 +1,23 @@
+﻿{
+    "id":  "pc-privacy-hardening",
+    "category":  "tech",
+    "title":  "...harden your computer privacy and security",
+    "desc":  "Minimize data tracking, telemetry, and vulnerability vectors.",
+    "tags":  [
+                 "privacy",
+                 "security",
+                 "windows",
+                 "mac",
+                 "telemetry"
+             ],
+    "sourceName":  "Electronic Frontier Foundation (EFF)",
+    "sourceUrl":  "https://www.eff.org/wp/privacy-tools",
+    "affiliate":  null,
+    "todos":  [
+                  "Install open-source content blocker (uBlock Origin) in browser.",
+                  "Disable OS background telemetry, diagnostic tracking, and location services.",
+                  "Switch default browser search engine to privacy-focused service (DuckDuckGo/Brave).",
+                  "Audit and revoke unnecessary camera and microphone app permissions.",
+                  "Configure DNS-over-HTTPS (DoH) inside web browser security settings."
+              ]
+}

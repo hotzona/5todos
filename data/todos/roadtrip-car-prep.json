@@ -1,0 +1,23 @@
+﻿{
+    "id":  "roadtrip-car-prep",
+    "category":  "travel",
+    "title":  "...prep your vehicle for a major road trip",
+    "desc":  "Prevent highway breakdowns and ensure passenger safety before long drives.",
+    "tags":  [
+                 "roadtrip",
+                 "car",
+                 "travel",
+                 "driving",
+                 "maintenance"
+             ],
+    "sourceName":  "National Highway Traffic Safety Administration (NHTSA)",
+    "sourceUrl":  "https://www.nhtsa.gov",
+    "affiliate":  null,
+    "todos":  [
+                  "Check tire pressure (including spare) and verify adequate tread depth.",
+                  "Inspect engine oil, coolant, brake fluid, and windshield washer levels.",
+                  "Test headlights, brake lights, turn signals, and windshield wipers.",
+                  "Pack emergency kit with jumper cables, flashlight, first aid, and water.",
+                  "Confirm roadside assistance coverage details and save hotline number."
+              ]
+}

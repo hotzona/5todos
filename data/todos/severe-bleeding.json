@@ -1,0 +1,23 @@
+﻿{
+    "id":  "severe-bleeding",
+    "category":  "health",
+    "title":  "...respond to severe arterial or deep wound bleeding",
+    "desc":  "Control life-threatening blood loss before paramedics arrive.",
+    "tags":  [
+                 "bleeding",
+                 "firstaid",
+                 "emergency",
+                 "trauma",
+                 "health"
+             ],
+    "sourceName":  "Stop The Bleed / American College of Surgeons",
+    "sourceUrl":  "https://www.stopthebleed.org",
+    "affiliate":  null,
+    "todos":  [
+                  "Call 911 immediately and ensure scene safety before approaching.",
+                  "Apply firm, continuous direct pressure to wound using clean cloth or sterile gauze.",
+                  "Pack deep wounds tightly with sterile gauze or clean cloth while maintaining pressure.",
+                  "Apply tourniquet 2â€“3 inches above wound on arm or leg if bleeding does not stop.",
+                  "Keep victim calm and covered with blanket to prevent medical shock."
+              ]
+}

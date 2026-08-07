@@ -1,0 +1,23 @@
+﻿{
+    "id":  "vacation-rental-checkout",
+    "category":  "travel",
+    "title":  "...check out of an Airbnb or vacation rental",
+    "desc":  "Avoid unexpected cleaning fee disputes and ensure nothing is left behind.",
+    "tags":  [
+                 "airbnb",
+                 "vacation",
+                 "rental",
+                 "checkout",
+                 "travel"
+             ],
+    "sourceName":  "Short Term Rental Association Guidelines",
+    "sourceUrl":  "https://www.vrma.org",
+    "affiliate":  null,
+    "todos":  [
+                  "Conduct a thorough room-by-room sweep under beds and outlets for chargers/items.",
+                  "Consolidate trash and food waste according to host house rule instructions.",
+                  "Start dishwasher or run used dishes if specified in checkout checklist.",
+                  "Set thermostat to target departure temperature and lock all windows and exterior doors.",
+                  "Return physical keys to lockbox and message host upon departure time."
+              ]
+}

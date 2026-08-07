@@ -1,0 +1,23 @@
+﻿{
+    "id":  "burn-first-aid",
+    "category":  "health",
+    "title":  "...treat a household thermal or heat burn",
+    "desc":  "Reduce tissue damage and prevent severe infection immediately after a burn.",
+    "tags":  [
+                 "burn",
+                 "firstaid",
+                 "health",
+                 "emergency",
+                 "medical"
+             ],
+    "sourceName":  "American Red Cross First Aid",
+    "sourceUrl":  "https://www.redcross.org",
+    "affiliate":  null,
+    "todos":  [
+                  "Cool the burn immediately under cool (not cold or ice) running water for 10â€“20 minutes.",
+                  "Remove rings or tight items from affected area before swelling begins.",
+                  "Cover burn loosely with clean, non-stick sterile gauze or plastic film wrap.",
+                  "Do NOT pop blisters, apply butter, ice, or ointment to open skin.",
+                  "Seek urgent medical care if burn is larger than 3 inches or on face, hands, or major joints."
+              ]
+}

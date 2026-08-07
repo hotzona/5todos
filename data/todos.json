@@ -409,5 +409,141 @@
       "Throw all extra disposable income toward eliminating smallest debt balance.",
       "Roll entire payment amount from paid-off debt into next smallest balance."
     ]
+  },
+  {
+    "id": "car-accident-response",
+    "category": "life",
+    "title": "...get into a minor fender bender car accident",
+    "desc": "Keep a clear head, gather evidence, and protect yourself legally on the road.",
+    "tags": ["car", "driving", "insurance", "accident", "emergency"],
+    "sourceName": "Insurance Information Institute",
+    "sourceUrl": "https://www.iii.org",
+    "affiliate": null,
+    "todos": [
+      "Move your vehicle safely out of traffic and turn on hazard flashers.",
+      "Check all passengers for injuries and call 911 immediately if required.",
+      "Photograph vehicle damage, street signs, license plates, and overall scene.",
+      "Exchange contact, insurance policy, and driver's license details with other driver.",
+      "Report the incident to your auto insurance provider and file a police report."
+    ]
+  },
+  {
+    "id": "apartment-movein-inspection",
+    "category": "life",
+    "title": "...move into a new rental apartment",
+    "desc": "Document pre-existing damage to protect your security deposit upon move-out.",
+    "tags": ["apartment", "renting", "moving", "home", "lease"],
+    "sourceName": "U.S. Department of Housing and Urban Development (HUD)",
+    "sourceUrl": "https://www.hud.gov",
+    "affiliate": null,
+    "todos": [
+      "Walk through entire apartment taking clear photos and videos of existing flaws.",
+      "Test all light switches, electrical outlets, window latches, and door locks.",
+      "Run water faucets, showerheads, and flush toilets to check water pressure and leaks.",
+      "Inspect appliances (stove, oven, fridge) to confirm proper heating and cooling.",
+      "Submit official signed condition checklist copy to landlord within 48 hours."
+    ]
+  },
+  {
+    "id": "storm-power-outage",
+    "category": "life",
+    "title": "...lose power during a severe winter or summer storm",
+    "desc": "Keep your home safe, protect electronics, and preserve food supplies.",
+    "tags": ["storm", "outage", "emergency", "power", "home"],
+    "sourceName": "Ready.gov Emergency Management",
+    "sourceUrl": "https://www.ready.gov/power-outages",
+    "affiliate": null,
+    "todos": [
+      "Keep refrigerator and freezer doors closed tightly to maintain cold temps.",
+      "Unplug sensitive electronics and appliances to prevent power surge damage.",
+      "Use battery-powered flashlights instead of candles to reduce fire hazards.",
+      "Report power outage immediately to local utility company provider.",
+      "Check on vulnerable neighbors, elderly family members, or pet needs."
+    ]
+  },
+  {
+    "id": "new-pet-adoption",
+    "category": "life",
+    "title": "...bring home a newly adopted dog or puppy",
+    "desc": "Create a safe, stress-free environment for your new pet's first 24 hours.",
+    "tags": ["pets", "dog", "puppy", "adoption", "animals"],
+    "sourceName": "ASPCA Pet Care Guidelines",
+    "sourceUrl": "https://www.aspca.org",
+    "affiliate": null,
+    "todos": [
+      "Pet-proof living space by securing electrical cords, plants, and small items.",
+      "Set up dedicated quiet area with bed, water bowl, and familiar blanket.",
+      "Establish immediate potty break routine outdoors or in designated area.",
+      "Schedule wellness checkup visit with local veterinarian within 7 days.",
+      "Update collar ID tags and microchip registry with your current contact info."
+    ]
+  },
+  {
+    "id": "sourdough-starter-begin",
+    "category": "hobbies",
+    "title": "...start cultivating your first sourdough bread starter",
+    "desc": "Begin wild yeast fermentation for artisanal home baking.",
+    "tags": ["baking", "sourdough", "cooking", "diy", "food"],
+    "sourceName": "King Arthur Baking",
+    "sourceUrl": "https://www.kingarthurbaking.com",
+    "affiliate": null,
+    "todos": [
+      "Mix equal parts whole wheat flour and room-temp unchlorinated water in clean jar.",
+      "Cover jar loosely with cloth or lid to allow gas expansion and airflow.",
+      "Store in warm ambient location (70°F–80°F) away from direct sunlight.",
+      "Discard half starter daily and feed equal parts fresh flour and water every 24h.",
+      "Look for consistent active bubbling and doubling in size after 5 to 7 days."
+    ]
+  },
+  {
+    "id": "dlsr-camera-beginner",
+    "category": "hobbies",
+    "title": "...pick up a new DSLR or mirrorless camera",
+    "desc": "Get your camera configured for sharp manual exposure shots.",
+    "tags": ["photography", "camera", "hobbies", "tech", "art"],
+    "sourceName": "Nikon Learn & Explore",
+    "sourceUrl": "https://www.nikonusa.com/en/learn-and-explore/index.page",
+    "affiliate": null,
+    "todos": [
+      "Format memory card inside camera menu settings before shooting.",
+      "Set photo output quality to RAW + JPEG for maximum editing flexibility.",
+      "Configure Autofocus (AF) mode to Single-Point AF for crisp subject targeting.",
+      "Attach neck/wrist strap securely to prevent accidental drop damage.",
+      "Practice Exposure Triangle basics: ISO, Aperture (f-stop), and Shutter Speed."
+    ]
+  },
+  {
+    "id": "indoor-houseplant-care",
+    "category": "hobbies",
+    "title": "...bring home a new indoor houseplant",
+    "desc": "Keep your new houseplants thriving and prevent root rot or pests.",
+    "tags": ["gardening", "plants", "houseplants", "home", "diy"],
+    "sourceName": "Royal Horticultural Society (RHS)",
+    "sourceUrl": "https://www.rhs.org.uk",
+    "affiliate": null,
+    "todos": [
+      "Check plant leaves and soil thoroughly for signs of insects or pests.",
+      "Verify container has adequate drainage holes at bottom before watering.",
+      "Position plant according to light requirements (direct, indirect, or low light).",
+      "Water deeply only when top 1-2 inches of soil feel dry to touch.",
+      "Wipe dust off leaves periodically to maintain healthy photosynthesis."
+    ]
+  },
+  {
+    "id": "running-couch-to-5k",
+    "category": "hobbies",
+    "title": "...start running as a beginner or C25K participant",
+    "desc": "Build cardiovascular endurance safely without joint pain or injury.",
+    "tags": ["fitness", "running", "health", "exercise", "hobbies"],
+    "sourceName": "Runner's World Beginner Guide",
+    "sourceUrl": "https://www.runnersworld.com",
+    "affiliate": null,
+    "todos": [
+      "Get fitted for proper supportive running shoes at local specialty running shop.",
+      "Incorporate dynamic mobility stretches before runs (leg swings, walking lunges).",
+      "Follow walk-run interval method rather than sprinting continuously.",
+      "Maintain comfortable conversational pace where you can speak in full sentences.",
+      "Schedule rest or low-impact cross-training days between running sessions."
+    ]
   }
 ]

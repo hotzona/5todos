@@ -1,0 +1,23 @@
+﻿{
+    "id":  "credit-report-freeze",
+    "category":  "finance",
+    "title":  "...freeze your credit reports against identity theft",
+    "desc":  "Block unauthorized loans and new credit accounts opened in your name.",
+    "tags":  [
+                 "credit",
+                 "identity",
+                 "security",
+                 "finance",
+                 "money"
+             ],
+    "sourceName":  "Federal Trade Commission (FTC)",
+    "sourceUrl":  "https://consumer.ftc.gov/articles/what-know-about-credit-freezes",
+    "affiliate":  null,
+    "todos":  [
+                  "Create official security accounts on Experian, Equifax, and TransUnion portals.",
+                  "Request a free Security Freeze on each of the 3 major credit bureau websites.",
+                  "Store generated PINs or security passwords safely in a password manager.",
+                  "Request a security freeze with Innovis and ChexSystems (checking account protection).",
+                  "Unfreeze credit temporarily whenever applying for legitimate new loans or cards."
+              ]
+}

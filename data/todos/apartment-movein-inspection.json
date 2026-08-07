@@ -1,0 +1,23 @@
+﻿{
+    "id":  "apartment-movein-inspection",
+    "category":  "life",
+    "title":  "...move into a new rental apartment",
+    "desc":  "Document pre-existing damage to protect your security deposit upon move-out.",
+    "tags":  [
+                 "apartment",
+                 "renting",
+                 "moving",
+                 "home",
+                 "lease"
+             ],
+    "sourceName":  "U.S. Department of Housing and Urban Development (HUD)",
+    "sourceUrl":  "https://www.hud.gov",
+    "affiliate":  null,
+    "todos":  [
+                  "Walk through entire apartment taking clear photos and videos of existing flaws.",
+                  "Test all light switches, electrical outlets, window latches, and door locks.",
+                  "Run water faucets, showerheads, and flush toilets to check water pressure and leaks.",
+                  "Inspect appliances (stove, oven, fridge) to confirm proper heating and cooling.",
+                  "Submit official signed condition checklist copy to landlord within 48 hours."
+              ]
+}

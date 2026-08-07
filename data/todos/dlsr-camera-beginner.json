@@ -1,0 +1,23 @@
+﻿{
+    "id":  "dlsr-camera-beginner",
+    "category":  "hobbies",
+    "title":  "...pick up a new DSLR or mirrorless camera",
+    "desc":  "Get your camera configured for sharp manual exposure shots.",
+    "tags":  [
+                 "photography",
+                 "camera",
+                 "hobbies",
+                 "tech",
+                 "art"
+             ],
+    "sourceName":  "Nikon Learn \u0026 Explore",
+    "sourceUrl":  "https://www.nikonusa.com/en/learn-and-explore/index.page",
+    "affiliate":  null,
+    "todos":  [
+                  "Format memory card inside camera menu settings before shooting.",
+                  "Set photo output quality to RAW + JPEG for maximum editing flexibility.",
+                  "Configure Autofocus (AF) mode to Single-Point AF for crisp subject targeting.",
+                  "Attach neck/wrist strap securely to prevent accidental drop damage.",
+                  "Practice Exposure Triangle basics: ISO, Aperture (f-stop), and Shutter Speed."
+              ]
+}

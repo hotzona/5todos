@@ -1,0 +1,23 @@
+﻿{
+    "id":  "debt-snowball-plan",
+    "category":  "finance",
+    "title":  "...build a debt elimination payoff plan",
+    "desc":  "Gain momentum paying off credit cards and personal loans systematically.",
+    "tags":  [
+                 "debt",
+                 "budget",
+                 "money",
+                 "creditcard",
+                 "finance"
+             ],
+    "sourceName":  "Consumer Financial Protection Bureau (CFPB)",
+    "sourceUrl":  "https://www.consumerfinance.gov",
+    "affiliate":  null,
+    "todos":  [
+                  "List all outstanding debts with exact balances, minimum payments, and interest rates.",
+                  "Organize list from smallest balance to largest balance (Snowball Method).",
+                  "Pay minimum required payment on all accounts except smallest balance debt.",
+                  "Throw all extra disposable income toward eliminating smallest debt balance.",
+                  "Roll entire payment amount from paid-off debt into next smallest balance."
+              ]
+}

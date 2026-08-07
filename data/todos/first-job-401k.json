@@ -1,0 +1,23 @@
+﻿{
+    "id":  "first-job-401k",
+    "category":  "finance",
+    "title":  "...set up your 401(k) at a new job",
+    "desc":  "Capture employer matching money and automate retirement compound growth.",
+    "tags":  [
+                 "investing",
+                 "401k",
+                 "retirement",
+                 "money",
+                 "jobs"
+             ],
+    "sourceName":  "FINRA Investor Education",
+    "sourceUrl":  "https://www.finra.org",
+    "affiliate":  null,
+    "todos":  [
+                  "Contribute at least enough percentage to claim 100% of employer matching contribution.",
+                  "Select low-cost Target Date Index Fund or broad S\u0026P 500 index fund options.",
+                  "Choose Traditional (tax-deferred) or Roth (tax-free growth) contribution type.",
+                  "Enable annual auto-escalation to increase savings rate by 1% each year.",
+                  "Designate primary and secondary account beneficiaries."
+              ]
+}

@@ -1,0 +1,23 @@
+﻿{
+    "id":  "sourdough-starter-begin",
+    "category":  "hobbies",
+    "title":  "...start cultivating your first sourdough bread starter",
+    "desc":  "Begin wild yeast fermentation for artisanal home baking.",
+    "tags":  [
+                 "baking",
+                 "sourdough",
+                 "cooking",
+                 "diy",
+                 "food"
+             ],
+    "sourceName":  "King Arthur Baking",
+    "sourceUrl":  "https://www.kingarthurbaking.com",
+    "affiliate":  null,
+    "todos":  [
+                  "Mix equal parts whole wheat flour and room-temp unchlorinated water in clean jar.",
+                  "Cover jar loosely with cloth or lid to allow gas expansion and airflow.",
+                  "Store in warm ambient location (70Â°Fâ€“80Â°F) away from direct sunlight.",
+                  "Discard half starter daily and feed equal parts fresh flour and water every 24h.",
+                  "Look for consistent active bubbling and doubling in size after 5 to 7 days."
+              ]
+}

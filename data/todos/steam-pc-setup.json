@@ -1,0 +1,23 @@
+﻿{
+    "id":  "steam-pc-setup",
+    "category":  "tech",
+    "title":  "...configure Steam on a new PC",
+    "desc":  "Optimize game downloads, cloud saves, and security on desktop.",
+    "tags":  [
+                 "steam",
+                 "gaming",
+                 "pc",
+                 "downloads",
+                 "security"
+             ],
+    "sourceName":  "Steam Customer Support",
+    "sourceUrl":  "https://help.steampowered.com",
+    "affiliate":  null,
+    "todos":  [
+                  "Enable Steam Guard Two-Factor Authentication via phone app.",
+                  "Verify Steam Cloud Save synchronization is globally active in settings.",
+                  "Select optimal local download region to maximize gigabit download bandwidth.",
+                  "Configure secondary hard drive or SSD library installation folders.",
+                  "Enable In-Game FPS Counter and Overlay preferences."
+              ]
+}

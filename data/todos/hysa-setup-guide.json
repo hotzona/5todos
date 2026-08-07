@@ -1,0 +1,26 @@
+﻿{
+    "id":  "hysa-setup-guide",
+    "category":  "finance",
+    "title":  "...open a High-Yield Savings Account (HYSA)",
+    "desc":  "Maximize interest earnings while keeping your emergency fund risk-free.",
+    "tags":  [
+                 "banking",
+                 "money",
+                 "savings",
+                 "interest",
+                 "finance"
+             ],
+    "sourceName":  "FDIC BankFind",
+    "sourceUrl":  "https://www.fdic.gov",
+    "affiliate":  {
+                      "text":  "Top FDIC-insured Banks",
+                      "url":  "#"
+                  },
+    "todos":  [
+                  "Verify financial institution is FDIC or NCUA insured up to $250,000 per depositor.",
+                  "Compare Annual Percentage Yields (APY), monthly maintenance fees, and minimum balance rules.",
+                  "Link primary checking account via secure ACH electronic bank transfer.",
+                  "Set up automatic recurring monthly transfers to build emergency savings habit.",
+                  "Designate official account payable-on-death beneficiaries for financial security."
+              ]
+}

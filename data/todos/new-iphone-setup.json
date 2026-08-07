@@ -1,0 +1,23 @@
+﻿{
+    "id":  "new-iphone-setup",
+    "category":  "tech",
+    "title":  "...set up a brand new iPhone",
+    "desc":  "Migrate data smoothly while locking down essential privacy controls.",
+    "tags":  [
+                 "iphone",
+                 "apple",
+                 "ios",
+                 "smartphone",
+                 "privacy"
+             ],
+    "sourceName":  "Apple Support",
+    "sourceUrl":  "https://support.apple.com/iphone",
+    "affiliate":  null,
+    "todos":  [
+                  "Use Quick Start proximity migration while keeping both phones plugged in.",
+                  "Set up Face ID and configure Stolen Device Protection in settings.",
+                  "Enable iCloud Backup and verify Messages and Photos are syncing.",
+                  "Review App Tracking Transparency and set all app permission prompts to Ask.",
+                  "Enable Find My iPhone including network offline location tracking."
+              ]
+}

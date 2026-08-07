@@ -1,0 +1,23 @@
+﻿{
+    "id":  "wifi-router-setup",
+    "category":  "tech",
+    "title":  "...set up a new home Wi-Fi router",
+    "desc":  "Secure your local network and optimize wireless performance.",
+    "tags":  [
+                 "wifi",
+                 "router",
+                 "network",
+                 "security",
+                 "internet"
+             ],
+    "sourceName":  "CISA Home Network Security",
+    "sourceUrl":  "https://www.cisa.gov/news-events/news/securing-your-home-network",
+    "affiliate":  null,
+    "todos":  [
+                  "Change default admin username and password on router portal immediately.",
+                  "Update network SSID name to avoid identifying personal or address information.",
+                  "Enable WPA3 security encryption (or WPA2-Personal minimum).",
+                  "Set up an isolated Guest Wi-Fi network for IoT and visitor devices.",
+                  "Enable automatic firmware update checks in router settings."
+              ]
+}

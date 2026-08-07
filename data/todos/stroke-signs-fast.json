@@ -1,0 +1,23 @@
+﻿{
+    "id":  "stroke-signs-fast",
+    "category":  "health",
+    "title":  "...suspect someone is having a stroke",
+    "desc":  "Act FAST to identify critical stroke symptoms and save lives.",
+    "tags":  [
+                 "emergency",
+                 "health",
+                 "medical",
+                 "fast",
+                 "stroke"
+             ],
+    "sourceName":  "American Stroke Association",
+    "sourceUrl":  "https://www.stroke.org",
+    "affiliate":  null,
+    "todos":  [
+                  "F - Face Drooping: Ask the person to smile and check if one side droops.",
+                  "A - Arm Weakness: Ask the person to raise both arms and see if one drifts downward.",
+                  "S - Speech Difficulty: Ask the person to repeat a simple phrase to check for slurring.",
+                  "T - Time to Call 911: Call emergency services immediately if you observe any sign.",
+                  "Note the exact time symptoms first appeared to inform emergency responders."
+              ]
+}

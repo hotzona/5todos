@@ -1,0 +1,23 @@
+﻿{
+    "id":  "new-pet-adoption",
+    "category":  "life",
+    "title":  "...bring home a newly adopted dog or puppy",
+    "desc":  "Create a safe, stress-free environment for your new pet\u0027s first 24 hours.",
+    "tags":  [
+                 "pets",
+                 "dog",
+                 "puppy",
+                 "adoption",
+                 "animals"
+             ],
+    "sourceName":  "ASPCA Pet Care Guidelines",
+    "sourceUrl":  "https://www.aspca.org",
+    "affiliate":  null,
+    "todos":  [
+                  "Pet-proof living space by securing electrical cords, plants, and small items.",
+                  "Set up dedicated quiet area with bed, water bowl, and familiar blanket.",
+                  "Establish immediate potty break routine outdoors or in designated area.",
+                  "Schedule wellness checkup visit with local veterinarian within 7 days.",
+                  "Update collar ID tags and microchip registry with your current contact info."
+              ]
+}

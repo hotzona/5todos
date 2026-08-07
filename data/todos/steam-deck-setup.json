@@ -1,0 +1,23 @@
+﻿{
+    "id":  "steam-deck-setup",
+    "category":  "tech",
+    "title":  "...unbox a new Steam Deck or handheld gaming PC",
+    "desc":  "Get your portable gaming rig optimized and protected out of the box.",
+    "tags":  [
+                 "steam",
+                 "handheld",
+                 "gaming",
+                 "steamdeck",
+                 "pcgaming"
+             ],
+    "sourceName":  "Valve Steam Deck Support",
+    "sourceUrl":  "https://help.steampowered.com/en/wizard/HelpWithSteamDeck",
+    "affiliate":  null,
+    "todos":  [
+                  "Run complete system software update while connected to wall charger.",
+                  "Format microSD card to ext4/system format inside device system settings.",
+                  "Configure Steam Guard Mobile Authenticator for full account protection.",
+                  "Set up custom power performance limits (TDP) for intensive AAA games.",
+                  "Install Proton GE compatibility layer via desktop mode for unverified titles."
+              ]
+}

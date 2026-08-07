@@ -1,0 +1,23 @@
+﻿{
+    "id":  "running-couch-to-5k",
+    "category":  "hobbies",
+    "title":  "...start running as a beginner or C25K participant",
+    "desc":  "Build cardiovascular endurance safely without joint pain or injury.",
+    "tags":  [
+                 "fitness",
+                 "running",
+                 "health",
+                 "exercise",
+                 "hobbies"
+             ],
+    "sourceName":  "Runner\u0027s World Beginner Guide",
+    "sourceUrl":  "https://www.runnersworld.com",
+    "affiliate":  null,
+    "todos":  [
+                  "Get fitted for proper supportive running shoes at local specialty running shop.",
+                  "Incorporate dynamic mobility stretches before runs (leg swings, walking lunges).",
+                  "Follow walk-run interval method rather than sprinting continuously.",
+                  "Maintain comfortable conversational pace where you can speak in full sentences.",
+                  "Schedule rest or low-impact cross-training days between running sessions."
+              ]
+}

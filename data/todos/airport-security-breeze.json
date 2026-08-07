@@ -1,0 +1,23 @@
+﻿{
+    "id":  "airport-security-breeze",
+    "category":  "travel",
+    "title":  "...breeze through airport security checkpoint lines",
+    "desc":  "Minimize wait times and avoid unnecessary bag searches or delays.",
+    "tags":  [
+                 "airport",
+                 "security",
+                 "flight",
+                 "tsa",
+                 "travel"
+             ],
+    "sourceName":  "Transportation Security Administration (TSA)",
+    "sourceUrl":  "https://www.tsa.gov",
+    "affiliate":  null,
+    "todos":  [
+                  "Place liquids/gels under 3.4oz (100ml) in a clear 1-quart zip bag in outer pocket.",
+                  "Keep boarding pass and physical photo ID accessible until through screening.",
+                  "Remove heavy jackets, belts, metal items, and empty pockets into bins.",
+                  "Pack large electronics (laptops/tablets) so they can be removed quickly.",
+                  "Wear easy-to-remove slip-on shoes if you do not have TSA PreCheck/Global Entry."
+              ]
+}

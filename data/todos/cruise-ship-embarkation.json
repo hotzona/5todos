@@ -1,0 +1,23 @@
+﻿{
+    "id":  "cruise-ship-embarkation",
+    "category":  "travel",
+    "title":  "...board a cruise ship on embarkation day",
+    "desc":  "Navigate boarding procedures, safety drills, and cabin setup smoothly.",
+    "tags":  [
+                 "cruise",
+                 "travel",
+                 "vacation",
+                 "ship",
+                 "embarkation"
+             ],
+    "sourceName":  "Cruise Lines International Association (CLIA)",
+    "sourceUrl":  "https://cruising.org",
+    "affiliate":  null,
+    "todos":  [
+                  "Pack essential meds, documents, and swim gear in day carry-on bag.",
+                  "Complete mandatory safety muster drill steps as soon as you board.",
+                  "Connect to ship network app to book specialty dining or show reservations.",
+                  "Inspect cabin upon keycard access and report any pre-existing damage.",
+                  "Switch mobile phone settings to Airplane Mode to avoid maritime roaming rates."
+              ]
+}

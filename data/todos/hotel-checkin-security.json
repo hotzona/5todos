@@ -1,0 +1,23 @@
+﻿{
+    "id":  "hotel-checkin-security",
+    "category":  "travel",
+    "title":  "...walk into a new hotel room",
+    "desc":  "Ensure your room is secure, sanitary, and functional before unpacking.",
+    "tags":  [
+                 "hotel",
+                 "travel",
+                 "safety",
+                 "hygiene",
+                 "security"
+             ],
+    "sourceName":  "OSHA Travel \u0026 Lodging Guidelines",
+    "sourceUrl":  "https://www.osha.gov",
+    "affiliate":  null,
+    "todos":  [
+                  "Inspect mattress seams, headboard corners, and sheets for bedbug signs.",
+                  "Verify main door deadbolt, secondary latch, and peep-hole function properly.",
+                  "Locate emergency fire exit stairwells relative to your floor room location.",
+                  "Sanitize high-touch items like TV remote, door handles, and light switches.",
+                  "Test air conditioning, hot water, and electronic room safe lock operation."
+              ]
+}

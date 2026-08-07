@@ -1,0 +1,23 @@
+﻿{
+    "id":  "indoor-houseplant-care",
+    "category":  "hobbies",
+    "title":  "...bring home a new indoor houseplant",
+    "desc":  "Keep your new houseplants thriving and prevent root rot or pests.",
+    "tags":  [
+                 "gardening",
+                 "plants",
+                 "houseplants",
+                 "home",
+                 "diy"
+             ],
+    "sourceName":  "Royal Horticultural Society (RHS)",
+    "sourceUrl":  "https://www.rhs.org.uk",
+    "affiliate":  null,
+    "todos":  [
+                  "Check plant leaves and soil thoroughly for signs of insects or pests.",
+                  "Verify container has adequate drainage holes at bottom before watering.",
+                  "Position plant according to light requirements (direct, indirect, or low light).",
+                  "Water deeply only when top 1-2 inches of soil feel dry to touch.",
+                  "Wipe dust off leaves periodically to maintain healthy photosynthesis."
+              ]
+}

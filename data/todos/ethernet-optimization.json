@@ -1,0 +1,23 @@
+﻿{
+    "id":  "ethernet-optimization",
+    "category":  "tech",
+    "title":  "...optimize a wired Ethernet connection",
+    "desc":  "Maximize throughput and minimize latency for gaming and streaming.",
+    "tags":  [
+                 "ethernet",
+                 "networking",
+                 "gigabit",
+                 "latency",
+                 "speed"
+             ],
+    "sourceName":  "IEEE Standards Association",
+    "sourceUrl":  "https://standards.ieee.org",
+    "affiliate":  null,
+    "todos":  [
+                  "Use Cat6 or Cat6a cabling for gigabit speeds and shielding against interference.",
+                  "Update network adapter drivers directly from motherboard or card manufacturer.",
+                  "Disable Energy-Efficient Ethernet (EEE) in Windows Device Manager properties.",
+                  "Configure network adapter speed and duplex settings to Auto-Negotiation.",
+                  "Set custom high-speed DNS servers (such as Cloudflare 1.1.1.1 or Google 8.8.8.8)."
+              ]
+}

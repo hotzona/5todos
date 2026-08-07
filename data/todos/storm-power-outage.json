@@ -1,0 +1,23 @@
+﻿{
+    "id":  "storm-power-outage",
+    "category":  "life",
+    "title":  "...lose power during a severe winter or summer storm",
+    "desc":  "Keep your home safe, protect electronics, and preserve food supplies.",
+    "tags":  [
+                 "storm",
+                 "outage",
+                 "emergency",
+                 "power",
+                 "home"
+             ],
+    "sourceName":  "Ready.gov Emergency Management",
+    "sourceUrl":  "https://www.ready.gov/power-outages",
+    "affiliate":  null,
+    "todos":  [
+                  "Keep refrigerator and freezer doors closed tightly to maintain cold temps.",
+                  "Unplug sensitive electronics and appliances to prevent power surge damage.",
+                  "Use battery-powered flashlights instead of candles to reduce fire hazards.",
+                  "Report power outage immediately to local utility company provider.",
+                  "Check on vulnerable neighbors, elderly family members, or pet needs."
+              ]
+}

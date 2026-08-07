@@ -1,0 +1,23 @@
+﻿{
+    "id":  "new-android-setup",
+    "category":  "tech",
+    "title":  "...set up a brand new Android phone",
+    "desc":  "Transfer data cleanly and optimize battery and privacy preferences.",
+    "tags":  [
+                 "android",
+                 "google",
+                 "samsung",
+                 "smartphone",
+                 "privacy"
+             ],
+    "sourceName":  "Google Android Help",
+    "sourceUrl":  "https://support.google.com/android",
+    "affiliate":  null,
+    "todos":  [
+                  "Transfer accounts and media using official cable-to-cable setup wizard.",
+                  "Update all system apps immediately via Google Play Store updates.",
+                  "Set up biometric fingerprint unlock along with a secure backup PIN.",
+                  "Disable personalized ads and usage diagnostics under Google Account settings.",
+                  "Turn on Android Find My Device and enable offline location network features."
+              ]
+}

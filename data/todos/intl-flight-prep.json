@@ -1,0 +1,23 @@
+﻿{
+    "id":  "intl-flight-prep",
+    "category":  "travel",
+    "title":  "...prepare for an international flight",
+    "desc":  "Ensure smooth border clearance, document readiness, and stress-free transit.",
+    "tags":  [
+                 "travel",
+                 "flight",
+                 "passport",
+                 "international",
+                 "packing"
+             ],
+    "sourceName":  "U.S. Department of State Travel",
+    "sourceUrl":  "https://travel.state.gov",
+    "affiliate":  null,
+    "todos":  [
+                  "Verify passport validity extends at least 6 months past planned return date.",
+                  "Check destination visa and digital entry form requirements (e.g., ETIAS/ESTA).",
+                  "Notify credit card companies and bank of international travel dates.",
+                  "Download offline maps and translation language packs to your smartphone.",
+                  "Pack physical printed copies of key travel documents and emergency contacts."
+              ]
+}

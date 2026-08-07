@@ -1,0 +1,23 @@
+﻿{
+    "id":  "new-computer-setup",
+    "category":  "tech",
+    "title":  "...un-box a brand new computer",
+    "desc":  "Clean up bloatware and secure your operating system on day one.",
+    "tags":  [
+                 "pc",
+                 "windows",
+                 "mac",
+                 "computer",
+                 "setup"
+             ],
+    "sourceName":  "Microsoft Windows Security",
+    "sourceUrl":  "https://support.microsoft.com/windows",
+    "affiliate":  null,
+    "todos":  [
+                  "Run system update utility until no OS updates remain.",
+                  "Uninstall pre-installed OEM bloatware and trial antivirus software.",
+                  "Enable BitLocker or FileVault full-disk encryption.",
+                  "Create a non-administrator daily user account for regular web browsing.",
+                  "Set up automatic system recovery restore points and external backup target."
+              ]
+}
