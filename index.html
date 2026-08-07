@@ -1,111 +1,111 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5todos - Clear, verified 5-step checklists</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>5todos — The First 5 Things to Do When Doing Anything</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="5todos — The First 5 Things to Do When Doing Anything">
+  <meta name="description" content="Clear, verified 5-step checklists for life, tech, travel, and emergencies. Get started without the fluff.">
+
+  <!-- Open Graph / Facebook / iMessage -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://5todos.com/">
+  <meta property="og:title" content="5todos — The First 5 Things to Do">
+  <meta property="og:description" content="Clear, verified 5-step checklists for life, tech, travel, and emergencies.">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://5todos.com/">
+  <meta property="twitter:title" content="5todos — The First 5 Things to Do">
+  <meta property="twitter:description" content="Clear, verified 5-step checklists for life, tech, travel, and emergencies.">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'media',
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              600: '#4f46e5',
-              700: '#4338ca',
-            }
-          }
-        }
-      }
+      darkMode: 'class',
+      theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } }
     }
   </script>
-  <style>
-    .scrollbar-none::-webkit-scrollbar { display: none; }
-    .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
-  </style>
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen flex flex-col font-sans antialiased">
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 min-h-screen flex flex-col transition-colors duration-200">
 
-  <!-- Header -->
-  <header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700/80 sticky top-0 z-30">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
-      <a href="/" class="flex items-center gap-2 font-black text-xl tracking-tight text-indigo-600 dark:text-indigo-400">
-        <span class="bg-indigo-600 text-white w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm">5</span>
-        <span>todos</span>
+  <!-- HEADER -->
+  <header class="border-b border-gray-200/60 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <div class="bg-indigo-600 text-white p-1 rounded-md">
+          <i data-lucide="check-square" class="w-4 h-4"></i>
+        </div>
+        <span class="font-extrabold text-lg tracking-tight text-gray-900 dark:text-white">
+          5todos<span class="text-xs font-normal text-gray-400 ml-0.5">.com</span>
+        </span>
       </a>
-      <a href="/creator.html" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors">
-        + Add Checklist
-      </a>
+
+      <div class="flex items-center gap-2">
+        <button id="surprise-btn" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-indigo-50 hover:bg-indigo-100 text-indigo-700 dark:bg-indigo-950/60 dark:hover:bg-indigo-900/60 dark:text-indigo-300 text-xs font-semibold transition-all">
+          <i data-lucide="shuffle" class="w-3.5 h-3.5"></i> Surprise Me
+        </button>
+
+        <button id="theme-toggle" class="p-1.5 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+          <i data-lucide="sun" class="w-4 h-4 text-amber-500 dark:text-indigo-400"></i>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 flex-1 w-full space-y-8">
+  <!-- MAIN AREA -->
+  <main class="max-w-3xl mx-auto px-4 py-6 flex-1 w-full space-y-6">
     
-    <!-- Hero Banner -->
-    <div class="text-center max-w-2xl mx-auto space-y-3">
-      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-        The first 5 things to do when...
+    <!-- MAIN HERO SUBJECT LINE -->
+    <section class="text-center space-y-1.5 pt-2 pb-1">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-tight">
+        The first <span class="text-indigo-600 dark:text-indigo-400">5 things to do</span> when you...
       </h1>
-      <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400">
-        Clear, verified step-by-step protocols for life, tech, travel, health, and emergencies.
-      </p>
-    </div>
+      <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 max-w-lg mx-auto">Clear, verified checklists for life, tech, travel, and emergencies.</p>
+    </section>
 
-    <!-- Search & Category Filters -->
-    <div class="space-y-4 max-w-3xl mx-auto">
-      <!-- Search Input -->
+    <!-- SEARCH & CATEGORY BAR -->
+    <section class="space-y-3">
       <div class="relative">
-        <input 
-          type="text" 
-          id="search-input" 
-          placeholder="Search checklists (e.g. car accident, router, passport)..." 
-          class="w-full pl-11 pr-4 py-3.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all text-sm sm:text-base"
-        />
-        <svg class="w-5 h-5 absolute left-4 top-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-        </svg>
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </div>
+        <input type="text" id="search-input" placeholder="Search checklists (e.g., wifi, hotel, iphone)..." class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700/80 focus:border-indigo-500 dark:focus:border-indigo-400 outline-none text-base md:text-sm shadow-2xs transition-all">
       </div>
 
       <!-- Category Filter Pills -->
       <div id="category-pills" class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
-        <button data-category="all" class="cat-btn px-4 py-1.5 rounded-full font-semibold text-xs sm:text-sm transition-all bg-indigo-600 text-white shadow-xs">All</button>
-        <button data-category="tech" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Tech</button>
-        <button data-category="travel" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Travel</button>
-        <button data-category="health" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Health</button>
-        <button data-category="finance" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Finance</button>
-        <button data-category="emergencies" class="cat-btn px-4 py-1.5 rounded-full font-medium text-xs sm:text-sm transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Emergencies</button>
-      </div>
-    </div>
+  <button data-category="all" class="cat-btn px-3.5 py-1 rounded-full font-semibold transition-all bg-indigo-600 text-white shadow-xs">All</button>
+  <button data-category="tech" class="cat-btn px-3.5 py-1 rounded-full font-medium transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Tech</button>
+  <button data-category="travel" class="cat-btn px-3.5 py-1 rounded-full font-medium transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Travel</button>
+  <button data-category="health" class="cat-btn px-3.5 py-1 rounded-full font-medium transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Health</button>
+  <button data-category="finance" class="cat-btn px-3.5 py-1 rounded-full font-medium transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Finance</button>
+  <button data-category="emergencies" class="cat-btn px-3.5 py-1 rounded-full font-medium transition-all text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">Emergencies</button>
+</div>
+    </section>
 
-    <!-- Featured Daily Card Container -->
-    <div id="daily-card" class="max-w-3xl mx-auto"></div>
+    <!-- FEATURED / DAILY CHECKLIST CARD -->
+    <section id="daily-section">
+      <div id="daily-card-container"></div>
+    </section>
 
-    <!-- Checklist Cards Grid Container -->
-    <div id="todos-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
-      <!-- Dynamically populated by app.js -->
-    </div>
+    <!-- COMPACT EXPLORE LISTINGS -->
+    <section class="space-y-2.5">
+      <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 pl-1">Library</h3>
+      <div id="listings-grid" class="space-y-2"></div>
+    </section>
 
   </main>
 
-  <!-- Modal for Checklist Details -->
-  <div id="todo-modal" class="fixed inset-0 bg-black/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
-    <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-gray-100 dark:border-gray-700 relative max-h-[90vh] overflow-y-auto">
-      <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 p-1 rounded-lg transition-colors">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        </svg>
-      </button>
-      <div id="modal-content"></div>
+  <!-- FOOTER -->
+  <footer class="border-t border-gray-200/50 dark:border-gray-800/50 py-6 mt-8">
+    <div class="max-w-3xl mx-auto px-4 flex justify-between items-center text-xs text-gray-400">
+      <div>&copy; 2026 5todos.com</div>
+      <a href="privacy.html" class="hover:text-indigo-500 transition-colors">Privacy</a>
     </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 py-6 mt-12 text-center text-xs text-gray-400">
-    <p>&copy; 5todos. Clear protocols when you need them most.</p>
   </footer>
 
   <script src="js/app.js"></script>
