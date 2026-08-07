@@ -1,0 +1,22 @@
+{
+  "id": "start-401k-roth-ira",
+  "title": "What to do when starting your first 401(k) or Roth IRA",
+  "desc": "Maximize tax-advantaged retirement growth and compound interest.",
+  "category": "finance",
+  "sourceName": "IRS Retirement Plans",
+  "sourceUrl": "https://www.irs.gov",
+  "tags": [
+    "retirement",
+    "401k",
+    "ira",
+    "investing",
+    "finance"
+  ],
+  "todos": [
+    "Contribute at least enough to your employer 401(k) to capture the full company match.",
+    "Choose low-cost index funds or target-date retirement funds rather than holding cash.",
+    "Open a Roth IRA if eligible to build tax-free growth and tax-free retirement withdrawals.",
+    "Set up automatic monthly contributions to hit annual IRA limits systematically.",
+    "Designate primary and contingent beneficiaries on all investment accounts."
+  ]
+}

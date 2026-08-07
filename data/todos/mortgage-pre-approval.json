@@ -1,0 +1,22 @@
+{
+  "id": "mortgage-pre-approval",
+  "title": "What to do when applying for a mortgage pre-approval",
+  "desc": "Streamline home loan qualification and prove buying power to sellers.",
+  "category": "finance",
+  "sourceName": "Consumer Financial Protection Bureau",
+  "sourceUrl": "https://www.consumerfinance.gov",
+  "tags": [
+    "mortgage",
+    "home",
+    "buying",
+    "loan",
+    "finance"
+  ],
+  "todos": [
+    "Check your credit reports and resolve any outstanding errors or collection items.",
+    "Gather W-2s, recent pay stubs, bank statements, and two years of tax returns.",
+    "Avoid opening new credit cards or making large financing purchases during the process.",
+    "Compare loan estimates from multiple lenders to find the best interest rates and terms.",
+    "Keep debt-to-income (DTI) ratio below 36% to qualify for optimal loan options."
+  ]
+}

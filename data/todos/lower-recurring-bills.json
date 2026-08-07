@@ -1,0 +1,22 @@
+{
+  "id": "lower-recurring-bills",
+  "title": "What to do to lower your monthly subscription and bill costs",
+  "desc": "Cut wasteful recurring overhead and negotiate better service rates.",
+  "category": "finance",
+  "sourceName": "Consumer Reports Money Advice",
+  "sourceUrl": "https://www.consumerreports.org",
+  "tags": [
+    "bills",
+    "savings",
+    "subscriptions",
+    "budget",
+    "finance"
+  ],
+  "todos": [
+    "Audit your last 90 days of credit card and bank statements for forgotten subscriptions.",
+    "Cancel unused streaming services, gym memberships, and auto-renewing software apps.",
+    "Call internet and cable providers to ask for current promotional rates or retention discounts.",
+    "Shop around for competitive car and homeowners insurance quotes annually.",
+    "Switch to low-cost prepaid or MVNO cell phone plans to cut mobile service costs."
+  ]
+}

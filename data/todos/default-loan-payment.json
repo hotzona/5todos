@@ -1,0 +1,22 @@
+{
+  "id": "default-loan-payment",
+  "title": "What to do if you default or fall behind on a loan payment",
+  "desc": "Mitigate credit damage and work out manageable payment solutions.",
+  "category": "finance",
+  "sourceName": "National Foundation for Credit Counseling",
+  "sourceUrl": "https://www.nfcc.org",
+  "tags": [
+    "debt",
+    "loans",
+    "credit",
+    "finance",
+    "hardship"
+  ],
+  "todos": [
+    "Contact your lender or loan servicer immediately before the payment reaches 30 days past due.",
+    "Inquire about hardship programs, temporary deferment, or loan modification options.",
+    "Prioritize essential debt payments (mortgage, auto, utilities) over uncollateralized credit cards.",
+    "Avoid ignoring calls or mail from creditors, as early communication prevents legal escalation.",
+    "Consult a non-profit credit counseling agency for accredited debt management plans."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "switch-primary-banks",
+  "title": "What to do when switching primary bank accounts",
+  "desc": "Move your checking and savings smoothly without missed bills or payroll delays.",
+  "category": "finance",
+  "sourceName": "FDIC Consumer Resource",
+  "sourceUrl": "https://www.fdic.gov",
+  "tags": [
+    "bank",
+    "checking",
+    "savings",
+    "finance",
+    "money"
+  ],
+  "todos": [
+    "Open your new checking account and deposit initial opening funds.",
+    "Switch direct deposit details with your employer HR or payroll provider.",
+    "List all recurring automatic bill payments and update them with new card or account numbers.",
+    "Leave a cash buffer in your old account for 30 days to cover any residual pending charges.",
+    "Formally close the old bank account and request a written confirmation letter."
+  ]
+}

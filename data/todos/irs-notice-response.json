@@ -1,0 +1,22 @@
+{
+  "id": "irs-notice-response",
+  "title": "What to do if you receive a notice or letter from the IRS",
+  "desc": "Handle tax inquiries or discrepancies calmly and systematically.",
+  "category": "finance",
+  "sourceName": "Internal Revenue Service",
+  "sourceUrl": "https://www.irs.gov",
+  "tags": [
+    "irs",
+    "taxes",
+    "audit",
+    "finance",
+    "notice"
+  ],
+  "todos": [
+    "Read the notice carefully to identify the specific tax year, issue, and response deadline.",
+    "Compare the IRS notice details against your original tax return copies and tax forms.",
+    "Do not panic or ignore the letter; response windows are strictly enforced.",
+    "Mail or upload requested documentation along with the provided IRS response stub.",
+    "Contact a certified CPA or tax professional if the discrepancy involves significant amounts."
+  ]
+}

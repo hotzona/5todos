@@ -1,0 +1,22 @@
+{
+  "id": "improve-credit-score",
+  "title": "What to do to improve your credit score by 50+ points",
+  "desc": "Actionable habits to boost your FICO and VantageScore ratings rapidly.",
+  "category": "finance",
+  "sourceName": "myFICO Score Guidelines",
+  "sourceUrl": "https://www.myfico.com",
+  "tags": [
+    "credit",
+    "fico",
+    "finance",
+    "debt",
+    "money"
+  ],
+  "todos": [
+    "Pay every bill on time; payment history makes up 35% of your total credit score.",
+    "Pay down card balances to keep overall credit utilization below 10% to 30%.",
+    "Request credit line increases on existing accounts without incurring hard inquiries.",
+    "Dispute errors, inaccurate late payments, or fraudulent items on your credit reports.",
+    "Keep older credit card accounts open to maintain a long average age of credit history."
+  ]
+}

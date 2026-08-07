@@ -1,0 +1,22 @@
+{
+  "id": "unthaw-credit-reports",
+  "title": "What to do when frozen credit reports need to be unthawed",
+  "desc": "Temporarily lift credit freezes safely when applying for loans or credit cards.",
+  "category": "finance",
+  "sourceName": "Federal Trade Commission",
+  "sourceUrl": "https://consumer.ftc.gov",
+  "tags": [
+    "credit",
+    "freeze",
+    "experian",
+    "transunion",
+    "equifax"
+  ],
+  "todos": [
+    "Ask the lender which specific credit bureau report they will be pulling.",
+    "Log into your secure account at Experian, TransUnion, or Equifax online.",
+    "Select 'Temporary Lift' and set the exact start and end dates for the thaw.",
+    "Keep your original PINs or account credentials stored in a password manager.",
+    "Verify that the freeze automatically re-engages after the designated timeframe expires."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "build-emergency-fund",
+  "title": "What to do to build an emergency fund from scratch",
+  "desc": "Create a financial safety net to handle unexpected expenses without debt.",
+  "category": "finance",
+  "sourceName": "FDIC Financial Education",
+  "sourceUrl": "https://www.fdic.gov",
+  "tags": [
+    "savings",
+    "emergency fund",
+    "finance",
+    "money",
+    "safety"
+  ],
+  "todos": [
+    "Set an initial milestone target of $1,000 before working toward 3 to 6 months of living expenses.",
+    "Open a separate high-yield savings account (HYSA) dedicated solely to emergencies.",
+    "Automate small, recurring transfers from checking to savings every payday.",
+    "Deposit unexpected windfalls (tax refunds, work bonuses, gift money) directly into the fund.",
+    "Define strict rules for what constitutes a true emergency versus planned spending."
+  ]
+}

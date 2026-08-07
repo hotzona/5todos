@@ -1,0 +1,22 @@
+{
+  "id": "basic-estate-plan",
+  "title": "What to do when setting up a basic estate plan or living will",
+  "desc": "Protect your assets and ensure medical and legal wishes are followed.",
+  "category": "finance",
+  "sourceName": "American Bar Association Estate Prep",
+  "sourceUrl": "https://www.americanbar.org",
+  "tags": [
+    "estate",
+    "will",
+    "legal",
+    "finance",
+    "planning"
+  ],
+  "todos": [
+    "Draft a last will and testament detailing asset distribution and guardianship for minors.",
+    "Designate a durable power of attorney to manage financial matters if you become incapacitated.",
+    "Create a healthcare advance directive and name a medical power of attorney.",
+    "Update transfer-on-death (TOD) and beneficiary designations on bank and investment accounts.",
+    "Store original signed legal documents in a secure, fireproof safe accessible by loved ones."
+  ]
+}

@@ -851,5 +851,185 @@
       "money",
       "accounting"
     ]
+  },
+  {
+    "id": "setup-monthly-budget",
+    "title": "What to do when setting up a personal monthly budget",
+    "category": "finance",
+    "tags": [
+      "budget",
+      "finance",
+      "money",
+      "saving",
+      "planning"
+    ]
+  },
+  {
+    "id": "job-loss-first-steps",
+    "title": "What to do if you lose your job or face a layoff",
+    "category": "finance",
+    "tags": [
+      "job loss",
+      "layoff",
+      "unemployment",
+      "finance",
+      "career"
+    ]
+  },
+  {
+    "id": "build-emergency-fund",
+    "title": "What to do to build an emergency fund from scratch",
+    "category": "finance",
+    "tags": [
+      "savings",
+      "emergency fund",
+      "finance",
+      "money",
+      "safety"
+    ]
+  },
+  {
+    "id": "unthaw-credit-reports",
+    "title": "What to do when frozen credit reports need to be unthawed",
+    "category": "finance",
+    "tags": [
+      "credit",
+      "freeze",
+      "experian",
+      "transunion",
+      "equifax"
+    ]
+  },
+  {
+    "id": "start-401k-roth-ira",
+    "title": "What to do when starting your first 401(k) or Roth IRA",
+    "category": "finance",
+    "tags": [
+      "retirement",
+      "401k",
+      "ira",
+      "investing",
+      "finance"
+    ]
+  },
+  {
+    "id": "irs-notice-response",
+    "title": "What to do if you receive a notice or letter from the IRS",
+    "category": "finance",
+    "tags": [
+      "irs",
+      "taxes",
+      "audit",
+      "finance",
+      "notice"
+    ]
+  },
+  {
+    "id": "negotiate-job-offer",
+    "title": "What to do when negotiating a job offer or salary increase",
+    "category": "finance",
+    "tags": [
+      "salary",
+      "negotiation",
+      "job offer",
+      "career",
+      "money"
+    ]
+  },
+  {
+    "id": "lower-recurring-bills",
+    "title": "What to do to lower your monthly subscription and bill costs",
+    "category": "finance",
+    "tags": [
+      "bills",
+      "savings",
+      "subscriptions",
+      "budget",
+      "finance"
+    ]
+  },
+  {
+    "id": "mortgage-pre-approval",
+    "title": "What to do when applying for a mortgage pre-approval",
+    "category": "finance",
+    "tags": [
+      "mortgage",
+      "home",
+      "buying",
+      "loan",
+      "finance"
+    ]
+  },
+  {
+    "id": "basic-estate-plan",
+    "title": "What to do when setting up a basic estate plan or living will",
+    "category": "finance",
+    "tags": [
+      "estate",
+      "will",
+      "legal",
+      "finance",
+      "planning"
+    ]
+  },
+  {
+    "id": "default-loan-payment",
+    "title": "What to do if you default or fall behind on a loan payment",
+    "category": "finance",
+    "tags": [
+      "debt",
+      "loans",
+      "credit",
+      "finance",
+      "hardship"
+    ]
+  },
+  {
+    "id": "switch-primary-banks",
+    "title": "What to do when switching primary bank accounts",
+    "category": "finance",
+    "tags": [
+      "bank",
+      "checking",
+      "savings",
+      "finance",
+      "money"
+    ]
+  },
+  {
+    "id": "open-enrollment-health",
+    "title": "What to do when choosing a health insurance plan during open enrollment",
+    "category": "health",
+    "tags": [
+      "insurance",
+      "health",
+      "open enrollment",
+      "medical",
+      "finance"
+    ]
+  },
+  {
+    "id": "improve-credit-score",
+    "title": "What to do to improve your credit score by 50+ points",
+    "category": "finance",
+    "tags": [
+      "credit",
+      "fico",
+      "finance",
+      "debt",
+      "money"
+    ]
+  },
+  {
+    "id": "dispute-credit-report-error",
+    "title": "What to do when disputing an error on your credit report",
+    "category": "finance",
+    "tags": [
+      "credit report",
+      "dispute",
+      "experian",
+      "transunion",
+      "equifax"
+    ]
   }
 ]

@@ -1,0 +1,22 @@
+{
+  "id": "setup-monthly-budget",
+  "title": "What to do when setting up a personal monthly budget",
+  "desc": "Establish a clear zero-based budget and gain control of your cash flow.",
+  "category": "finance",
+  "sourceName": "Consumer Financial Protection Bureau",
+  "sourceUrl": "https://www.consumerfinance.gov",
+  "tags": [
+    "budget",
+    "finance",
+    "money",
+    "saving",
+    "planning"
+  ],
+  "todos": [
+    "Calculate your net take-home monthly income across all reliable revenue sources.",
+    "List fixed recurring expenses (rent/mortgage, utilities, insurance, loan payments).",
+    "Track variable spending categories (groceries, dining out, entertainment, gas) using past bank statements.",
+    "Assign every dollar a specific job using the 50/30/20 rule or zero-based budgeting method.",
+    "Set up automated transfers to high-yield savings accounts on payday before spending."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "open-enrollment-health",
+  "title": "What to do when choosing a health insurance plan during open enrollment",
+  "desc": "Select the right coverage while minimizing total out-of-pocket medical costs.",
+  "category": "health",
+  "sourceName": "HealthCare.gov Guidelines",
+  "sourceUrl": "https://www.healthcare.gov",
+  "tags": [
+    "insurance",
+    "health",
+    "open enrollment",
+    "medical",
+    "finance"
+  ],
+  "todos": [
+    "Estimate your total annual medical expenses based on expected prescriptions and care needs.",
+    "Compare premiums, deductibles, copays, and maximum out-of-pocket limits across plans.",
+    "Verify that your preferred doctors, specialists, and hospitals remain in-network.",
+    "Check the formulary tier list to ensure your prescription medications are covered affordably.",
+    "Consider an HSA-eligible High Deductible Health Plan if you want tax-advantaged medical savings."
+  ]
+}

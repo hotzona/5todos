@@ -1,0 +1,22 @@
+{
+  "id": "dispute-credit-report-error",
+  "title": "What to do when disputing an error on your credit report",
+  "desc": "Remove inaccurate items and correct credit bureau records officially.",
+  "category": "finance",
+  "sourceName": "FTC Credit Repair Guide",
+  "sourceUrl": "https://consumer.ftc.gov",
+  "tags": [
+    "credit report",
+    "dispute",
+    "experian",
+    "transunion",
+    "equifax"
+  ],
+  "todos": [
+    "Obtain free copies of your credit reports from AnnualCreditReport.com.",
+    "Gather supporting documentation (bank statements, payment receipts, release letters).",
+    "File an official online dispute with each bureau displaying the specific error.",
+    "Send a formal written dispute letter via certified mail with return receipt requested.",
+    "Track the 30-day investigation window during which the bureau must verify or remove the item."
+  ]
+}
