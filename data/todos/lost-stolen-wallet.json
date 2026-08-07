@@ -1,0 +1,22 @@
+{
+  "id": "lost-stolen-wallet",
+  "title": "What to do if your wallet is lost or stolen",
+  "desc": "Prevent identity theft and credit card fraud in five quick steps.",
+  "category": "emergencies",
+  "sourceName": "Federal Trade Commission",
+  "sourceUrl": "https://consumer.ftc.gov",
+  "tags": [
+    "wallet",
+    "stolen",
+    "credit card",
+    "identity",
+    "finance"
+  ],
+  "todos": [
+    "Call every card issuer immediately to freeze or cancel debit and credit cards and request replacements.",
+    "Contact one of the three major credit bureaus (Experian, TransUnion, Equifax) to place a free fraud alert on your credit file.",
+    "Report the missing drivers license or state ID to your local Department of Motor Vehicles (DMV).",
+    "File a non-emergency police report to create an official paper trail against identity theft.",
+    "List all missing contents (insurance cards, memberships, transit passes) and initiate replacement requests."
+  ]
+}

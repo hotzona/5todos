@@ -1,0 +1,22 @@
+{
+  "id": "hacked-smart-camera",
+  "title": "What to do if your smart home camera or IoT device is compromised",
+  "desc": "Isolate hijacked smart home hardware and secure local home automation.",
+  "category": "tech",
+  "sourceName": "FTC Smart Home Security",
+  "sourceUrl": "https://consumer.ftc.gov",
+  "tags": [
+    "smart home",
+    "security",
+    "camera",
+    "privacy",
+    "iot"
+  ],
+  "todos": [
+    "Disconnect the compromised device from power and local Wi-Fi instantly.",
+    "Change the account password for the device management app and terminate active logged-in sessions.",
+    "Enable 2FA on your smart home ecosystem accounts (Ring, Nest, Google, Apple).",
+    "Factory reset the physical hardware unit using the pinhole button before reconnecting.",
+    "Move all smart home IoT devices to a segregated Guest Wi-Fi network away from personal computers."
+  ]
+}

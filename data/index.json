@@ -1,386 +1,675 @@
-﻿[
-    {
-        "id":  "wifi-router-setup",
-        "title":  "...set up a new home Wi-Fi router",
-        "category":  "tech",
-        "tags":  [
-                     "wifi",
-                     "router",
-                     "network",
-                     "security",
-                     "internet"
-                 ]
-    },
-    {
-        "id":  "ethernet-optimization",
-        "title":  "...optimize a wired Ethernet connection",
-        "category":  "tech",
-        "tags":  [
-                     "ethernet",
-                     "networking",
-                     "gigabit",
-                     "latency",
-                     "speed"
-                 ]
-    },
-    {
-        "id":  "steam-deck-setup",
-        "title":  "...unbox a new Steam Deck or handheld gaming PC",
-        "category":  "tech",
-        "tags":  [
-                     "steam",
-                     "handheld",
-                     "gaming",
-                     "steamdeck",
-                     "pcgaming"
-                 ]
-    },
-    {
-        "id":  "steam-pc-setup",
-        "title":  "...configure Steam on a new PC",
-        "category":  "tech",
-        "tags":  [
-                     "steam",
-                     "gaming",
-                     "pc",
-                     "downloads",
-                     "security"
-                 ]
-    },
-    {
-        "id":  "new-iphone-setup",
-        "title":  "...set up a brand new iPhone",
-        "category":  "tech",
-        "tags":  [
-                     "iphone",
-                     "apple",
-                     "ios",
-                     "smartphone",
-                     "privacy"
-                 ]
-    },
-    {
-        "id":  "new-android-setup",
-        "title":  "...set up a brand new Android phone",
-        "category":  "tech",
-        "tags":  [
-                     "android",
-                     "google",
-                     "samsung",
-                     "smartphone",
-                     "privacy"
-                 ]
-    },
-    {
-        "id":  "new-computer-setup",
-        "title":  "...un-box a brand new computer",
-        "category":  "tech",
-        "tags":  [
-                     "pc",
-                     "windows",
-                     "mac",
-                     "computer",
-                     "setup"
-                 ]
-    },
-    {
-        "id":  "pc-privacy-hardening",
-        "title":  "...harden your computer privacy and security",
-        "category":  "tech",
-        "tags":  [
-                     "privacy",
-                     "security",
-                     "windows",
-                     "mac",
-                     "telemetry"
-                 ]
-    },
-    {
-        "id":  "intl-flight-prep",
-        "title":  "...prepare for an international flight",
-        "category":  "travel",
-        "tags":  [
-                     "travel",
-                     "flight",
-                     "passport",
-                     "international",
-                     "packing"
-                 ]
-    },
-    {
-        "id":  "foreign-airport-arrival",
-        "title":  "...land in a foreign country where you don\u0027t speak the language",
-        "category":  "travel",
-        "tags":  [
-                     "travel",
-                     "airport",
-                     "transit",
-                     "language",
-                     "international"
-                 ]
-    },
-    {
-        "id":  "hotel-checkin-security",
-        "title":  "...walk into a new hotel room",
-        "category":  "travel",
-        "tags":  [
-                     "hotel",
-                     "travel",
-                     "safety",
-                     "hygiene",
-                     "security"
-                 ]
-    },
-    {
-        "id":  "roadtrip-car-prep",
-        "title":  "...prep your vehicle for a major road trip",
-        "category":  "travel",
-        "tags":  [
-                     "roadtrip",
-                     "car",
-                     "travel",
-                     "driving",
-                     "maintenance"
-                 ]
-    },
-    {
-        "id":  "airport-security-breeze",
-        "title":  "...breeze through airport security checkpoint lines",
-        "category":  "travel",
-        "tags":  [
-                     "airport",
-                     "security",
-                     "flight",
-                     "tsa",
-                     "travel"
-                 ]
-    },
-    {
-        "id":  "hostel-first-night",
-        "title":  "...stay in a shared hostel room for the first time",
-        "category":  "travel",
-        "tags":  [
-                     "hostel",
-                     "travel",
-                     "backpacking",
-                     "budget",
-                     "safety"
-                 ]
-    },
-    {
-        "id":  "vacation-rental-checkout",
-        "title":  "...check out of an Airbnb or vacation rental",
-        "category":  "travel",
-        "tags":  [
-                     "airbnb",
-                     "vacation",
-                     "rental",
-                     "checkout",
-                     "travel"
-                 ]
-    },
-    {
-        "id":  "cruise-ship-embarkation",
-        "title":  "...board a cruise ship on embarkation day",
-        "category":  "travel",
-        "tags":  [
-                     "cruise",
-                     "travel",
-                     "vacation",
-                     "ship",
-                     "embarkation"
-                 ]
-    },
-    {
-        "id":  "stroke-signs-fast",
-        "title":  "...suspect someone is having a stroke",
-        "category":  "health",
-        "tags":  [
-                     "emergency",
-                     "health",
-                     "medical",
-                     "fast",
-                     "stroke"
-                 ]
-    },
-    {
-        "id":  "burn-first-aid",
-        "title":  "...treat a household thermal or heat burn",
-        "category":  "health",
-        "tags":  [
-                     "burn",
-                     "firstaid",
-                     "health",
-                     "emergency",
-                     "medical"
-                 ]
-    },
-    {
-        "id":  "severe-bleeding",
-        "title":  "...respond to severe arterial or deep wound bleeding",
-        "category":  "health",
-        "tags":  [
-                     "bleeding",
-                     "firstaid",
-                     "emergency",
-                     "trauma",
-                     "health"
-                 ]
-    },
-    {
-        "id":  "choking-adult",
-        "title":  "...help a conscious adult who is choking",
-        "category":  "health",
-        "tags":  [
-                     "choking",
-                     "heimlich",
-                     "emergency",
-                     "firstaid",
-                     "health"
-                 ]
-    },
-    {
-        "id":  "hysa-setup-guide",
-        "title":  "...open a High-Yield Savings Account (HYSA)",
-        "category":  "finance",
-        "tags":  [
-                     "banking",
-                     "money",
-                     "savings",
-                     "interest",
-                     "finance"
-                 ]
-    },
-    {
-        "id":  "credit-report-freeze",
-        "title":  "...freeze your credit reports against identity theft",
-        "category":  "finance",
-        "tags":  [
-                     "credit",
-                     "identity",
-                     "security",
-                     "finance",
-                     "money"
-                 ]
-    },
-    {
-        "id":  "first-job-401k",
-        "title":  "...set up your 401(k) at a new job",
-        "category":  "finance",
-        "tags":  [
-                     "investing",
-                     "401k",
-                     "retirement",
-                     "money",
-                     "jobs"
-                 ]
-    },
-    {
-        "id":  "debt-snowball-plan",
-        "title":  "...build a debt elimination payoff plan",
-        "category":  "finance",
-        "tags":  [
-                     "debt",
-                     "budget",
-                     "money",
-                     "creditcard",
-                     "finance"
-                 ]
-    },
-    {
-        "id":  "car-accident-response",
-        "title":  "...get into a minor fender bender car accident",
-        "category":  "life",
-        "tags":  [
-                     "car",
-                     "driving",
-                     "insurance",
-                     "accident",
-                     "emergency"
-                 ]
-    },
-    {
-        "id":  "apartment-movein-inspection",
-        "title":  "...move into a new rental apartment",
-        "category":  "life",
-        "tags":  [
-                     "apartment",
-                     "renting",
-                     "moving",
-                     "home",
-                     "lease"
-                 ]
-    },
-    {
-        "id":  "storm-power-outage",
-        "title":  "...lose power during a severe winter or summer storm",
-        "category":  "life",
-        "tags":  [
-                     "storm",
-                     "outage",
-                     "emergency",
-                     "power",
-                     "home"
-                 ]
-    },
-    {
-        "id":  "new-pet-adoption",
-        "title":  "...bring home a newly adopted dog or puppy",
-        "category":  "life",
-        "tags":  [
-                     "pets",
-                     "dog",
-                     "puppy",
-                     "adoption",
-                     "animals"
-                 ]
-    },
-    {
-        "id":  "sourdough-starter-begin",
-        "title":  "...start cultivating your first sourdough bread starter",
-        "category":  "hobbies",
-        "tags":  [
-                     "baking",
-                     "sourdough",
-                     "cooking",
-                     "diy",
-                     "food"
-                 ]
-    },
-    {
-        "id":  "dlsr-camera-beginner",
-        "title":  "...pick up a new DSLR or mirrorless camera",
-        "category":  "hobbies",
-        "tags":  [
-                     "photography",
-                     "camera",
-                     "hobbies",
-                     "tech",
-                     "art"
-                 ]
-    },
-    {
-        "id":  "indoor-houseplant-care",
-        "title":  "...bring home a new indoor houseplant",
-        "category":  "hobbies",
-        "tags":  [
-                     "gardening",
-                     "plants",
-                     "houseplants",
-                     "home",
-                     "diy"
-                 ]
-    },
-    {
-        "id":  "running-couch-to-5k",
-        "title":  "...start running as a beginner or C25K participant",
-        "category":  "hobbies",
-        "tags":  [
-                     "fitness",
-                     "running",
-                     "health",
-                     "exercise",
-                     "hobbies"
-                 ]
-    }
+[
+  {
+    "id": "wifi-router-setup",
+    "title": "...set up a new home Wi-Fi router",
+    "category": "tech",
+    "tags": [
+      "wifi",
+      "router",
+      "network",
+      "security",
+      "internet"
+    ]
+  },
+  {
+    "id": "ethernet-optimization",
+    "title": "...optimize a wired Ethernet connection",
+    "category": "tech",
+    "tags": [
+      "ethernet",
+      "networking",
+      "gigabit",
+      "latency",
+      "speed"
+    ]
+  },
+  {
+    "id": "steam-deck-setup",
+    "title": "...unbox a new Steam Deck or handheld gaming PC",
+    "category": "tech",
+    "tags": [
+      "steam",
+      "handheld",
+      "gaming",
+      "steamdeck",
+      "pcgaming"
+    ]
+  },
+  {
+    "id": "steam-pc-setup",
+    "title": "...configure Steam on a new PC",
+    "category": "tech",
+    "tags": [
+      "steam",
+      "gaming",
+      "pc",
+      "downloads",
+      "security"
+    ]
+  },
+  {
+    "id": "new-iphone-setup",
+    "title": "...set up a brand new iPhone",
+    "category": "tech",
+    "tags": [
+      "iphone",
+      "apple",
+      "ios",
+      "smartphone",
+      "privacy"
+    ]
+  },
+  {
+    "id": "new-android-setup",
+    "title": "...set up a brand new Android phone",
+    "category": "tech",
+    "tags": [
+      "android",
+      "google",
+      "samsung",
+      "smartphone",
+      "privacy"
+    ]
+  },
+  {
+    "id": "new-computer-setup",
+    "title": "What to do when setting up a new Mac or Windows PC",
+    "category": "tech",
+    "tags": [
+      "pc",
+      "mac",
+      "windows",
+      "computer",
+      "setup"
+    ]
+  },
+  {
+    "id": "pc-privacy-hardening",
+    "title": "...harden your computer privacy and security",
+    "category": "tech",
+    "tags": [
+      "privacy",
+      "security",
+      "windows",
+      "mac",
+      "telemetry"
+    ]
+  },
+  {
+    "id": "intl-flight-prep",
+    "title": "...prepare for an international flight",
+    "category": "travel",
+    "tags": [
+      "travel",
+      "flight",
+      "passport",
+      "international",
+      "packing"
+    ]
+  },
+  {
+    "id": "foreign-airport-arrival",
+    "title": "...land in a foreign country where you don't speak the language",
+    "category": "travel",
+    "tags": [
+      "travel",
+      "airport",
+      "transit",
+      "language",
+      "international"
+    ]
+  },
+  {
+    "id": "hotel-checkin-security",
+    "title": "...walk into a new hotel room",
+    "category": "travel",
+    "tags": [
+      "hotel",
+      "travel",
+      "safety",
+      "hygiene",
+      "security"
+    ]
+  },
+  {
+    "id": "roadtrip-car-prep",
+    "title": "...prep your vehicle for a major road trip",
+    "category": "travel",
+    "tags": [
+      "roadtrip",
+      "car",
+      "travel",
+      "driving",
+      "maintenance"
+    ]
+  },
+  {
+    "id": "airport-security-breeze",
+    "title": "...breeze through airport security checkpoint lines",
+    "category": "travel",
+    "tags": [
+      "airport",
+      "security",
+      "flight",
+      "tsa",
+      "travel"
+    ]
+  },
+  {
+    "id": "hostel-first-night",
+    "title": "...stay in a shared hostel room for the first time",
+    "category": "travel",
+    "tags": [
+      "hostel",
+      "travel",
+      "backpacking",
+      "budget",
+      "safety"
+    ]
+  },
+  {
+    "id": "vacation-rental-checkout",
+    "title": "...check out of an Airbnb or vacation rental",
+    "category": "travel",
+    "tags": [
+      "airbnb",
+      "vacation",
+      "rental",
+      "checkout",
+      "travel"
+    ]
+  },
+  {
+    "id": "cruise-ship-embarkation",
+    "title": "...board a cruise ship on embarkation day",
+    "category": "travel",
+    "tags": [
+      "cruise",
+      "travel",
+      "vacation",
+      "ship",
+      "embarkation"
+    ]
+  },
+  {
+    "id": "stroke-signs-fast",
+    "title": "...suspect someone is having a stroke",
+    "category": "health",
+    "tags": [
+      "emergency",
+      "health",
+      "medical",
+      "fast",
+      "stroke"
+    ]
+  },
+  {
+    "id": "burn-first-aid",
+    "title": "...treat a household thermal or heat burn",
+    "category": "health",
+    "tags": [
+      "burn",
+      "firstaid",
+      "health",
+      "emergency",
+      "medical"
+    ]
+  },
+  {
+    "id": "severe-bleeding",
+    "title": "...respond to severe arterial or deep wound bleeding",
+    "category": "health",
+    "tags": [
+      "bleeding",
+      "firstaid",
+      "emergency",
+      "trauma",
+      "health"
+    ]
+  },
+  {
+    "id": "choking-adult",
+    "title": "...help a conscious adult who is choking",
+    "category": "health",
+    "tags": [
+      "choking",
+      "heimlich",
+      "emergency",
+      "firstaid",
+      "health"
+    ]
+  },
+  {
+    "id": "hysa-setup-guide",
+    "title": "...open a High-Yield Savings Account (HYSA)",
+    "category": "finance",
+    "tags": [
+      "banking",
+      "money",
+      "savings",
+      "interest",
+      "finance"
+    ]
+  },
+  {
+    "id": "credit-report-freeze",
+    "title": "...freeze your credit reports against identity theft",
+    "category": "finance",
+    "tags": [
+      "credit",
+      "identity",
+      "security",
+      "finance",
+      "money"
+    ]
+  },
+  {
+    "id": "first-job-401k",
+    "title": "...set up your 401(k) at a new job",
+    "category": "finance",
+    "tags": [
+      "investing",
+      "401k",
+      "retirement",
+      "money",
+      "jobs"
+    ]
+  },
+  {
+    "id": "debt-snowball-plan",
+    "title": "...build a debt elimination payoff plan",
+    "category": "finance",
+    "tags": [
+      "debt",
+      "budget",
+      "money",
+      "creditcard",
+      "finance"
+    ]
+  },
+  {
+    "id": "car-accident-response",
+    "title": "...get into a minor fender bender car accident",
+    "category": "life",
+    "tags": [
+      "car",
+      "driving",
+      "insurance",
+      "accident",
+      "emergency"
+    ]
+  },
+  {
+    "id": "apartment-movein-inspection",
+    "title": "...move into a new rental apartment",
+    "category": "life",
+    "tags": [
+      "apartment",
+      "renting",
+      "moving",
+      "home",
+      "lease"
+    ]
+  },
+  {
+    "id": "storm-power-outage",
+    "title": "...lose power during a severe winter or summer storm",
+    "category": "life",
+    "tags": [
+      "storm",
+      "outage",
+      "emergency",
+      "power",
+      "home"
+    ]
+  },
+  {
+    "id": "new-pet-adoption",
+    "title": "...bring home a newly adopted dog or puppy",
+    "category": "life",
+    "tags": [
+      "pets",
+      "dog",
+      "puppy",
+      "adoption",
+      "animals"
+    ]
+  },
+  {
+    "id": "sourdough-starter-begin",
+    "title": "...start cultivating your first sourdough bread starter",
+    "category": "hobbies",
+    "tags": [
+      "baking",
+      "sourdough",
+      "cooking",
+      "diy",
+      "food"
+    ]
+  },
+  {
+    "id": "dlsr-camera-beginner",
+    "title": "...pick up a new DSLR or mirrorless camera",
+    "category": "hobbies",
+    "tags": [
+      "photography",
+      "camera",
+      "hobbies",
+      "tech",
+      "art"
+    ]
+  },
+  {
+    "id": "indoor-houseplant-care",
+    "title": "...bring home a new indoor houseplant",
+    "category": "hobbies",
+    "tags": [
+      "gardening",
+      "plants",
+      "houseplants",
+      "home",
+      "diy"
+    ]
+  },
+  {
+    "id": "running-couch-to-5k",
+    "title": "...start running as a beginner or C25K participant",
+    "category": "hobbies",
+    "tags": [
+      "fitness",
+      "running",
+      "health",
+      "exercise",
+      "hobbies"
+    ]
+  },
+  {
+    "id": "car-accident",
+    "title": "What to do immediately after a minor car accident",
+    "category": "emergencies",
+    "tags": [
+      "car",
+      "accident",
+      "driving",
+      "insurance",
+      "vehicle"
+    ]
+  },
+  {
+    "id": "lost-stolen-phone",
+    "title": "What to do if your smartphone is lost or stolen",
+    "category": "emergencies",
+    "tags": [
+      "phone",
+      "stolen",
+      "iphone",
+      "android",
+      "security",
+      "mobile"
+    ]
+  },
+  {
+    "id": "lost-passport-abroad",
+    "title": "What to do if you lose your passport while traveling abroad",
+    "category": "emergencies",
+    "tags": [
+      "passport",
+      "travel",
+      "international",
+      "embassy",
+      "emergency"
+    ]
+  },
+  {
+    "id": "lost-stolen-wallet",
+    "title": "What to do if your wallet is lost or stolen",
+    "category": "emergencies",
+    "tags": [
+      "wallet",
+      "stolen",
+      "credit card",
+      "identity",
+      "finance"
+    ]
+  },
+  {
+    "id": "home-pipe-burst",
+    "title": "What to do if you experience a home water pipe burst",
+    "category": "emergencies",
+    "tags": [
+      "home",
+      "plumbing",
+      "water",
+      "damage",
+      "emergency"
+    ]
+  },
+  {
+    "id": "stolen-identity-ssn",
+    "title": "What to do if your identity or Social Security Number is stolen",
+    "category": "emergencies",
+    "tags": [
+      "identity",
+      "ssn",
+      "security",
+      "fraud",
+      "credit"
+    ]
+  },
+  {
+    "id": "suspected-gas-leak",
+    "title": "What to do if you suspect a natural gas leak in your house",
+    "category": "emergencies",
+    "tags": [
+      "gas",
+      "safety",
+      "home",
+      "leak",
+      "emergency"
+    ]
+  },
+  {
+    "id": "hotel-bed-bugs",
+    "title": "What to do if you discover bed bugs in a hotel room",
+    "category": "emergencies",
+    "tags": [
+      "hotel",
+      "travel",
+      "bedbugs",
+      "inspection",
+      "bugs"
+    ]
+  },
+  {
+    "id": "flat-tire-highway",
+    "title": "What to do if you get a flat tire on the highway",
+    "category": "emergencies",
+    "tags": [
+      "driving",
+      "car",
+      "tire",
+      "highway",
+      "roadside"
+    ]
+  },
+  {
+    "id": "fraudulent-credit-charge",
+    "title": "What to do if your credit card statement shows a fraudulent charge",
+    "category": "emergencies",
+    "tags": [
+      "finance",
+      "credit card",
+      "fraud",
+      "dispute",
+      "banking"
+    ]
+  },
+  {
+    "id": "new-phone-setup",
+    "title": "What to do when setting up a brand-new smartphone",
+    "category": "tech",
+    "tags": [
+      "phone",
+      "iphone",
+      "android",
+      "setup",
+      "mobile"
+    ]
+  },
+  {
+    "id": "prep-laptop-sale",
+    "title": "What to do before selling, trading, or recycling a laptop",
+    "category": "tech",
+    "tags": [
+      "laptop",
+      "mac",
+      "windows",
+      "security",
+      "privacy"
+    ]
+  },
+  {
+    "id": "new-wifi-router",
+    "title": "What to do when setting up a new home Wi-Fi router",
+    "category": "tech",
+    "tags": [
+      "wifi",
+      "router",
+      "network",
+      "internet",
+      "security"
+    ]
+  },
+  {
+    "id": "hacked-email-account",
+    "title": "What to do if your email account gets hacked",
+    "category": "tech",
+    "tags": [
+      "email",
+      "hacked",
+      "security",
+      "passwords",
+      "privacy"
+    ]
+  },
+  {
+    "id": "secure-home-wifi",
+    "title": "What to do to audit and secure your home Wi-Fi network",
+    "category": "tech",
+    "tags": [
+      "wifi",
+      "security",
+      "privacy",
+      "router",
+      "home"
+    ]
+  },
+  {
+    "id": "first-password-manager",
+    "title": "What to do when setting up a password manager for the first time",
+    "category": "tech",
+    "tags": [
+      "passwords",
+      "security",
+      "privacy",
+      "tech",
+      "setup"
+    ]
+  },
+  {
+    "id": "digital-privacy-audit",
+    "title": "What to do to audit your digital privacy and social media settings",
+    "category": "tech",
+    "tags": [
+      "privacy",
+      "security",
+      "social media",
+      "data",
+      "tech"
+    ]
+  },
+  {
+    "id": "pre-update-backup",
+    "title": "What to do before doing a major phone or computer software update",
+    "category": "tech",
+    "tags": [
+      "update",
+      "backup",
+      "software",
+      "iphone",
+      "windows"
+    ]
+  },
+  {
+    "id": "hacked-smart-camera",
+    "title": "What to do if your smart home camera or IoT device is compromised",
+    "category": "tech",
+    "tags": [
+      "smart home",
+      "security",
+      "camera",
+      "privacy",
+      "iot"
+    ]
+  },
+  {
+    "id": "first-computer-backup",
+    "title": "What to do when backing up your computer for the first time",
+    "category": "tech",
+    "tags": [
+      "backup",
+      "computer",
+      "data",
+      "storage",
+      "tech"
+    ]
+  },
+  {
+    "id": "fix-dropping-wifi",
+    "title": "What to do if your Wi-Fi keeps dropping connection",
+    "category": "tech",
+    "tags": [
+      "wifi",
+      "internet",
+      "network",
+      "troubleshooting",
+      "tech"
+    ]
+  },
+  {
+    "id": "pre-factory-reset",
+    "title": "What to do before wiping your phone for a factory reset",
+    "category": "tech",
+    "tags": [
+      "phone",
+      "reset",
+      "backup",
+      "security",
+      "mobile"
+    ]
+  },
+  {
+    "id": "setup-2fa-safely",
+    "title": "What to do when setting up Two-Factor Authentication (2FA) safely",
+    "category": "tech",
+    "tags": [
+      "2fa",
+      "security",
+      "passwords",
+      "privacy",
+      "tech"
+    ]
+  },
+  {
+    "id": "clicking-hard-drive",
+    "title": "What to do if your hard drive starts making unusual clicking noises",
+    "category": "tech",
+    "tags": [
+      "hard drive",
+      "storage",
+      "hardware",
+      "data",
+      "tech"
+    ]
+  }
 ]

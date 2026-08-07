@@ -1,23 +1,22 @@
-﻿{
-    "id":  "new-computer-setup",
-    "category":  "tech",
-    "title":  "...un-box a brand new computer",
-    "desc":  "Clean up bloatware and secure your operating system on day one.",
-    "tags":  [
-                 "pc",
-                 "windows",
-                 "mac",
-                 "computer",
-                 "setup"
-             ],
-    "sourceName":  "Microsoft Windows Security",
-    "sourceUrl":  "https://support.microsoft.com/windows",
-    "affiliate":  null,
-    "todos":  [
-                  "Run system update utility until no OS updates remain.",
-                  "Uninstall pre-installed OEM bloatware and trial antivirus software.",
-                  "Enable BitLocker or FileVault full-disk encryption.",
-                  "Create a non-administrator daily user account for regular web browsing.",
-                  "Set up automatic system recovery restore points and external backup target."
-              ]
+{
+  "id": "new-computer-setup",
+  "title": "What to do when setting up a new Mac or Windows PC",
+  "desc": "Clean setup steps to remove bloatware, update security, and optimize performance.",
+  "category": "tech",
+  "sourceName": "Microsoft & Apple Setup Guides",
+  "sourceUrl": "https://support.microsoft.com",
+  "tags": [
+    "pc",
+    "mac",
+    "windows",
+    "computer",
+    "setup"
+  ],
+  "todos": [
+    "Run system updates immediately to install critical OS patches and hardware drivers.",
+    "Uninstall pre-installed trialware, bloatware, and unwanted background utilities.",
+    "Install a trusted web browser, password manager, and cloud backup utility.",
+    "Enable full-disk encryption (FileVault on Mac, BitLocker on Windows).",
+    "Configure automated system backup software (Time Machine or File History)."
+  ]
 }

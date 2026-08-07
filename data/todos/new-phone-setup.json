@@ -1,0 +1,22 @@
+{
+  "id": "new-phone-setup",
+  "title": "What to do when setting up a brand-new smartphone",
+  "desc": "Migrate data, configure security, and optimize battery settings on a new device.",
+  "category": "tech",
+  "sourceName": "Apple & Google Device Setup",
+  "sourceUrl": "https://support.apple.com",
+  "tags": [
+    "phone",
+    "iphone",
+    "android",
+    "setup",
+    "mobile"
+  ],
+  "todos": [
+    "Perform a full backup of your old phone to cloud storage or a computer before powering down.",
+    "Use direct device-to-device transfer during initial boot to migrate apps, photos, and messages.",
+    "Set up screen lock, biometric authentication (Face ID/Fingerprint), and Find My device tracking.",
+    "Sign in to your password manager and verify Two-Factor Authentication (2FA) apps are active.",
+    "Review privacy settings, location permissions, and automated background app refresh."
+  ]
+}

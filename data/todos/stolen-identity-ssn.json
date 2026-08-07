@@ -1,0 +1,22 @@
+{
+  "id": "stolen-identity-ssn",
+  "title": "What to do if your identity or Social Security Number is stolen",
+  "desc": "Freeze your credit and file official federal identity theft reports.",
+  "category": "emergencies",
+  "sourceName": "Federal Trade Commission",
+  "sourceUrl": "https://www.identitytheft.gov",
+  "tags": [
+    "identity",
+    "ssn",
+    "security",
+    "fraud",
+    "credit"
+  ],
+  "todos": [
+    "File an official report at IdentityTheft.gov to get a personalized federal recovery plan.",
+    "Place a free credit freeze at all three major bureaus: Experian, TransUnion, and Equifax.",
+    "Contact the IRS Identity Protection Specialized Unit to request an IRS IP PIN for tax filings.",
+    "Report compromised SSNs to the Social Security Fraud Hotline (1-800-269-0271).",
+    "Review your bank and credit card statements weekly and dispute any unauthorized accounts."
+  ]
+}

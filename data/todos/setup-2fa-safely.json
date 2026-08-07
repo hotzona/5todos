@@ -1,0 +1,22 @@
+{
+  "id": "setup-2fa-safely",
+  "title": "What to do when setting up Two-Factor Authentication (2FA) safely",
+  "desc": "Layer account security properly without risking locked accounts.",
+  "category": "tech",
+  "sourceName": "CISA Cyber Essentials",
+  "sourceUrl": "https://www.cisa.gov",
+  "tags": [
+    "2fa",
+    "security",
+    "passwords",
+    "privacy",
+    "tech"
+  ],
+  "todos": [
+    "Choose an authenticator app (Google Authenticator, Authy) or hardware key over SMS-based 2FA.",
+    "Scan the setup QR code on your primary device and verify code generation works.",
+    "Download, print, or copy the provided account Emergency Backup / Recovery Codes immediately.",
+    "Store recovery codes inside your encrypted password manager or an offline vault.",
+    "Set up a secondary backup device (tablet or backup phone) on the authenticator app if supported."
+  ]
+}

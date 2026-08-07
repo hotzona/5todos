@@ -1,0 +1,22 @@
+{
+  "id": "fix-dropping-wifi",
+  "title": "What to do if your Wi-Fi keeps dropping connection",
+  "desc": "Troubleshoot home network instability, channel interference, and signal dead zones.",
+  "category": "tech",
+  "sourceName": "Federal Communications Commission",
+  "sourceUrl": "https://www.fcc.gov",
+  "tags": [
+    "wifi",
+    "internet",
+    "network",
+    "troubleshooting",
+    "tech"
+  ],
+  "todos": [
+    "Unplug power from both your modem and router for 30 seconds, then restart modem first.",
+    "Move your router to an elevated, central location clear of thick walls, metal objects, and microwaves.",
+    "Log in to router settings and change the Wi-Fi broadcast channel to reduce neighborhood congestion.",
+    "Separate the 2.4 GHz and 5 GHz network SSIDs to assign high-bandwidth devices to 5 GHz.",
+    "Check connected device network adapter drivers for pending updates or perform a network settings reset."
+  ]
+}

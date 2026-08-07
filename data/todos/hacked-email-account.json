@@ -1,0 +1,22 @@
+{
+  "id": "hacked-email-account",
+  "title": "What to do if your email account gets hacked",
+  "desc": "Regain control of your master account and lock down secondary accounts.",
+  "category": "tech",
+  "sourceName": "CISA Identity Protection",
+  "sourceUrl": "https://www.cisa.gov",
+  "tags": [
+    "email",
+    "hacked",
+    "security",
+    "passwords",
+    "privacy"
+  ],
+  "todos": [
+    "Initiate account recovery immediately to reset your password using backup phone or recovery emails.",
+    "Log out of all active sessions and devices via account security management.",
+    "Check auto-forwarding rules and deleted email folders for unauthorized filter changes.",
+    "Enable Two-Factor Authentication (2FA) using an authenticator app rather than SMS.",
+    "Change passwords on critical financial and social services linked to that email address."
+  ]
+}

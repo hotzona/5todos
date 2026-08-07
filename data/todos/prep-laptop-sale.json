@@ -1,0 +1,22 @@
+{
+  "id": "prep-laptop-sale",
+  "title": "What to do before selling, trading, or recycling a laptop",
+  "desc": "Wipe sensitive personal data completely and remove hardware account locks.",
+  "category": "tech",
+  "sourceName": "Federal Trade Commission",
+  "sourceUrl": "https://consumer.ftc.gov",
+  "tags": [
+    "laptop",
+    "mac",
+    "windows",
+    "security",
+    "privacy"
+  ],
+  "todos": [
+    "Back up all local files, documents, and photos to an external drive or cloud storage.",
+    "Sign out of Apple ID, iCloud, Microsoft, and browser accounts to remove activation locks.",
+    "Deauthorize DRM software (iTunes, Adobe Creative Cloud) tied to the machine's hardware ID.",
+    "Perform a full drive wipe and factory reset using built-in system recovery tools.",
+    "Clean physical ports, screen, and keyboard, and safely store original accessories."
+  ]
+}

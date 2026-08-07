@@ -1,0 +1,22 @@
+{
+  "id": "first-computer-backup",
+  "title": "What to do when backing up your computer for the first time",
+  "desc": "Set up the 3-2-1 backup strategy to ensure complete data protection.",
+  "category": "tech",
+  "sourceName": "U.S. CERT Backup Guidelines",
+  "sourceUrl": "https://www.cisa.gov",
+  "tags": [
+    "backup",
+    "computer",
+    "data",
+    "storage",
+    "tech"
+  ],
+  "todos": [
+    "Identify essential local folders containing personal documents, family photos, and critical work files.",
+    "Connect a dedicated external drive and configure automated OS backup utilities (Time Machine or File History).",
+    "Subscribe to an encrypted cloud backup provider for off-site redundant protection.",
+    "Test restoring a sample file from both local and cloud backups to verify backup integrity.",
+    "Schedule automatic background backups to run daily or weekly without manual intervention."
+  ]
+}

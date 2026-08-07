@@ -1,0 +1,22 @@
+{
+  "id": "clicking-hard-drive",
+  "title": "What to do if your hard drive starts making unusual clicking noises",
+  "desc": "Emergency steps to salvage data before mechanical hard drive failure.",
+  "category": "tech",
+  "sourceName": "Hard Drive Recovery Guidelines",
+  "sourceUrl": "https://www.cisa.gov",
+  "tags": [
+    "hard drive",
+    "storage",
+    "hardware",
+    "data",
+    "tech"
+  ],
+  "todos": [
+    "Stop heavy file transfers immediately and copy only irreplaceable personal documents to external storage.",
+    "Do not run drive defragmentation, intensive disk scans, or CHKDSK utilities on physical clicking drives.",
+    "Shut down the computer completely to prevent further mechanical read/write head damage.",
+    "Avoid rebooting or cycling power repeatedly, which accelerates hardware degradation.",
+    "Consult a professional data recovery service if critical unbacked-up files remain on the drive."
+  ]
+}

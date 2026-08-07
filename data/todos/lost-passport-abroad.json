@@ -1,0 +1,22 @@
+{
+  "id": "lost-passport-abroad",
+  "title": "What to do if you lose your passport while traveling abroad",
+  "desc": "Get an emergency travel replacement quickly through official diplomatic channels.",
+  "category": "emergencies",
+  "sourceName": "U.S. Department of State",
+  "sourceUrl": "https://travel.state.gov",
+  "tags": [
+    "passport",
+    "travel",
+    "international",
+    "embassy",
+    "emergency"
+  ],
+  "todos": [
+    "File a report with local police immediately and request a copy of the official police report for documentation.",
+    "Locate the nearest embassy or consulate for your home country and schedule an urgent emergency appointment.",
+    "Gather proof of citizenship (photo ID copy, birth certificate) and standard passport-sized photos.",
+    "Complete government form DS-64 (Statement Regarding Lost/Stolen Passport) and emergency issuance paperwork.",
+    "Pay the replacement fee and obtain an Emergency Limited-Validity Passport to complete your travel."
+  ]
+}

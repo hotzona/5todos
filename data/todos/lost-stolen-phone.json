@@ -1,0 +1,23 @@
+{
+  "id": "lost-stolen-phone",
+  "title": "What to do if your smartphone is lost or stolen",
+  "desc": "Lock down your identity, secure financial accounts, and protect your personal data immediately.",
+  "category": "emergencies",
+  "sourceName": "Federal Communications Commission",
+  "sourceUrl": "https://www.fcc.gov",
+  "tags": [
+    "phone",
+    "stolen",
+    "iphone",
+    "android",
+    "security",
+    "mobile"
+  ],
+  "todos": [
+    "Log into Apple Find My or Google Find My Device from another browser to remotely lock the phone and erase data.",
+    "Call your mobile carrier to suspend service and prevent unauthorized calls or SMS 2FA hijacks.",
+    "Change passwords for critical accounts starting with primary email, banking, and social media apps.",
+    "Unlink digital wallets (Apple Pay, Google Pay) and notify your bank to monitor for fraudulent charges.",
+    "File a report with local police and note the IMEI number for insurance claims."
+  ]
+}

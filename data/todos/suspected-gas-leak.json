@@ -1,0 +1,22 @@
+{
+  "id": "suspected-gas-leak",
+  "title": "What to do if you suspect a natural gas leak in your house",
+  "desc": "Critical safety actions when smelling rotten eggs or hearing whistling near gas lines.",
+  "category": "emergencies",
+  "sourceName": "American Gas Association",
+  "sourceUrl": "https://www.aga.org",
+  "tags": [
+    "gas",
+    "safety",
+    "home",
+    "leak",
+    "emergency"
+  ],
+  "todos": [
+    "Evacuate everyone from the home immediately without turning lights, appliances, or switches on or off.",
+    "Do not ignite matches, lighters, or use phone switches inside the building.",
+    "Leave doors open as you exit to allow natural ventilation.",
+    "Call 911 and your local gas utility company immediately from a safe distance outside.",
+    "Do not re-enter the premises until utility technicians officially declare it safe."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "hotel-bed-bugs",
+  "title": "What to do if you discover bed bugs in a hotel room",
+  "desc": "Inspect rooms safely and prevent bringing infestations back to your house.",
+  "category": "emergencies",
+  "sourceName": "EPA Bed Bug Guidelines",
+  "sourceUrl": "https://www.epa.gov/bedbugs",
+  "tags": [
+    "hotel",
+    "travel",
+    "bedbugs",
+    "inspection",
+    "bugs"
+  ],
+  "todos": [
+    "Place luggage in the bathroom tub immediately upon entering before inspecting the room.",
+    "Pull back mattress sheets to inspect seams, headboard cracks, and box springs for small dark spots.",
+    "Notify hotel management immediately with photo evidence and request a room at least two floors away.",
+    "Keep luggage elevated off carpeted floors on metal luggage racks throughout your stay.",
+    "Wash all clothes in hot water and dry on high heat for 30 minutes immediately upon returning home."
+  ]
+}

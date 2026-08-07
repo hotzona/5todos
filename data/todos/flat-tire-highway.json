@@ -1,0 +1,22 @@
+{
+  "id": "flat-tire-highway",
+  "title": "What to do if you get a flat tire on the highway",
+  "desc": "Stay safe in heavy traffic while replacing or servicing a flat tire.",
+  "category": "emergencies",
+  "sourceName": "AAA Roadside Safety",
+  "sourceUrl": "https://www.aaa.com",
+  "tags": [
+    "driving",
+    "car",
+    "tire",
+    "highway",
+    "roadside"
+  ],
+  "todos": [
+    "Ease off the accelerator gradually and signal to pull onto the far right shoulder away from traffic.",
+    "Turn on hazard lights immediately and set your emergency parking brake.",
+    "Stay inside the vehicle with seatbelts fastened if pulled over on a narrow highway shoulder.",
+    "Call roadside assistance (AAA, insurance provider, or highway patrol) for assistance in high-traffic zones.",
+    "Only attempt changing the tire yourself if safely parked on flat ground completely clear of moving lanes."
+  ]
+}

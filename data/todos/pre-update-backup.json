@@ -1,0 +1,22 @@
+{
+  "id": "pre-update-backup",
+  "title": "What to do before doing a major phone or computer software update",
+  "desc": "Prevent bricked hardware and lost data before OS upgrade installs.",
+  "category": "tech",
+  "sourceName": "Apple & Microsoft Support",
+  "sourceUrl": "https://support.apple.com",
+  "tags": [
+    "update",
+    "backup",
+    "software",
+    "iphone",
+    "windows"
+  ],
+  "todos": [
+    "Run a complete local or cloud system backup immediately prior to starting the installation.",
+    "Verify that your device has at least 15–20 GB of free storage space available for temporary update files.",
+    "Plug your device into a wall charger to prevent power failure during critical firmware writes.",
+    "Confirm that key productivity apps and software are compatible with the new OS version.",
+    "Connect to a stable, unmetered Wi-Fi network before initiating large file downloads."
+  ]
+}

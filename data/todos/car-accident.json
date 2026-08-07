@@ -1,0 +1,22 @@
+{
+  "id": "car-accident",
+  "title": "What to do immediately after a minor car accident",
+  "desc": "Essential safety, legal, and insurance steps to take at the scene of a crash.",
+  "category": "emergencies",
+  "sourceName": "Insurance Information Institute",
+  "sourceUrl": "https://www.iii.org",
+  "tags": [
+    "car",
+    "accident",
+    "driving",
+    "insurance",
+    "vehicle"
+  ],
+  "todos": [
+    "Check all passengers for injuries and move vehicles to a safe area out of traffic if possible.",
+    "Call 911 or local police to file an official accident report, even for minor damage.",
+    "Exchange names, phone numbers, drivers license details, and insurance policy info with all drivers involved.",
+    "Take detailed photos and video of scene damage, road conditions, skid marks, and vehicle positioning.",
+    "Notify your auto insurance provider as soon as possible to initiate the claims process."
+  ]
+}

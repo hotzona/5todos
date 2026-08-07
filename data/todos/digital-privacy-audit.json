@@ -1,0 +1,22 @@
+{
+  "id": "digital-privacy-audit",
+  "title": "What to do to audit your digital privacy and social media settings",
+  "desc": "Limit public data exposure, location tracking, and third-party data broker visibility.",
+  "category": "tech",
+  "sourceName": "Electronic Frontier Foundation",
+  "sourceUrl": "https://www.eff.org",
+  "tags": [
+    "privacy",
+    "security",
+    "social media",
+    "data",
+    "tech"
+  ],
+  "todos": [
+    "Review account privacy controls on major social platforms to restrict post visibility to friends only.",
+    "Revoke access for inactive third-party apps connected to Google, Apple, and Facebook logins.",
+    "Audit mobile phone app permissions to turn off unnecessary background location and microphone access.",
+    "Opt out of data broker aggregators and targeted ad profiling in phone privacy settings.",
+    "Replace default search engines with privacy-focused alternatives or enable secure DNS."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "pre-factory-reset",
+  "title": "What to do before wiping your phone for a factory reset",
+  "desc": "Ensure complete file retention and account unlinking before full hardware wipe.",
+  "category": "tech",
+  "sourceName": "Android & iOS Support",
+  "sourceUrl": "https://support.google.com",
+  "tags": [
+    "phone",
+    "reset",
+    "backup",
+    "security",
+    "mobile"
+  ],
+  "todos": [
+    "Verify that photos, contacts, app data, and messages are fully synced to cloud backup services.",
+    "Export two-factor authenticator (2FA) codes to a second device or write down backup codes.",
+    "Sign out of Apple ID or Google Account to prevent Factory Reset Protection (FRP) activation locks.",
+    "Deregister iMessage or RCS text services if switching operating systems or phone numbers.",
+    "Remove physical SIM cards or manage eSIM transfer profiles prior to clearing local storage."
+  ]
+}

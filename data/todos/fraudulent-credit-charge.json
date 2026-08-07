@@ -1,0 +1,22 @@
+{
+  "id": "fraudulent-credit-charge",
+  "title": "What to do if your credit card statement shows a fraudulent charge",
+  "desc": "Dispute unauthorized transactions and protect your account from ongoing fraud.",
+  "category": "emergencies",
+  "sourceName": "Consumer Financial Protection Bureau",
+  "sourceUrl": "https://www.consumerfinance.gov",
+  "tags": [
+    "finance",
+    "credit card",
+    "fraud",
+    "dispute",
+    "banking"
+  ],
+  "todos": [
+    "Call the official customer service number on the back of your card immediately to report the transaction.",
+    "Request an instant freeze on the compromised card and order a new card with a new account number.",
+    "File an official billing dispute for the specific fraudulent charge to initiate chargeback protection.",
+    "Review recent pending transactions for any small test charges from unfamiliar vendors.",
+    "Update recurring billing payments once your replacement card arrives in the mail."
+  ]
+}

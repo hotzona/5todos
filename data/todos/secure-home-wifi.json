@@ -1,0 +1,22 @@
+{
+  "id": "secure-home-wifi",
+  "title": "What to do to audit and secure your home Wi-Fi network",
+  "desc": "Protect connected home devices from unauthorized intrusions and bandwidth leeching.",
+  "category": "tech",
+  "sourceName": "National Security Agency Guidelines",
+  "sourceUrl": "https://www.nsa.gov",
+  "tags": [
+    "wifi",
+    "security",
+    "privacy",
+    "router",
+    "home"
+  ],
+  "todos": [
+    "Access your router dashboard and review all currently connected devices for unrecognized MAC addresses.",
+    "Update your main Wi-Fi network password and reconnect trusted household devices.",
+    "Ensure router management access is restricted to wired local connections only.",
+    "Disable legacy Wi-Fi protocols (WEP and TKIP) in network settings.",
+    "Enable automatic firmware updates on your router if supported by the manufacturer."
+  ]
+}

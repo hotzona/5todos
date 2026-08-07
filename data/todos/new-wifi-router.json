@@ -1,0 +1,22 @@
+{
+  "id": "new-wifi-router",
+  "title": "What to do when setting up a new home Wi-Fi router",
+  "desc": "Secure your home network against unauthorized access and speed up your connection.",
+  "category": "tech",
+  "sourceName": "Cybersecurity and Infrastructure Security Agency",
+  "sourceUrl": "https://www.cisa.gov",
+  "tags": [
+    "wifi",
+    "router",
+    "network",
+    "internet",
+    "security"
+  ],
+  "todos": [
+    "Change the default admin login username and password on the router management dashboard.",
+    "Update the network SSID name and enable WPA3 or WPA2-AES encryption with a strong passphrase.",
+    "Disable Remote Management, WPS (Wi-Fi Protected Setup), and Universal Plug and Play (UPnP).",
+    "Create a isolated Guest Network for smart home IoT devices and visitor connections.",
+    "Check for and install the latest firmware updates from the hardware manufacturer."
+  ]
+}
