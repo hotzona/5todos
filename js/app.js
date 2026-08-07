@@ -21,7 +21,42 @@ function getChecklistProgress(id) {
 document.addEventListener('DOMContentLoaded', () => {
   fetchIndex();
   setupEventListeners();
+  initThemeToggle();
 });
+
+// Theme Toggle Functionality
+function initThemeToggle() {
+  const toggleBtn = getEl('theme-toggle');
+  const sunIcon = getEl('theme-toggle-sun-icon');
+  const moonIcon = getEl('theme-toggle-moon-icon');
+
+  if (!toggleBtn || !sunIcon || !moonIcon) return;
+
+  function updateIcons() {
+    const isDark = document.documentElement.classList.contains('dark');
+    if (isDark) {
+      sunIcon.classList.remove('hidden');
+      moonIcon.classList.add('hidden');
+    } else {
+      sunIcon.classList.add('hidden');
+      moonIcon.classList.remove('hidden');
+    }
+  }
+
+  updateIcons();
+
+  toggleBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    } else {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    }
+    updateIcons();
+  });
+}
 
 // 1. Fetch Index Data
 async function fetchIndex() {
