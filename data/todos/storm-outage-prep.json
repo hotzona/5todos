@@ -1,0 +1,22 @@
+{
+  "id": "storm-outage-prep",
+  "title": "What to do to prepare your home for a long power outage",
+  "desc": "Safeguard food, water, light, and power reserves before severe weather hits.",
+  "category": "emergencies",
+  "sourceName": "Ready.gov Severe Weather Prep",
+  "sourceUrl": "https://www.ready.gov",
+  "tags": [
+    "emergency",
+    "power outage",
+    "storm",
+    "home",
+    "safety"
+  ],
+  "todos": [
+    "Stock at least 1 gallon of drinking water per person per day for a minimum 3-day supply.",
+    "Assemble non-perishable food, manual can openers, flashlights, and extra fresh batteries.",
+    "Charge all mobile phones, laptops, and portable USB power banks fully before the storm arrives.",
+    "Set refrigerator and freezer temperatures to the coldest settings to preserve food longer.",
+    "Keep a backup supply of required prescription medications and a complete first-aid kit on hand."
+  ]
+}

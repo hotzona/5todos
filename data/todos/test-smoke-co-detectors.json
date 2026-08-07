@@ -1,0 +1,22 @@
+{
+  "id": "test-smoke-co-detectors",
+  "title": "What to do when testing and replacing home smoke and CO detectors",
+  "desc": "Keep life-saving early warning systems operational throughout your home.",
+  "category": "emergencies",
+  "sourceName": "National Fire Protection Association",
+  "sourceUrl": "https://www.nfpa.org",
+  "tags": [
+    "fire",
+    "safety",
+    "smoke detector",
+    "home",
+    "emergency"
+  ],
+  "todos": [
+    "Press and hold the test button on every smoke and CO detector monthly to verify siren functionality.",
+    "Replace alarm batteries at least once per year or whenever chirp warning signals begin.",
+    "Install detectors inside every bedroom, outside sleeping areas, and on every level of the home.",
+    "Clean detector covers using a vacuum soft brush attachment to remove dust and cobwebs.",
+    "Replace entire detector units every 10 years (or 5–7 years for carbon monoxide units)."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "car-cross-country-prep",
+  "title": "What to do when preparing your car for a long road trip",
+  "desc": "Prevent mechanical breakdowns and ensure highway safety across long distances.",
+  "category": "travel",
+  "sourceName": "AAA Long-Distance Travel Prep",
+  "sourceUrl": "https://www.aaa.com",
+  "tags": [
+    "driving",
+    "car",
+    "road trip",
+    "travel",
+    "maintenance"
+  ],
+  "todos": [
+    "Check engine oil, transmission fluid, coolant, brake fluid, and windshield washer levels.",
+    "Inspect tire tread depth, sidewalls, and inflate all tires (including spare) to proper PSI specs.",
+    "Test headlights, taillights, brake indicators, and replace worn wiper blades.",
+    "Inspect brake pads and belt tension for signs of excess wear or squealing noises.",
+    "Pack a fully stocked roadside kit: jumper cables, tire pressure gauge, flashlight, and basic tools."
+  ]
+}

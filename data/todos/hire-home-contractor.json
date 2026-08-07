@@ -1,0 +1,22 @@
+{
+  "id": "hire-home-contractor",
+  "title": "What to do when hiring a home contractor for renovations",
+  "desc": "Avoid renovation scams, cost overruns, and poor quality workmanship.",
+  "category": "emergencies",
+  "sourceName": "Federal Trade Commission",
+  "sourceUrl": "https://consumer.ftc.gov",
+  "tags": [
+    "home",
+    "contractor",
+    "renovation",
+    "remodeling",
+    "repairs"
+  ],
+  "todos": [
+    "Obtain detailed written estimates from at least three licensed, insured, and bonded contractors.",
+    "Verify professional licenses and check state contractor board records for past complaints.",
+    "Contact at least two recent references to inspect past work quality and communication.",
+    "Sign a comprehensive written contract outlining detailed scope, timeline, and material specs.",
+    "Establish a milestone payment plan linked to completed work rather than paying up front."
+  ]
+}

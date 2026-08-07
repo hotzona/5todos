@@ -1,0 +1,22 @@
+{
+  "id": "seasonal-allergy-home-prep",
+  "title": "What to do when dealing with seasonal allergies at home",
+  "desc": "Reduce indoor pollen, dust mites, and airborne triggers.",
+  "category": "health",
+  "sourceName": "Asthma and Allergy Foundation of America",
+  "sourceUrl": "https://www.aafa.org",
+  "tags": [
+    "allergies",
+    "health",
+    "home",
+    "wellness",
+    "air quality"
+  ],
+  "todos": [
+    "Keep windows closed during high pollen days and run air conditioning with clean HEPA filters.",
+    "Wash bed sheets, pillowcases, and blankets weekly in hot water (130°F / 54°C).",
+    "Shower and wash hair after returning from outdoor activities to remove trapped pollen.",
+    "Vacuum carpeted areas twice weekly using a vacuum equipped with a certified HEPA filter.",
+    "Use allergen-proof zip covers on mattresses, box springs, and pillows."
+  ]
+}

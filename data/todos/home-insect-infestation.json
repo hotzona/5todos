@@ -1,0 +1,22 @@
+{
+  "id": "home-insect-infestation",
+  "title": "What to do when dealing with an insect infestation at home",
+  "desc": "Identify, contain, and eliminate household pests effectively.",
+  "category": "emergencies",
+  "sourceName": "EPA Pest Control Guidelines",
+  "sourceUrl": "https://www.epa.gov",
+  "tags": [
+    "bugs",
+    "pests",
+    "home",
+    "insects",
+    "cleaning"
+  ],
+  "todos": [
+    "Identify the specific pest species to select targeted, effective treatment methods.",
+    "Seal food in airtight glass or thick plastic containers and eliminate standing water sources.",
+    "Vacuum carpets, baseboards, and furniture thoroughly, disposing of vacuum bags immediately.",
+    "Caulk exterior wall cracks, gap openings around pipes, and repair damaged window screens.",
+    "Consult a certified pest control professional if DIY treatments do not resolve the issue quickly."
+  ]
+}

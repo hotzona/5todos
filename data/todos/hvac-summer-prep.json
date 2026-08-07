@@ -1,0 +1,22 @@
+{
+  "id": "hvac-summer-prep",
+  "title": "What to do when prepping your AC or HVAC unit for summer",
+  "desc": "Maximize cooling efficiency and avoid mid-summer air conditioning breakdowns.",
+  "category": "emergencies",
+  "sourceName": "Energy Star Maintenance Guide",
+  "sourceUrl": "https://www.energystar.gov",
+  "tags": [
+    "hvac",
+    "ac",
+    "home",
+    "summer",
+    "maintenance"
+  ],
+  "todos": [
+    "Replace dirty air filter units with fresh MERV-rated filters for proper airflow.",
+    "Clear leaves, grass clippings, and debris at least 2 feet around the outdoor AC condenser unit.",
+    "Clean interior supply and return vents, ensuring furniture or rugs are not blocking airflow.",
+    "Inspect the condensate drain line to confirm water drains freely without backup.",
+    "Test cooling operation on your thermostat early in the season before heatwaves begin."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "id": "appliance-maintenance-washers",
+  "title": "What to do to clean and maintain major household washing appliances",
+  "desc": "Prevent mold smells, extend appliance life, and improve washing performance.",
+  "category": "emergencies",
+  "sourceName": "Major Appliance Consumer Advice",
+  "sourceUrl": "https://www.energystar.gov",
+  "tags": [
+    "appliances",
+    "cleaning",
+    "home",
+    "maintenance",
+    "laundry"
+  ],
+  "todos": [
+    "Run a hot tub-clean cycle on your washing machine monthly using vinegar or washer cleaner.",
+    "Wipe rubber door gaskets dry after washing loads to prevent mold and mildew odors.",
+    "Clean lint filters after every dryer cycle and inspect exterior dryer vent ductwork annually.",
+    "Inspect washing machine water fill hoses for cracks, bulges, or corrosion leaks every 6 months.",
+    "Clean dishwasher filter traps and spray arms to remove food debris and hard water scale."
+  ]
+}

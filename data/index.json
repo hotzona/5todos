@@ -1031,5 +1031,245 @@
       "transunion",
       "equifax"
     ]
+  },
+  {
+    "id": "winterize-home",
+    "title": "What to do to winterize your house or apartment",
+    "category": "emergencies",
+    "tags": [
+      "home",
+      "winter",
+      "heating",
+      "maintenance",
+      "house"
+    ]
+  },
+  {
+    "id": "start-exercise-routine",
+    "title": "What to do when starting a new exercise or workout routine",
+    "category": "health",
+    "tags": [
+      "fitness",
+      "health",
+      "workout",
+      "exercise",
+      "wellness"
+    ]
+  },
+  {
+    "id": "storm-outage-prep",
+    "title": "What to do to prepare your home for a long power outage",
+    "category": "emergencies",
+    "tags": [
+      "emergency",
+      "power outage",
+      "storm",
+      "home",
+      "safety"
+    ]
+  },
+  {
+    "id": "hvac-summer-prep",
+    "title": "What to do when prepping your AC or HVAC unit for summer",
+    "category": "emergencies",
+    "tags": [
+      "hvac",
+      "ac",
+      "home",
+      "summer",
+      "maintenance"
+    ]
+  },
+  {
+    "id": "prep-planned-surgery",
+    "title": "What to do when preparing for a planned medical surgery",
+    "category": "health",
+    "tags": [
+      "health",
+      "surgery",
+      "medical",
+      "recovery",
+      "hospital"
+    ]
+  },
+  {
+    "id": "deep-clean-refrigerator",
+    "title": "What to do to deep clean a refrigerator and pantry safely",
+    "category": "health",
+    "tags": [
+      "cleaning",
+      "refrigerator",
+      "pantry",
+      "food safety",
+      "home"
+    ]
+  },
+  {
+    "id": "hire-home-contractor",
+    "title": "What to do when hiring a home contractor for renovations",
+    "category": "emergencies",
+    "tags": [
+      "home",
+      "contractor",
+      "renovation",
+      "remodeling",
+      "repairs"
+    ]
+  },
+  {
+    "id": "optimize-bedroom-sleep",
+    "title": "What to do to optimize your bedroom for better sleep hygiene",
+    "category": "health",
+    "tags": [
+      "sleep",
+      "health",
+      "bedroom",
+      "wellness",
+      "rest"
+    ]
+  },
+  {
+    "id": "home-insect-infestation",
+    "title": "What to do when dealing with an insect infestation at home",
+    "category": "emergencies",
+    "tags": [
+      "bugs",
+      "pests",
+      "home",
+      "insects",
+      "cleaning"
+    ]
+  },
+  {
+    "id": "car-cross-country-prep",
+    "title": "What to do when preparing your car for a long road trip",
+    "category": "travel",
+    "tags": [
+      "driving",
+      "car",
+      "road trip",
+      "travel",
+      "maintenance"
+    ]
+  },
+  {
+    "id": "child-proof-living-room",
+    "title": "What to do to child-proof or pet-proof a living area",
+    "category": "health",
+    "tags": [
+      "safety",
+      "kids",
+      "pets",
+      "baby-proofing",
+      "home"
+    ]
+  },
+  {
+    "id": "test-smoke-co-detectors",
+    "title": "What to do when testing and replacing home smoke and CO detectors",
+    "category": "emergencies",
+    "tags": [
+      "fire",
+      "safety",
+      "smoke detector",
+      "home",
+      "emergency"
+    ]
+  },
+  {
+    "id": "start-indoor-garden",
+    "title": "What to do when starting an indoor plant or vegetable garden",
+    "category": "health",
+    "tags": [
+      "gardening",
+      "plants",
+      "home",
+      "herbs",
+      "hobbies"
+    ]
+  },
+  {
+    "id": "digital-detox-plan",
+    "title": "What to do when taking a digital detox break from screen time",
+    "category": "health",
+    "tags": [
+      "mental health",
+      "digital detox",
+      "wellness",
+      "screens",
+      "focus"
+    ]
+  },
+  {
+    "id": "weekly-meal-prep",
+    "title": "What to do when prepping meals for a busy work week",
+    "category": "health",
+    "tags": [
+      "nutrition",
+      "meal prep",
+      "food",
+      "health",
+      "cooking"
+    ]
+  },
+  {
+    "id": "appliance-maintenance-washers",
+    "title": "What to do to clean and maintain major household washing appliances",
+    "category": "emergencies",
+    "tags": [
+      "appliances",
+      "cleaning",
+      "home",
+      "maintenance",
+      "laundry"
+    ]
+  },
+  {
+    "id": "home-first-aid-kit",
+    "title": "What to do when setting up a home emergency first-aid kit",
+    "category": "emergencies",
+    "tags": [
+      "first aid",
+      "emergency",
+      "medical",
+      "safety",
+      "home"
+    ]
+  },
+  {
+    "id": "seasonal-allergy-home-prep",
+    "title": "What to do when dealing with seasonal allergies at home",
+    "category": "health",
+    "tags": [
+      "allergies",
+      "health",
+      "home",
+      "wellness",
+      "air quality"
+    ]
+  },
+  {
+    "id": "prep-overnight-guests",
+    "title": "What to do to prepare your home before hosting overnight guests",
+    "category": "health",
+    "tags": [
+      "hosting",
+      "guests",
+      "home",
+      "cleaning",
+      "hospitality"
+    ]
+  },
+  {
+    "id": "store-seasonal-clothing",
+    "title": "What to do when storing seasonal clothing long-term",
+    "category": "health",
+    "tags": [
+      "organization",
+      "clothing",
+      "storage",
+      "home",
+      "closet"
+    ]
   }
 ]

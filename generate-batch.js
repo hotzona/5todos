@@ -1,246 +1,326 @@
 const fs = require('fs');
 const path = require('path');
 
-// BATCH 4: PERSONAL FINANCE & ADMINISTRATION (ITEMS 41-55)
+// BATCH 5: HEALTH, HOME MAINTENANCE & OPTIMIZATION (ITEMS 56-75)
 const batch = [
   {
-    id: "setup-monthly-budget",
-    title: "What to do when setting up a personal monthly budget",
-    desc: "Establish a clear zero-based budget and gain control of your cash flow.",
-    category: "finance",
-    sourceName: "Consumer Financial Protection Bureau",
-    sourceUrl: "https://www.consumerfinance.gov",
-    tags: ["budget", "finance", "money", "saving", "planning"],
+    id: "winterize-home",
+    title: "What to do to winterize your house or apartment",
+    desc: "Protect pipes, reduce heating bills, and seal air leaks before freezing weather.",
+    category: "emergencies",
+    sourceName: "U.S. Department of Energy",
+    sourceUrl: "https://www.energy.gov",
+    tags: ["home", "winter", "heating", "maintenance", "house"],
     todos: [
-      "Calculate your net take-home monthly income across all reliable revenue sources.",
-      "List fixed recurring expenses (rent/mortgage, utilities, insurance, loan payments).",
-      "Track variable spending categories (groceries, dining out, entertainment, gas) using past bank statements.",
-      "Assign every dollar a specific job using the 50/30/20 rule or zero-based budgeting method.",
-      "Set up automated transfers to high-yield savings accounts on payday before spending."
+      "Disconnect and drain outdoor garden hoses, shut off exterior water valves, and insulate spigots.",
+      "Inspect window and door seals, applying weatherstripping or caulk to prevent cold drafts.",
+      "Service your heating furnace or heat pump and replace air filters for efficient winter operation.",
+      "Clean gutters and downspouts to allow proper drainage and prevent ice dam formation on the roof.",
+      "Reverse ceiling fan rotation to clockwise on low speed to push trapped warm air downward."
     ]
   },
   {
-    id: "job-loss-first-steps",
-    title: "What to do if you lose your job or face a layoff",
-    desc: "Protect your cash reserves, secure benefits, and plan your transition.",
-    category: "finance",
-    sourceName: "U.S. Department of Labor",
-    sourceUrl: "https://www.dol.gov",
-    tags: ["job loss", "layoff", "unemployment", "finance", "career"],
+    id: "start-exercise-routine",
+    title: "What to do when starting a new exercise or workout routine",
+    desc: "Build sustainable fitness habits while preventing injury and burnout.",
+    category: "health",
+    sourceName: "CDC Physical Activity Guidelines",
+    sourceUrl: "https://www.cdc.gov",
+    tags: ["fitness", "health", "workout", "exercise", "wellness"],
     todos: [
-      "File for state unemployment benefits immediately to minimize income gaps.",
-      "Review severance package terms, PTO payout policies, and COBRA health insurance options.",
-      "Cut non-essential recurring subscriptions and pause discretionary spending to preserve cash.",
-      "Contact lenders to request temporary hardship forebearances on mortgages or student loans if needed.",
-      "Update your resume, LinkedIn profile, and reach out to professional contacts in your industry."
+      "Consult a healthcare professional for physical clearance if managing prior injuries or conditions.",
+      "Establish realistic, measurable goals focused on consistency rather than rapid intensity.",
+      "Schedule workout sessions on your primary calendar like non-negotiable appointments.",
+      "Learn foundational movement mechanics with lighter weights before increasing resistance.",
+      "Prioritize recovery by getting 7–9 hours of sleep and taking designated rest days."
     ]
   },
   {
-    id: "build-emergency-fund",
-    title: "What to do to build an emergency fund from scratch",
-    desc: "Create a financial safety net to handle unexpected expenses without debt.",
-    category: "finance",
-    sourceName: "FDIC Financial Education",
-    sourceUrl: "https://www.fdic.gov",
-    tags: ["savings", "emergency fund", "finance", "money", "safety"],
+    id: "storm-outage-prep",
+    title: "What to do to prepare your home for a long power outage",
+    desc: "Safeguard food, water, light, and power reserves before severe weather hits.",
+    category: "emergencies",
+    sourceName: "Ready.gov Severe Weather Prep",
+    sourceUrl: "https://www.ready.gov",
+    tags: ["emergency", "power outage", "storm", "home", "safety"],
     todos: [
-      "Set an initial milestone target of $1,000 before working toward 3 to 6 months of living expenses.",
-      "Open a separate high-yield savings account (HYSA) dedicated solely to emergencies.",
-      "Automate small, recurring transfers from checking to savings every payday.",
-      "Deposit unexpected windfalls (tax refunds, work bonuses, gift money) directly into the fund.",
-      "Define strict rules for what constitutes a true emergency versus planned spending."
+      "Stock at least 1 gallon of drinking water per person per day for a minimum 3-day supply.",
+      "Assemble non-perishable food, manual can openers, flashlights, and extra fresh batteries.",
+      "Charge all mobile phones, laptops, and portable USB power banks fully before the storm arrives.",
+      "Set refrigerator and freezer temperatures to the coldest settings to preserve food longer.",
+      "Keep a backup supply of required prescription medications and a complete first-aid kit on hand."
     ]
   },
   {
-    id: "unthaw-credit-reports",
-    title: "What to do when frozen credit reports need to be unthawed",
-    desc: "Temporarily lift credit freezes safely when applying for loans or credit cards.",
-    category: "finance",
+    id: "hvac-summer-prep",
+    title: "What to do when prepping your AC or HVAC unit for summer",
+    desc: "Maximize cooling efficiency and avoid mid-summer air conditioning breakdowns.",
+    category: "emergencies",
+    sourceName: "Energy Star Maintenance Guide",
+    sourceUrl: "https://www.energystar.gov",
+    tags: ["hvac", "ac", "home", "summer", "maintenance"],
+    todos: [
+      "Replace dirty air filter units with fresh MERV-rated filters for proper airflow.",
+      "Clear leaves, grass clippings, and debris at least 2 feet around the outdoor AC condenser unit.",
+      "Clean interior supply and return vents, ensuring furniture or rugs are not blocking airflow.",
+      "Inspect the condensate drain line to confirm water drains freely without backup.",
+      "Test cooling operation on your thermostat early in the season before heatwaves begin."
+    ]
+  },
+  {
+    id: "prep-planned-surgery",
+    title: "What to do when preparing for a planned medical surgery",
+    desc: "Streamline pre-op requirements and set up a smooth home recovery environment.",
+    category: "health",
+    sourceName: "American College of Surgeons",
+    sourceUrl: "https://www.facs.org",
+    tags: ["health", "surgery", "medical", "recovery", "hospital"],
+    todos: [
+      "Follow all doctor fasting guidelines regarding food, drink, and morning medication restriction.",
+      "Arrange a trusted adult to drive you home and assist during the first 24–48 hours post-op.",
+      "Prepare a ground-floor recovery area stocked with ice packs, extra pillows, and easy prescription access.",
+      "Pre-cook or purchase soft, easily digestible meals and stock up on hydration beverages.",
+      "Complete pre-admission paperwork, medical directives, and verify insurance coverage in advance."
+    ]
+  },
+  {
+    id: "deep-clean-refrigerator",
+    title: "What to do to deep clean a refrigerator and pantry safely",
+    desc: "Sanitize food storage surfaces and eliminate hidden bacteria and spoiled items.",
+    category: "health",
+    sourceName: "USDA Food Safety and Inspection Service",
+    sourceUrl: "https://www.fsis.usda.gov",
+    tags: ["cleaning", "refrigerator", "pantry", "food safety", "home"],
+    todos: [
+      "Empty all contents into coolers to keep perishables cold while cleaning.",
+      "Check expiration dates, discarding spoiled produce, expired condiments, and freezer-burned goods.",
+      "Remove shelves and drawers, washing them in warm soapy water after reaching room temperature.",
+      "Sanitize interior walls using a mixture of water and mild dish soap or baking soda solution.",
+      "Wipe down exterior door handles, door seals, and vacuum dust from refrigerator condenser coils."
+    ]
+  },
+  {
+    id: "hire-home-contractor",
+    title: "What to do when hiring a home contractor for renovations",
+    desc: "Avoid renovation scams, cost overruns, and poor quality workmanship.",
+    category: "emergencies",
     sourceName: "Federal Trade Commission",
     sourceUrl: "https://consumer.ftc.gov",
-    tags: ["credit", "freeze", "experian", "transunion", "equifax"],
+    tags: ["home", "contractor", "renovation", "remodeling", "repairs"],
     todos: [
-      "Ask the lender which specific credit bureau report they will be pulling.",
-      "Log into your secure account at Experian, TransUnion, or Equifax online.",
-      "Select 'Temporary Lift' and set the exact start and end dates for the thaw.",
-      "Keep your original PINs or account credentials stored in a password manager.",
-      "Verify that the freeze automatically re-engages after the designated timeframe expires."
+      "Obtain detailed written estimates from at least three licensed, insured, and bonded contractors.",
+      "Verify professional licenses and check state contractor board records for past complaints.",
+      "Contact at least two recent references to inspect past work quality and communication.",
+      "Sign a comprehensive written contract outlining detailed scope, timeline, and material specs.",
+      "Establish a milestone payment plan linked to completed work rather than paying up front."
     ]
   },
   {
-    id: "start-401k-roth-ira",
-    title: "What to do when starting your first 401(k) or Roth IRA",
-    desc: "Maximize tax-advantaged retirement growth and compound interest.",
-    category: "finance",
-    sourceName: "IRS Retirement Plans",
-    sourceUrl: "https://www.irs.gov",
-    tags: ["retirement", "401k", "ira", "investing", "finance"],
-    todos: [
-      "Contribute at least enough to your employer 401(k) to capture the full company match.",
-      "Choose low-cost index funds or target-date retirement funds rather than holding cash.",
-      "Open a Roth IRA if eligible to build tax-free growth and tax-free retirement withdrawals.",
-      "Set up automatic monthly contributions to hit annual IRA limits systematically.",
-      "Designate primary and contingent beneficiaries on all investment accounts."
-    ]
-  },
-  {
-    id: "irs-notice-response",
-    title: "What to do if you receive a notice or letter from the IRS",
-    desc: "Handle tax inquiries or discrepancies calmly and systematically.",
-    category: "finance",
-    sourceName: "Internal Revenue Service",
-    sourceUrl: "https://www.irs.gov",
-    tags: ["irs", "taxes", "audit", "finance", "notice"],
-    todos: [
-      "Read the notice carefully to identify the specific tax year, issue, and response deadline.",
-      "Compare the IRS notice details against your original tax return copies and tax forms.",
-      "Do not panic or ignore the letter; response windows are strictly enforced.",
-      "Mail or upload requested documentation along with the provided IRS response stub.",
-      "Contact a certified CPA or tax professional if the discrepancy involves significant amounts."
-    ]
-  },
-  {
-    id: "negotiate-job-offer",
-    title: "What to do when negotiating a job offer or salary increase",
-    desc: "Maximize total compensation and benefits with professional confidence.",
-    category: "finance",
-    sourceName: "U.S. Bureau of Labor Statistics Data",
-    sourceUrl: "https://www.bls.gov",
-    tags: ["salary", "negotiation", "job offer", "career", "money"],
-    todos: [
-      "Research benchmark salary ranges for your role, experience level, and geographic market.",
-      "Evaluate the complete compensation package including health benefits, 401(k) match, and equity.",
-      "Express enthusiasm for the role before presenting a clear, data-backed counteroffer.",
-      "Negotiate non-salary perks like remote flexibility, sign-on bonuses, or extra PTO if base pay is rigid.",
-      "Request all finalized agreed-upon terms in writing before resigning from your current job."
-    ]
-  },
-  {
-    id: "lower-recurring-bills",
-    title: "What to do to lower your monthly subscription and bill costs",
-    desc: "Cut wasteful recurring overhead and negotiate better service rates.",
-    category: "finance",
-    sourceName: "Consumer Reports Money Advice",
-    sourceUrl: "https://www.consumerreports.org",
-    tags: ["bills", "savings", "subscriptions", "budget", "finance"],
-    todos: [
-      "Audit your last 90 days of credit card and bank statements for forgotten subscriptions.",
-      "Cancel unused streaming services, gym memberships, and auto-renewing software apps.",
-      "Call internet and cable providers to ask for current promotional rates or retention discounts.",
-      "Shop around for competitive car and homeowners insurance quotes annually.",
-      "Switch to low-cost prepaid or MVNO cell phone plans to cut mobile service costs."
-    ]
-  },
-  {
-    id: "mortgage-pre-approval",
-    title: "What to do when applying for a mortgage pre-approval",
-    desc: "Streamline home loan qualification and prove buying power to sellers.",
-    category: "finance",
-    sourceName: "Consumer Financial Protection Bureau",
-    sourceUrl: "https://www.consumerfinance.gov",
-    tags: ["mortgage", "home", "buying", "loan", "finance"],
-    todos: [
-      "Check your credit reports and resolve any outstanding errors or collection items.",
-      "Gather W-2s, recent pay stubs, bank statements, and two years of tax returns.",
-      "Avoid opening new credit cards or making large financing purchases during the process.",
-      "Compare loan estimates from multiple lenders to find the best interest rates and terms.",
-      "Keep debt-to-income (DTI) ratio below 36% to qualify for optimal loan options."
-    ]
-  },
-  {
-    id: "basic-estate-plan",
-    title: "What to do when setting up a basic estate plan or living will",
-    desc: "Protect your assets and ensure medical and legal wishes are followed.",
-    category: "finance",
-    sourceName: "American Bar Association Estate Prep",
-    sourceUrl: "https://www.americanbar.org",
-    tags: ["estate", "will", "legal", "finance", "planning"],
-    todos: [
-      "Draft a last will and testament detailing asset distribution and guardianship for minors.",
-      "Designate a durable power of attorney to manage financial matters if you become incapacitated.",
-      "Create a healthcare advance directive and name a medical power of attorney.",
-      "Update transfer-on-death (TOD) and beneficiary designations on bank and investment accounts.",
-      "Store original signed legal documents in a secure, fireproof safe accessible by loved ones."
-    ]
-  },
-  {
-    id: "default-loan-payment",
-    title: "What to do if you default or fall behind on a loan payment",
-    desc: "Mitigate credit damage and work out manageable payment solutions.",
-    category: "finance",
-    sourceName: "National Foundation for Credit Counseling",
-    sourceUrl: "https://www.nfcc.org",
-    tags: ["debt", "loans", "credit", "finance", "hardship"],
-    todos: [
-      "Contact your lender or loan servicer immediately before the payment reaches 30 days past due.",
-      "Inquire about hardship programs, temporary deferment, or loan modification options.",
-      "Prioritize essential debt payments (mortgage, auto, utilities) over uncollateralized credit cards.",
-      "Avoid ignoring calls or mail from creditors, as early communication prevents legal escalation.",
-      "Consult a non-profit credit counseling agency for accredited debt management plans."
-    ]
-  },
-  {
-    id: "switch-primary-banks",
-    title: "What to do when switching primary bank accounts",
-    desc: "Move your checking and savings smoothly without missed bills or payroll delays.",
-    category: "finance",
-    sourceName: "FDIC Consumer Resource",
-    sourceUrl: "https://www.fdic.gov",
-    tags: ["bank", "checking", "savings", "finance", "money"],
-    todos: [
-      "Open your new checking account and deposit initial opening funds.",
-      "Switch direct deposit details with your employer HR or payroll provider.",
-      "List all recurring automatic bill payments and update them with new card or account numbers.",
-      "Leave a cash buffer in your old account for 30 days to cover any residual pending charges.",
-      "Formally close the old bank account and request a written confirmation letter."
-    ]
-  },
-  {
-    id: "open-enrollment-health",
-    title: "What to do when choosing a health insurance plan during open enrollment",
-    desc: "Select the right coverage while minimizing total out-of-pocket medical costs.",
+    id: "optimize-bedroom-sleep",
+    title: "What to do to optimize your bedroom for better sleep hygiene",
+    desc: "Transform your sleeping space to fall asleep faster and stay asleep longer.",
     category: "health",
-    sourceName: "HealthCare.gov Guidelines",
-    sourceUrl: "https://www.healthcare.gov",
-    tags: ["insurance", "health", "open enrollment", "medical", "finance"],
+    sourceName: "National Sleep Foundation",
+    sourceUrl: "https://www.sleepfoundation.org",
+    tags: ["sleep", "health", "bedroom", "wellness", "rest"],
     todos: [
-      "Estimate your total annual medical expenses based on expected prescriptions and care needs.",
-      "Compare premiums, deductibles, copays, and maximum out-of-pocket limits across plans.",
-      "Verify that your preferred doctors, specialists, and hospitals remain in-network.",
-      "Check the formulary tier list to ensure your prescription medications are covered affordably.",
-      "Consider an HSA-eligible High Deductible Health Plan if you want tax-advantaged medical savings."
+      "Keep bedroom temperature cool, ideally between 60°F and 67°F (15°C–19°C) for optimal rest.",
+      "Install blackout curtains or use a contoured eye mask to block all ambient light source exposure.",
+      "Remove TVs, computers, and tablets from the bedroom to eliminate disruptive light and stimuli.",
+      "Use white noise machines or earplugs to mask intrusive exterior sounds.",
+      "Invest in a supportive mattress and breathable, moisture-wicking bedding materials."
     ]
   },
   {
-    id: "improve-credit-score",
-    title: "What to do to improve your credit score by 50+ points",
-    desc: "Actionable habits to boost your FICO and VantageScore ratings rapidly.",
-    category: "finance",
-    sourceName: "myFICO Score Guidelines",
-    sourceUrl: "https://www.myfico.com",
-    tags: ["credit", "fico", "finance", "debt", "money"],
+    id: "home-insect-infestation",
+    title: "What to do when dealing with an insect infestation at home",
+    desc: "Identify, contain, and eliminate household pests effectively.",
+    category: "emergencies",
+    sourceName: "EPA Pest Control Guidelines",
+    sourceUrl: "https://www.epa.gov",
+    tags: ["bugs", "pests", "home", "insects", "cleaning"],
     todos: [
-      "Pay every bill on time; payment history makes up 35% of your total credit score.",
-      "Pay down card balances to keep overall credit utilization below 10% to 30%.",
-      "Request credit line increases on existing accounts without incurring hard inquiries.",
-      "Dispute errors, inaccurate late payments, or fraudulent items on your credit reports.",
-      "Keep older credit card accounts open to maintain a long average age of credit history."
+      "Identify the specific pest species to select targeted, effective treatment methods.",
+      "Seal food in airtight glass or thick plastic containers and eliminate standing water sources.",
+      "Vacuum carpets, baseboards, and furniture thoroughly, disposing of vacuum bags immediately.",
+      "Caulk exterior wall cracks, gap openings around pipes, and repair damaged window screens.",
+      "Consult a certified pest control professional if DIY treatments do not resolve the issue quickly."
     ]
   },
   {
-    id: "dispute-credit-report-error",
-    title: "What to do when disputing an error on your credit report",
-    desc: "Remove inaccurate items and correct credit bureau records officially.",
-    category: "finance",
-    sourceName: "FTC Credit Repair Guide",
-    sourceUrl: "https://consumer.ftc.gov",
-    tags: ["credit report", "dispute", "experian", "transunion", "equifax"],
+    id: "car-cross-country-prep",
+    title: "What to do when preparing your car for a long road trip",
+    desc: "Prevent mechanical breakdowns and ensure highway safety across long distances.",
+    category: "travel",
+    sourceName: "AAA Long-Distance Travel Prep",
+    sourceUrl: "https://www.aaa.com",
+    tags: ["driving", "car", "road trip", "travel", "maintenance"],
     todos: [
-      "Obtain free copies of your credit reports from AnnualCreditReport.com.",
-      "Gather supporting documentation (bank statements, payment receipts, release letters).",
-      "File an official online dispute with each bureau displaying the specific error.",
-      "Send a formal written dispute letter via certified mail with return receipt requested.",
-      "Track the 30-day investigation window during which the bureau must verify or remove the item."
+      "Check engine oil, transmission fluid, coolant, brake fluid, and windshield washer levels.",
+      "Inspect tire tread depth, sidewalls, and inflate all tires (including spare) to proper PSI specs.",
+      "Test headlights, taillights, brake indicators, and replace worn wiper blades.",
+      "Inspect brake pads and belt tension for signs of excess wear or squealing noises.",
+      "Pack a fully stocked roadside kit: jumper cables, tire pressure gauge, flashlight, and basic tools."
+    ]
+  },
+  {
+    id: "child-proof-living-room",
+    title: "What to do to child-proof or pet-proof a living area",
+    desc: "Eliminate household hazards for infants, toddlers, and new pets.",
+    category: "health",
+    sourceName: "American Academy of Pediatrics Safety",
+    sourceUrl: "https://www.aap.org",
+    tags: ["safety", "kids", "pets", "baby-proofing", "home"],
+    todos: [
+      "Anchor heavy furniture pieces, dressers, bookcases, and TVs securely to wall studs using safety straps.",
+      "Install safety covers on all open electrical outlets within reach.",
+      "Keep dangerous blind cords wrapped high on cleats or install cordless window treatments.",
+      "Attach padded corner guards to sharp coffee table edges and low glass furniture.",
+      "Store toxic house plants, cleaning agents, and small swallowing hazards well out of reach."
+    ]
+  },
+  {
+    id: "test-smoke-co-detectors",
+    title: "What to do when testing and replacing home smoke and CO detectors",
+    desc: "Keep life-saving early warning systems operational throughout your home.",
+    category: "emergencies",
+    sourceName: "National Fire Protection Association",
+    sourceUrl: "https://www.nfpa.org",
+    tags: ["fire", "safety", "smoke detector", "home", "emergency"],
+    todos: [
+      "Press and hold the test button on every smoke and CO detector monthly to verify siren functionality.",
+      "Replace alarm batteries at least once per year or whenever chirp warning signals begin.",
+      "Install detectors inside every bedroom, outside sleeping areas, and on every level of the home.",
+      "Clean detector covers using a vacuum soft brush attachment to remove dust and cobwebs.",
+      "Replace entire detector units every 10 years (or 5–7 years for carbon monoxide units)."
+    ]
+  },
+  {
+    id: "start-indoor-garden",
+    title: "What to do when starting an indoor plant or vegetable garden",
+    desc: "Grow healthy house plants and fresh herbs indoors successfully.",
+    category: "health",
+    sourceName: "USDA Gardening Basics",
+    sourceUrl: "https://www.usda.gov",
+    tags: ["gardening", "plants", "home", "herbs", "hobbies"],
+    todos: [
+      "Select indoor plants matched to your room's natural sunlight conditions (bright vs. indirect vs. low light).",
+      "Use pots with functional drainage holes to prevent root rot from excess moisture.",
+      "Plant in high-quality potting mix formulated for indoor containers rather than outdoor garden soil.",
+      "Water thoroughly only when the top 1–2 inches of soil feel dry to the touch.",
+      "Rotate plant pots weekly to ensure balanced growth toward light sources."
+    ]
+  },
+  {
+    id: "digital-detox-plan",
+    title: "What to do when taking a digital detox break from screen time",
+    desc: "Reduce mental fatigue, improve focus, and restore healthy sleep patterns.",
+    category: "health",
+    sourceName: "American Psychological Association",
+    sourceUrl: "https://www.apa.org",
+    tags: ["mental health", "digital detox", "wellness", "screens", "focus"],
+    todos: [
+      "Turn off non-essential app push notifications on mobile phones and computers.",
+      "Establish screen-free physical zones in your home, especially bedrooms and dining tables.",
+      "Set strict daily app time limits or use app blockers during work or family hours.",
+      "Replace mindless screen scrolling with offline hobbies, reading, or outdoor walking.",
+      "Inform close contacts of your intentional screen pause to set response expectations."
+    ]
+  },
+  {
+    id: "weekly-meal-prep",
+    title: "What to do when prepping meals for a busy work week",
+    desc: "Save time, lower food costs, and maintain healthy eating habits.",
+    category: "health",
+    sourceName: "Academy of Nutrition and Dietetics",
+    sourceUrl: "https://www.eatright.org",
+    tags: ["nutrition", "meal prep", "food", "health", "cooking"],
+    todos: [
+      "Plan a weekly menu using overlapping ingredients to minimize grocery costs and waste.",
+      "Create a structured grocery shopping list and stick strictly to ingredients needed.",
+      "Dedicate a 2-hour cooking block to batch-prepare grains, proteins, and roasted vegetables.",
+      "Store prepped meals in glass, airtight, portion-controlled containers.",
+      "Label containers with preparation dates and freeze portions needed later in the week."
+    ]
+  },
+  {
+    id: "appliance-maintenance-washers",
+    title: "What to do to clean and maintain major household washing appliances",
+    desc: "Prevent mold smells, extend appliance life, and improve washing performance.",
+    category: "emergencies",
+    sourceName: "Major Appliance Consumer Advice",
+    sourceUrl: "https://www.energystar.gov",
+    tags: ["appliances", "cleaning", "home", "maintenance", "laundry"],
+    todos: [
+      "Run a hot tub-clean cycle on your washing machine monthly using vinegar or washer cleaner.",
+      "Wipe rubber door gaskets dry after washing loads to prevent mold and mildew odors.",
+      "Clean lint filters after every dryer cycle and inspect exterior dryer vent ductwork annually.",
+      "Inspect washing machine water fill hoses for cracks, bulges, or corrosion leaks every 6 months.",
+      "Clean dishwasher filter traps and spray arms to remove food debris and hard water scale."
+    ]
+  },
+  {
+    id: "home-first-aid-kit",
+    title: "What to do when setting up a home emergency first-aid kit",
+    desc: "Assemble essential medical supplies to handle common household injuries.",
+    category: "emergencies",
+    sourceName: "American Red Cross First Aid Prep",
+    sourceUrl: "https://www.redcross.org",
+    tags: ["first aid", "emergency", "medical", "safety", "home"],
+    todos: [
+      "Include adhesive bandages in multiple sizes, sterile gauze pads, and adhesive medical tape.",
+      "Add antiseptic wipes, antibiotic ointment, hydrocortisone cream, and burn gel packets.",
+      "Stock basic medications: pain relievers, antihistamines, antacids, and anti-diarrheal tablets.",
+      "Include essential tools: blunt scissors, tweezers, digital thermometer, and instant cold packs.",
+      "Check expiration dates on medications and sterile supplies every six months to replace old stock."
+    ]
+  },
+  {
+    id: "seasonal-allergy-home-prep",
+    title: "What to do when dealing with seasonal allergies at home",
+    desc: "Reduce indoor pollen, dust mites, and airborne triggers.",
+    category: "health",
+    sourceName: "Asthma and Allergy Foundation of America",
+    sourceUrl: "https://www.aafa.org",
+    tags: ["allergies", "health", "home", "wellness", "air quality"],
+    todos: [
+      "Keep windows closed during high pollen days and run air conditioning with clean HEPA filters.",
+      "Wash bed sheets, pillowcases, and blankets weekly in hot water (130°F / 54°C).",
+      "Shower and wash hair after returning from outdoor activities to remove trapped pollen.",
+      "Vacuum carpeted areas twice weekly using a vacuum equipped with a certified HEPA filter.",
+      "Use allergen-proof zip covers on mattresses, box springs, and pillows."
+    ]
+  },
+  {
+    id: "prep-overnight-guests",
+    title: "What to do to prepare your home before hosting overnight guests",
+    desc: "Create a welcoming, comfortable environment for visitors.",
+    category: "health",
+    sourceName: "Hospitality Home Preparation Guide",
+    sourceUrl: "https://www.hud.gov",
+    tags: ["hosting", "guests", "home", "cleaning", "hospitality"],
+    todos: [
+      "Wash and dress guest beds with fresh sheets, extra blankets, and a choice of firm and soft pillows.",
+      "Stock the guest bathroom with fresh towels, bathmat, extra toilet paper, and basic travel toiletries.",
+      "Clear closet hanging space or drawer storage so visitors can unpack comfortably.",
+      "Share your home Wi-Fi network password and basic TV remote instructions on a printed card.",
+      "Check in on dietary preferences, allergies, or coffee/tea habits prior to their arrival."
+    ]
+  },
+  {
+    id: "store-seasonal-clothing",
+    title: "What to do when storing seasonal clothing long-term",
+    desc: "Prevent fabric damage, moth infestations, and musty odors during off-seasons.",
+    category: "health",
+    sourceName: "Textile Preservation Guidelines",
+    sourceUrl: "https://www.si.edu",
+    tags: ["organization", "clothing", "storage", "home", "closet"],
+    todos: [
+      "Wash or dry clean all garments before storage to remove body oils and food residues that attract pests.",
+      "Fold heavy knits and sweaters loosely rather than hanging them to prevent shoulder stretching.",
+      "Use breathable fabric storage bins or canvas garment bags instead of sealed plastic bags.",
+      "Store clothing in a cool, dry, dark, climate-controlled room away from direct sunlight and humidity.",
+      "Add natural cedar blocks or lavender sachets to repel insects without chemical mothball smells."
     ]
   }
 ];

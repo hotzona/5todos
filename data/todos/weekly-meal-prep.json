@@ -1,0 +1,22 @@
+{
+  "id": "weekly-meal-prep",
+  "title": "What to do when prepping meals for a busy work week",
+  "desc": "Save time, lower food costs, and maintain healthy eating habits.",
+  "category": "health",
+  "sourceName": "Academy of Nutrition and Dietetics",
+  "sourceUrl": "https://www.eatright.org",
+  "tags": [
+    "nutrition",
+    "meal prep",
+    "food",
+    "health",
+    "cooking"
+  ],
+  "todos": [
+    "Plan a weekly menu using overlapping ingredients to minimize grocery costs and waste.",
+    "Create a structured grocery shopping list and stick strictly to ingredients needed.",
+    "Dedicate a 2-hour cooking block to batch-prepare grains, proteins, and roasted vegetables.",
+    "Store prepped meals in glass, airtight, portion-controlled containers.",
+    "Label containers with preparation dates and freeze portions needed later in the week."
+  ]
+}

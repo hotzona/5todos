@@ -1,0 +1,22 @@
+{
+  "id": "deep-clean-refrigerator",
+  "title": "What to do to deep clean a refrigerator and pantry safely",
+  "desc": "Sanitize food storage surfaces and eliminate hidden bacteria and spoiled items.",
+  "category": "health",
+  "sourceName": "USDA Food Safety and Inspection Service",
+  "sourceUrl": "https://www.fsis.usda.gov",
+  "tags": [
+    "cleaning",
+    "refrigerator",
+    "pantry",
+    "food safety",
+    "home"
+  ],
+  "todos": [
+    "Empty all contents into coolers to keep perishables cold while cleaning.",
+    "Check expiration dates, discarding spoiled produce, expired condiments, and freezer-burned goods.",
+    "Remove shelves and drawers, washing them in warm soapy water after reaching room temperature.",
+    "Sanitize interior walls using a mixture of water and mild dish soap or baking soda solution.",
+    "Wipe down exterior door handles, door seals, and vacuum dust from refrigerator condenser coils."
+  ]
+}

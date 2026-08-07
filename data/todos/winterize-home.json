@@ -1,0 +1,22 @@
+{
+  "id": "winterize-home",
+  "title": "What to do to winterize your house or apartment",
+  "desc": "Protect pipes, reduce heating bills, and seal air leaks before freezing weather.",
+  "category": "emergencies",
+  "sourceName": "U.S. Department of Energy",
+  "sourceUrl": "https://www.energy.gov",
+  "tags": [
+    "home",
+    "winter",
+    "heating",
+    "maintenance",
+    "house"
+  ],
+  "todos": [
+    "Disconnect and drain outdoor garden hoses, shut off exterior water valves, and insulate spigots.",
+    "Inspect window and door seals, applying weatherstripping or caulk to prevent cold drafts.",
+    "Service your heating furnace or heat pump and replace air filters for efficient winter operation.",
+    "Clean gutters and downspouts to allow proper drainage and prevent ice dam formation on the roof.",
+    "Reverse ceiling fan rotation to clockwise on low speed to push trapped warm air downward."
+  ]
+}

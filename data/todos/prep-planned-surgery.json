@@ -1,0 +1,22 @@
+{
+  "id": "prep-planned-surgery",
+  "title": "What to do when preparing for a planned medical surgery",
+  "desc": "Streamline pre-op requirements and set up a smooth home recovery environment.",
+  "category": "health",
+  "sourceName": "American College of Surgeons",
+  "sourceUrl": "https://www.facs.org",
+  "tags": [
+    "health",
+    "surgery",
+    "medical",
+    "recovery",
+    "hospital"
+  ],
+  "todos": [
+    "Follow all doctor fasting guidelines regarding food, drink, and morning medication restriction.",
+    "Arrange a trusted adult to drive you home and assist during the first 24–48 hours post-op.",
+    "Prepare a ground-floor recovery area stocked with ice packs, extra pillows, and easy prescription access.",
+    "Pre-cook or purchase soft, easily digestible meals and stock up on hydration beverages.",
+    "Complete pre-admission paperwork, medical directives, and verify insurance coverage in advance."
+  ]
+}

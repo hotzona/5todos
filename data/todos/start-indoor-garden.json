@@ -1,0 +1,22 @@
+{
+  "id": "start-indoor-garden",
+  "title": "What to do when starting an indoor plant or vegetable garden",
+  "desc": "Grow healthy house plants and fresh herbs indoors successfully.",
+  "category": "health",
+  "sourceName": "USDA Gardening Basics",
+  "sourceUrl": "https://www.usda.gov",
+  "tags": [
+    "gardening",
+    "plants",
+    "home",
+    "herbs",
+    "hobbies"
+  ],
+  "todos": [
+    "Select indoor plants matched to your room's natural sunlight conditions (bright vs. indirect vs. low light).",
+    "Use pots with functional drainage holes to prevent root rot from excess moisture.",
+    "Plant in high-quality potting mix formulated for indoor containers rather than outdoor garden soil.",
+    "Water thoroughly only when the top 1–2 inches of soil feel dry to the touch.",
+    "Rotate plant pots weekly to ensure balanced growth toward light sources."
+  ]
+}

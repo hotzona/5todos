@@ -1,0 +1,22 @@
+{
+  "id": "prep-overnight-guests",
+  "title": "What to do to prepare your home before hosting overnight guests",
+  "desc": "Create a welcoming, comfortable environment for visitors.",
+  "category": "health",
+  "sourceName": "Hospitality Home Preparation Guide",
+  "sourceUrl": "https://www.hud.gov",
+  "tags": [
+    "hosting",
+    "guests",
+    "home",
+    "cleaning",
+    "hospitality"
+  ],
+  "todos": [
+    "Wash and dress guest beds with fresh sheets, extra blankets, and a choice of firm and soft pillows.",
+    "Stock the guest bathroom with fresh towels, bathmat, extra toilet paper, and basic travel toiletries.",
+    "Clear closet hanging space or drawer storage so visitors can unpack comfortably.",
+    "Share your home Wi-Fi network password and basic TV remote instructions on a printed card.",
+    "Check in on dietary preferences, allergies, or coffee/tea habits prior to their arrival."
+  ]
+}

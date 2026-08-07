@@ -1,0 +1,22 @@
+{
+  "id": "start-exercise-routine",
+  "title": "What to do when starting a new exercise or workout routine",
+  "desc": "Build sustainable fitness habits while preventing injury and burnout.",
+  "category": "health",
+  "sourceName": "CDC Physical Activity Guidelines",
+  "sourceUrl": "https://www.cdc.gov",
+  "tags": [
+    "fitness",
+    "health",
+    "workout",
+    "exercise",
+    "wellness"
+  ],
+  "todos": [
+    "Consult a healthcare professional for physical clearance if managing prior injuries or conditions.",
+    "Establish realistic, measurable goals focused on consistency rather than rapid intensity.",
+    "Schedule workout sessions on your primary calendar like non-negotiable appointments.",
+    "Learn foundational movement mechanics with lighter weights before increasing resistance.",
+    "Prioritize recovery by getting 7–9 hours of sleep and taking designated rest days."
+  ]
+}

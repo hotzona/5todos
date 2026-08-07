@@ -1,0 +1,22 @@
+{
+  "id": "home-first-aid-kit",
+  "title": "What to do when setting up a home emergency first-aid kit",
+  "desc": "Assemble essential medical supplies to handle common household injuries.",
+  "category": "emergencies",
+  "sourceName": "American Red Cross First Aid Prep",
+  "sourceUrl": "https://www.redcross.org",
+  "tags": [
+    "first aid",
+    "emergency",
+    "medical",
+    "safety",
+    "home"
+  ],
+  "todos": [
+    "Include adhesive bandages in multiple sizes, sterile gauze pads, and adhesive medical tape.",
+    "Add antiseptic wipes, antibiotic ointment, hydrocortisone cream, and burn gel packets.",
+    "Stock basic medications: pain relievers, antihistamines, antacids, and anti-diarrheal tablets.",
+    "Include essential tools: blunt scissors, tweezers, digital thermometer, and instant cold packs.",
+    "Check expiration dates on medications and sterile supplies every six months to replace old stock."
+  ]
+}
